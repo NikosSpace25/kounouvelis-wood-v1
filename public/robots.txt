@@ -1,0 +1,38 @@
+# Search Engines (SEO & Indexing)
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Bingbot
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /*?*
+Disallow: /*&*
+
+# Block AI Scrapers & LLMs
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: Google-Extended
+User-agent: Anthropic-ai
+User-agent: Claude-Web
+User-agent: CCBot
+User-agent: PerplexityBot
+User-agent: Omgilibot
+User-agent: FacebookBot
+Disallow: /
+
+# SEO Tools (Rate Limited)
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: MJ12bot
+User-agent: DotBot
+User-agent: PetalBot
+Crawl-delay: 5
+
+# General Rules
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://www.kounouvelis.gr/sitemap-index.xml

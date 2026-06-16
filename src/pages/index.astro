@@ -1,17 +1,80 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 
+const homePageSchema = {
+  '@type': 'HomeAndConstructionBusiness',
+  name: 'Kounouvelis Wood',
+  description:
+    'Premium κατασκευές επίπλων κουζίνας, ντουλάπας και ειδικών ξύλινων εφαρμογών με κορυφαία υλικά.',
+  priceRange: '€€€',
+  telephone: '+302102759822',
+  email: 'info@kounouveliswood.gr',
+
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Αντωνίου Σαπουντζάκη 7',
+    addressLocality: 'Νέα Ιωνία',
+    postalCode: '142313',
+    addressRegion: 'Αττική',
+    addressCountry: 'GR'
+  },
+
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '37.983810',
+    longitude: '23.727539'
+  },
+
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:00',
+      closes: '16:30'
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: 'Saturday',
+      opens: '08:00',
+      closes: '14:30'
+    }
+  ],
+
+  sameAs: [
+    'https://www.instagram.com/kounouveliswood',
+    'https://www.facebook.com/kounouveliswood',
+    'https://www.tiktok.com/kounouveliswood'
+  ],
+
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Ξυλουργικές Υπηρεσίες',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Κατασκευή Premium Κουζίνας'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Κατασκευή Ντουλάπας'
+        }
+      }
+    ]
+  }
+};
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Kounouvelis Wood | Premium Κουζίνες & Ντουλάπες"
+  description="Εξειδικευμένη κατασκευή premium επίπλων κουζίνας, ντουλάπας και ειδικών ξύλινων εφαρμογών. Κορυφαία υλικά και αψεγάδιαστη εφαρμογή."
+  schemaData={homePageSchema}
+>
+  <main>
+    <h2>Καλώς ήρθατε στο Kounouvelis Wood</h2>
+  </main>
+</BaseLayout>

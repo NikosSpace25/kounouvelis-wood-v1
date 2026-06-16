@@ -1,0 +1,72 @@
+---
+import '../styles/global.css';
+
+const {
+  title = 'Kounouvelis Wood',
+  description = 'Premium Κουζίνες & Ντουλάπες',
+  image = 'https://www.kounouveliswood.gr/images/og-image.jpg',
+  schemaData = {}
+} = Astro.props;
+
+const siteUrl = 'https://www.kounouvelis.gr/';
+
+const finalSchema = {
+  '@context': 'https://schema.org',
+  '@type': schemaData['@type'] || 'WebPage',
+  name: 'Kounouvelis Wood',
+  url: siteUrl,
+  logo: `${siteUrl}/images/logo.png`,
+  ...schemaData
+};
+---
+
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={siteUrl} />
+
+    <link
+      rel="preload"
+      href="/fonts/SourceSerif4Variable-Roman.ttf.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Manrope-Variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self';"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(finalSchema)} />
+  </head>
+  <body>
+    <header class="site-header"></header>
+
+    <slot />
+  </body>
+</html>
