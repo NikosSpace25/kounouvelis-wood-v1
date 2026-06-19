@@ -1,0 +1,416 @@
+---
+import { Picture } from 'astro:assets';
+
+import imgKitchenMarble from '../assets/kitchen-marble.jpg';
+import imgBedroomCloset from '../assets/bedroom-with-closet.jpg';
+import imgModernWalkCloset from '../assets/modern-walk-in-closet.jpg';
+import imgKitchenOven from '../assets/kitchen-with-counter-oven.jpg';
+---
+
+<section
+  class="hero"
+  aria-labelledby="hero-title"
+  itemscope
+  itemtype="https://schema.org/WPHeader"
+>
+  <div class="hero__container">
+    <div class="hero__text-wrapper">
+      <h1
+        id="hero-title"
+        class="hero__title"
+        aria-label="Η τέχνη του ξύλου σε κουζίνες και έπιπλα που ορίζουν τον χώρο."
+        itemprop="headline"
+      >
+        <span class="hero__title-line" aria-hidden="true"
+          >Η τέχνη του ξύλου</span
+        >
+        <span class="hero__title-line" aria-hidden="true"
+          >σε κουζίνες & έπιπλα</span
+        >
+        <span class="hero__title-line" aria-hidden="true"
+          >που ορίζουν τον χώρο</span
+        >
+      </h1>
+    </div>
+
+    <div
+      class="hero__gallery"
+      role="list"
+      aria-label="Δείγματα custom κατασκευών"
+      itemscope
+      itemtype="https://schema.org/ImageGallery"
+    >
+      <div
+        class="hero__gallery-item"
+        role="listitem"
+        tabindex="0"
+        itemprop="associatedMedia"
+        itemscope
+        itemtype="https://schema.org/ImageObject"
+      >
+        <Picture
+          src={imgKitchenMarble}
+          formats={['avif', 'webp']}
+          alt="Αρχιτεκτονικός σχεδιασμός κουζίνας με επένδυση μασίφ ξύλου και πάγκο από πράσινο μάρμαρο."
+          class="hero__image"
+          itemprop="contentUrl"
+          loading="eager"
+          fetchpriority="high"
+          decoding="sync"
+        />
+        <meta
+          itemprop="description"
+          content="Αρχιτεκτονικός σχεδιασμός κουζίνας με επένδυση μασίφ ξύλου και πάγκο από πράσινο μάρμαρο."
+        />
+      </div>
+
+      <div
+        class="hero__gallery-item"
+        role="listitem"
+        tabindex="0"
+        itemprop="associatedMedia"
+        itemscope
+        itemtype="https://schema.org/ImageObject"
+      >
+        <Picture
+          src={imgBedroomCloset}
+          formats={['avif', 'webp']}
+          alt="Custom ξύλινη ντουλάπα υπνοδωματίου κορυφαίας δεξιοτεχνίας με ανοιχτό αποθηκευτικό χώρο."
+          class="hero__image"
+          itemprop="contentUrl"
+          loading="eager"
+          decoding="async"
+        />
+        <meta
+          itemprop="description"
+          content="Custom ξύλινη ντουλάπα υπνοδωματίου κορυφαίας δεξιοτεχνίας με ανοιχτό αποθηκευτικό χώρο."
+        />
+      </div>
+
+      <div
+        class="hero__gallery-item"
+        role="listitem"
+        tabindex="0"
+        itemprop="associatedMedia"
+        itemscope
+        itemtype="https://schema.org/ImageObject"
+      >
+        <Picture
+          src={imgModernWalkCloset}
+          formats={['avif', 'webp']}
+          alt="Μοντέρνο δωμάτιο ντουλάπας (walk-in closet) κατασκευασμένο από εκλεκτό ξύλο."
+          class="hero__image"
+          itemprop="contentUrl"
+          loading="eager"
+          decoding="async"
+        />
+        <meta
+          itemprop="description"
+          content="Μοντέρνο δωμάτιο ντουλάπας (walk-in closet) κατασκευασμένο από εκλεκτό ξύλο."
+        />
+      </div>
+
+      <div
+        class="hero__gallery-item"
+        role="listitem"
+        tabindex="0"
+        itemprop="associatedMedia"
+        itemscope
+        itemtype="https://schema.org/ImageObject"
+      >
+        <Picture
+          src={imgKitchenOven}
+          formats={['avif', 'webp']}
+          alt="Μίνιμαλ σχεδιασμός κουζίνας με εντοιχιζόμενο φούρνο και tailor-made ξύλινα συρτάρια."
+          class="hero__image"
+          itemprop="contentUrl"
+          loading="eager"
+          decoding="async"
+        />
+        <meta
+          itemprop="description"
+          content="Μίνιμαλ σχεδιασμός κουζίνας με εντοιχιζόμενο φούρνο και tailor-made ξύλινα συρτάρια."
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- styling hero section -->
+<style>
+  .hero {
+    inline-size: var(--width-full);
+    block-size: var(--height-100dvh);
+    background-color: var(--color-text);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: var(--space-xl);
+    padding-inline: var(--space-md);
+  }
+
+  .hero__container {
+    inline-size: var(--width-full);
+    block-size: 100%;
+    max-inline-size: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-xl);
+  }
+
+  .hero__text-wrapper {
+    inline-size: 100%;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    margin-block-start: var(--space-2xl);
+  }
+
+  .hero__title {
+    font-size: var(--font-size-display);
+    line-height: var(--leading-minus);
+    letter-spacing: var(--tracking-tighter);
+    color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    will-change: transform;
+  }
+
+  .hero__title-line {
+    display: block;
+    white-space: normal;
+    text-wrap: balance;
+  }
+
+  .hero__gallery {
+    inline-size: var(--width-full);
+    block-size: var(--height-50dvh);
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero__gallery-item {
+    position: absolute;
+    inset: 0;
+    inline-size: var(--width-full);
+    block-size: 100%;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    will-change: clip-path, filter, transform;
+  }
+
+  .hero__gallery-item:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  .hero__gallery-item:nth-child(1) {
+    z-index: 1;
+    clip-path: inset(0 0 0 0);
+  }
+  .hero__gallery-item:nth-child(2) {
+    z-index: 2;
+    clip-path: inset(0 0 100% 0);
+  }
+  .hero__gallery-item:nth-child(3) {
+    z-index: 3;
+    clip-path: inset(0 0 100% 0);
+  }
+  .hero__gallery-item:nth-child(4) {
+    z-index: 4;
+    clip-path: inset(0 0 100% 0);
+  }
+
+  picture {
+    display: block;
+    inline-size: var(--width-full);
+    block-size: 100%;
+  }
+
+  .hero__image {
+    inline-size: var(--width-full);
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: 64rem) {
+    .hero {
+      block-size: 100dvh;
+      justify-content: flex-end;
+      padding-block: var(--space-md);
+      padding-inline: var(--space-md);
+    }
+
+    .hero__container {
+      justify-content: flex-end;
+      gap: 0;
+    }
+
+    .hero__text-wrapper {
+      position: absolute;
+      inset-block-start: 22%;
+      inset-inline-start: 0;
+      margin-block-start: 0;
+      pointer-events: none;
+    }
+
+    .hero__title {
+      line-height: var(--leading-none);
+    }
+
+    .hero__gallery {
+      display: flex;
+      flex-direction: row;
+      block-size: var(--height-50dvh);
+      justify-content: center;
+      align-items: flex-end;
+      gap: var(--space-2xs);
+    }
+
+    .hero__gallery-item {
+      position: relative;
+      inset: auto;
+      flex: 1;
+      block-size: 65%;
+      cursor: pointer;
+    }
+
+    .hero__gallery-item:nth-child(n) {
+      z-index: auto;
+      clip-path: none;
+    }
+  }
+</style>
+
+<!-- interactive hero section -->
+<script>
+  import gsap from 'gsap';
+  import ScrollTrigger from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const heroSection = document.querySelector('.hero') as HTMLElement;
+  const title = document.querySelector('.hero__title') as HTMLElement;
+  const galleryItems = document.querySelectorAll(
+    '.hero__gallery-item'
+  ) as NodeListOf<HTMLElement>;
+
+  if (heroSection && title && galleryItems.length >= 4) {
+    let mm = gsap.matchMedia();
+
+    mm.add('(min-width: 64rem)', () => {
+      let currentIndex = -1;
+
+      const triggerAccordion = (targetIndex: number) => {
+        if (targetIndex !== currentIndex) {
+          currentIndex = targetIndex;
+          const shiftX = (targetIndex - (galleryItems.length - 1) / 2) * -90;
+
+          gsap.to(title, {
+            x: shiftX,
+            duration: 1.2,
+            ease: 'power4.out',
+            overwrite: 'auto'
+          });
+
+          galleryItems.forEach((item, i) => {
+            if (i === targetIndex) {
+              gsap.to(item, {
+                flex: 3.2,
+                blockSize: '100%',
+                filter: 'brightness(1)',
+                duration: 1.2,
+                ease: 'power4.out',
+                overwrite: 'auto'
+              });
+            } else {
+              gsap.to(item, {
+                flex: 0.6,
+                blockSize: '60%',
+                filter: 'brightness(0.5)',
+                duration: 1.2,
+                ease: 'power4.out',
+                overwrite: 'auto'
+              });
+            }
+          });
+        }
+      };
+
+      const resetAccordion = () => {
+        currentIndex = -1;
+        gsap.to(title, {
+          x: 0,
+          duration: 1.4,
+          ease: 'expo.out',
+          overwrite: 'auto'
+        });
+        galleryItems.forEach(item => {
+          gsap.to(item, {
+            flex: 1,
+            blockSize: '65%',
+            filter: 'brightness(1)',
+            duration: 1.4,
+            ease: 'expo.out',
+            overwrite: 'auto'
+          });
+        });
+      };
+
+      const handleMouseMove = (e: MouseEvent) => {
+        const mousePercent = e.clientX / window.innerWidth;
+        const targetIndex = Math.min(
+          Math.floor(mousePercent * galleryItems.length),
+          galleryItems.length - 1
+        );
+        triggerAccordion(targetIndex);
+      };
+
+      heroSection.addEventListener('mousemove', handleMouseMove);
+      heroSection.addEventListener('mouseleave', resetAccordion);
+
+      const focusListeners = Array.from(galleryItems).map((item, index) => {
+        const focusHandler = () => triggerAccordion(index);
+        item.addEventListener('focus', focusHandler);
+        return { item, focusHandler };
+      });
+
+      return () => {
+        heroSection.removeEventListener('mousemove', handleMouseMove);
+        heroSection.removeEventListener('mouseleave', resetAccordion);
+        focusListeners.forEach(({ item, focusHandler }) => {
+          item.removeEventListener('focus', focusHandler);
+        });
+      };
+    });
+
+    mm.add('(max-width: 64rem)', () => {
+      const prefersReducedMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      ).matches;
+
+      if (!prefersReducedMotion) {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: heroSection,
+            start: 'top top',
+            end: '+=200%',
+            pin: true,
+            scrub: 1
+          }
+        });
+
+        tl.to(galleryItems[1], { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none' })
+          .to(galleryItems[2], { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none' })
+          .to(galleryItems[3], {
+            clipPath: 'inset(0% 0% 0% 0%)',
+            ease: 'none'
+          });
+      }
+    });
+  }
+</script>

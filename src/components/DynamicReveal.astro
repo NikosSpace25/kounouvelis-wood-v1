@@ -1,0 +1,666 @@
+---
+import { Picture } from 'astro:assets';
+import Button from './Button.astro';
+
+import imgPhil1 from '../assets/bedroom-with-closet.jpg';
+import imgPhil2 from '../assets/kitchen-marble.jpg';
+import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
+---
+
+<section
+  class="dynamic-reveal"
+  aria-labelledby="reveal-hidden-title"
+  itemscope
+  itemtype="https://schema.org/AboutPage"
+>
+  <h2 id="reveal-hidden-title" class="sr-only">
+    Η φιλοσοφία και η εξειδίκευσή μας
+  </h2>
+
+  <div class="dynamic-reveal__pin">
+    <div
+      class="dynamic-reveal__grid-line dynamic-reveal__grid-line--v1"
+      aria-hidden="true"
+    >
+    </div>
+    <div
+      class="dynamic-reveal__grid-line dynamic-reveal__grid-line--v2"
+      aria-hidden="true"
+    >
+    </div>
+    <div
+      class="dynamic-reveal__grid-line dynamic-reveal__grid-line--h1"
+      aria-hidden="true"
+    >
+    </div>
+    <div
+      class="dynamic-reveal__grid-line dynamic-reveal__grid-line--h2"
+      aria-hidden="true"
+    >
+    </div>
+
+    <div class="dynamic-reveal__text-panel dynamic-reveal__text-panel--intro">
+      <p class="dynamic-reveal__description" itemprop="description">
+        Η Kounouvelis Wood αναπτύσσει και υλοποιεί custom κατασκευές μασίφ ξύλου
+        σχεδιασμένες με τα υψηλότερα πρότυπα καινοτομίας, ακρίβειας και
+        αριστείας.
+      </p>
+    </div>
+
+    <div class="dynamic-reveal__text-panel dynamic-reveal__text-panel--main">
+      <p class="dynamic-reveal__description" itemprop="abstract">
+        Συνδυάζουμε τη βαθιά τεχνογνωσία στην επιλογή υλικών, την αρχιτεκτονική
+        γεωμετρία και τις σύγχρονες τεχνικές για να παραδώσουμε έργα μοναδικής
+        ποιότητας.
+      </p>
+
+      <Button
+        href="/expertise"
+        text="Η Εξειδίκευσή Μας"
+        ariaLabel="Μάθετε περισσότερα για την εξειδίκευσή μας"
+        className="dynamic-reveal__btn"
+      />
+    </div>
+
+    <div
+      class="dynamic-reveal__image-panel"
+      role="list"
+      aria-label="Οπτική παρουσίαση έργων και εξειδίκευσης"
+      itemscope
+      itemtype="https://schema.org/ImageGallery"
+    >
+      <div
+        class="dynamic-reveal__cross dynamic-reveal__cross--tl"
+        aria-hidden="true"
+      >
+      </div>
+      <div
+        class="dynamic-reveal__cross dynamic-reveal__cross--tr"
+        aria-hidden="true"
+      >
+      </div>
+      <div
+        class="dynamic-reveal__cross dynamic-reveal__cross--bl"
+        aria-hidden="true"
+      >
+      </div>
+      <div
+        class="dynamic-reveal__cross dynamic-reveal__cross--br"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="dynamic-reveal__media-bounds">
+        <figure
+          class="dynamic-reveal__figure dynamic-reveal__figure--1"
+          role="listitem"
+          itemprop="associatedMedia"
+          itemscope
+          itemtype="https://schema.org/ImageObject"
+        >
+          <Picture
+            src={imgPhil1}
+            formats={['avif', 'webp']}
+            alt="Αρχικό στάδιο επεξεργασίας και επιλογή premium ξυλείας."
+            class="dynamic-reveal__image"
+            itemprop="contentUrl"
+          />
+        </figure>
+
+        <figure
+          class="dynamic-reveal__figure dynamic-reveal__figure--2"
+          role="listitem"
+          itemprop="associatedMedia"
+          itemscope
+          itemtype="https://schema.org/ImageObject"
+        >
+          <Picture
+            src={imgPhil2}
+            formats={['avif', 'webp']}
+            alt="Αρχιτεκτονική λεπτομέρεια κατά την υλοποίηση της κατασκευής."
+            class="dynamic-reveal__image"
+            itemprop="contentUrl"
+          />
+        </figure>
+
+        <figure
+          class="dynamic-reveal__figure dynamic-reveal__figure--3"
+          role="listitem"
+          itemprop="associatedMedia"
+          itemscope
+          itemtype="https://schema.org/ImageObject"
+        >
+          <Picture
+            src={imgPhil3}
+            formats={['avif', 'webp']}
+            alt="Ολοκληρωμένη αρχιτεκτονική κατασκευή ξύλου στον χώρο."
+            class="dynamic-reveal__image"
+            itemprop="contentUrl"
+          />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- styling section -->
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .dynamic-reveal {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    position: relative;
+  }
+
+  .dynamic-reveal__pin {
+    position: relative;
+    inline-size: 100vw;
+    block-size: var(--height-100dvh);
+    overflow: hidden;
+  }
+
+  .dynamic-reveal__grid-line {
+    position: absolute;
+    background-color: var(--color-muted);
+    z-index: var(--z-raised);
+    will-change: transform, top, left;
+  }
+
+  .dynamic-reveal__grid-line--v1,
+  .dynamic-reveal__grid-line--v2 {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 20vh);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 20vh);
+  }
+
+  .dynamic-reveal__grid-line--v1 {
+    inline-size: 1px;
+    block-size: var(--height-100dvh);
+    inset-block-start: 0;
+    inset-inline-start: 5vw;
+  }
+
+  .dynamic-reveal__grid-line--v2 {
+    inline-size: 1px;
+    block-size: var(--height-100dvh);
+    inset-block-start: 0;
+    inset-inline-start: 95vw;
+  }
+
+  .dynamic-reveal__grid-line--h1 {
+    inline-size: 100vw;
+    block-size: 1px;
+    inset-block-start: 15vh;
+    inset-inline-start: 0;
+  }
+
+  .dynamic-reveal__grid-line--h2 {
+    inline-size: 100vw;
+    block-size: 1px;
+    inset-block-start: 60vh;
+    inset-inline-start: 0;
+  }
+
+  .dynamic-reveal__text-panel {
+    position: absolute;
+    z-index: 5;
+    will-change: transform, opacity;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-inline: var(--space-md);
+    gap: var(--space-md);
+  }
+
+  .dynamic-reveal__text-panel--intro {
+    inset-inline-start: 5vw;
+    inset-block-start: 65vh;
+    inline-size: 90vw;
+    opacity: 1;
+  }
+
+  .dynamic-reveal__text-panel--main {
+    inset-inline-start: 5vw;
+    inset-block-start: 15vh;
+    inline-size: 90vw;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .dynamic-reveal__description {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body-lg);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-relaxed);
+    color: var(--color-bg);
+    margin: 0;
+  }
+
+  .dynamic-reveal__btn {
+    align-self: flex-start;
+    margin-block-start: 0.5rem;
+  }
+
+  .dynamic-reveal__image-panel {
+    position: absolute;
+    z-index: 2;
+    inset-inline-start: 5vw;
+    inline-size: 90vw;
+    inset-block-start: 15vh;
+    block-size: 45vh;
+    will-change: top, left, width, height, transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+
+  .dynamic-reveal__media-bounds {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    will-change: transform;
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+  }
+
+  .dynamic-reveal__cross {
+    position: absolute;
+    inline-size: 11px;
+    block-size: 11px;
+    z-index: 20;
+    transform: translate(-50%, -50%);
+    will-change: opacity;
+  }
+
+  .dynamic-reveal__cross::before,
+  .dynamic-reveal__cross::after {
+    content: '';
+    position: absolute;
+    background-color: var(--color-bg);
+  }
+
+  .dynamic-reveal__cross::before {
+    inline-size: 100%;
+    block-size: 1px;
+    inset-block-start: 50%;
+    inset-inline-start: 0;
+    transform: translateY(-50%);
+  }
+  .dynamic-reveal__cross::after {
+    inline-size: 1px;
+    block-size: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+  }
+
+  .dynamic-reveal__cross--tl {
+    inset-block-start: 0;
+    inset-inline-start: 0;
+  }
+  .dynamic-reveal__cross--tr {
+    inset-block-start: 0;
+    inset-inline-start: var(--width-full);
+  }
+  .dynamic-reveal__cross--bl {
+    inset-block-start: var(--width-full);
+    inset-inline-start: 0;
+  }
+  .dynamic-reveal__cross--br {
+    inset-block-start: 100%;
+    inset-inline-start: var(--width-full);
+  }
+
+  .dynamic-reveal__figure {
+    position: absolute;
+    inset: 0;
+    inline-size: var(--width-full);
+    block-size: 100%;
+    margin: 0;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: clip-path;
+  }
+
+  .dynamic-reveal__figure--2,
+  .dynamic-reveal__figure--3 {
+    clip-path: polygon(100% 0, 100% 0, 120% 100%, 120% 100%);
+  }
+
+  .dynamic-reveal__image {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  @media (min-width: 48rem) {
+    .dynamic-reveal__grid-line--v1 {
+      inset-inline-start: 15vw;
+    }
+    .dynamic-reveal__grid-line--v2 {
+      inset-inline-start: 70vw;
+    }
+    .dynamic-reveal__grid-line--h1 {
+      inset-block-start: 15vh;
+    }
+    .dynamic-reveal__grid-line--h2 {
+      inset-block-start: 85vh;
+    }
+
+    .dynamic-reveal__image-panel {
+      inset-inline-start: 15vw;
+      inline-size: 55vw;
+      inset-block-start: 15vh;
+      block-size: 70vh;
+    }
+
+    .dynamic-reveal__text-panel {
+      padding-inline: 0;
+    }
+    .dynamic-reveal__text-panel--intro {
+      inset-inline-start: 74vw;
+      inset-block-start: 45vh;
+      inline-size: 22vw;
+    }
+    .dynamic-reveal__text-panel--main {
+      inset-inline-start: 15vw;
+      inset-block-start: 45vh;
+      inline-size: 30vw;
+    }
+
+    .dynamic-reveal__description {
+      font-size: var(--font-size-body-lg);
+      line-height: var(--leading-relaxed);
+      max-inline-size: var(--measure-heading);
+    }
+  }
+</style>
+
+<!-- interactive section -->
+<script>
+  import gsap from 'gsap';
+  import ScrollTrigger from 'gsap/ScrollTrigger';
+  import Lenis from '@studio-freight/lenis';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const lenis = new Lenis({
+      duration: 1.4,
+      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+      infinite: false
+    });
+
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(time => {
+      lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
+
+    const section = document.querySelector('.dynamic-reveal');
+    const pinWrapper = document.querySelector('.dynamic-reveal__pin');
+
+    if (!section || !pinWrapper) return;
+
+    let mm = gsap.matchMedia() as any;
+
+    mm.add('(min-width: 48rem)', () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: '+=400%',
+          scrub: true,
+          pin: pinWrapper,
+          anticipatePin: 1
+        }
+      });
+
+      tl.to(
+        '.dynamic-reveal__text-panel--intro',
+        { opacity: 0, y: -20, duration: 0.1 },
+        0
+      )
+        .to(
+          '.dynamic-reveal__image-panel',
+          {
+            left: '55vw',
+            width: '30vw',
+            top: '25vh',
+            height: '50vh',
+            ease: 'none',
+            autoRound: false,
+            force3D: true
+          },
+          0
+        )
+        .to(
+          '.dynamic-reveal__grid-line--v1',
+          { left: '55vw', ease: 'none', autoRound: false, force3D: true },
+          0
+        )
+        .to(
+          '.dynamic-reveal__grid-line--v2',
+          { left: '85vw', ease: 'none', autoRound: false, force3D: true },
+          0
+        )
+        .to(
+          '.dynamic-reveal__grid-line--h1',
+          { top: '25vh', ease: 'none', autoRound: false, force3D: true },
+          0
+        )
+        .to(
+          '.dynamic-reveal__grid-line--h2',
+          { top: '75vh', ease: 'none', autoRound: false, force3D: true },
+          0
+        )
+        .to(
+          '.dynamic-reveal__figure--2',
+          {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            ease: 'none',
+            force3D: true
+          },
+          0
+        )
+        .to(
+          '.dynamic-reveal__text-panel--main',
+          { opacity: 1, y: 0, ease: 'none', duration: 0.4 },
+          0.4
+        );
+
+      tl.to(
+        '.dynamic-reveal__text-panel--main',
+        { opacity: 0, y: -20, duration: 0.1 },
+        1
+      )
+        .to(
+          '.dynamic-reveal__image-panel',
+          {
+            left: '25vw',
+            width: '50vw',
+            top: '35vh',
+            height: '30vh',
+            ease: 'none',
+            autoRound: false,
+            force3D: true
+          },
+          1
+        )
+        .to(
+          '.dynamic-reveal__grid-line--v1',
+          { left: '25vw', ease: 'none', autoRound: false, force3D: true },
+          1
+        )
+        .to(
+          '.dynamic-reveal__grid-line--v2',
+          { left: '75vw', ease: 'none', autoRound: false, force3D: true },
+          1
+        )
+        .to(
+          '.dynamic-reveal__grid-line--h1',
+          { top: '35vh', ease: 'none', autoRound: false, force3D: true },
+          1
+        )
+        .to(
+          '.dynamic-reveal__grid-line--h2',
+          { top: '65vh', ease: 'none', autoRound: false, force3D: true },
+          1
+        )
+        .to(
+          '.dynamic-reveal__figure--3',
+          {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            ease: 'none',
+            force3D: true
+          },
+          1
+        );
+
+      tl.to(
+        '.dynamic-reveal__image-panel',
+        {
+          left: '0vw',
+          width: '100vw',
+          top: '0vh',
+          height: '100vh',
+          ease: 'none',
+          autoRound: false,
+          force3D: true
+        },
+        1.6
+      ).to(
+        '.dynamic-reveal__grid-line, .dynamic-reveal__cross',
+        { opacity: 0, ease: 'none' },
+        1.6
+      );
+    });
+
+    mm.add('(max-width: 47.9rem)', () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: '+=400%',
+          scrub: true,
+          pin: pinWrapper,
+          anticipatePin: 1
+        }
+      });
+
+      tl.to(
+        '.dynamic-reveal__text-panel--intro',
+        { opacity: 0, y: -20, duration: 0.1 },
+        0
+      )
+        .to(
+          '.dynamic-reveal__image-panel',
+          {
+            top: '40vh',
+            height: '45vh',
+            ease: 'none',
+            autoRound: false,
+            force3D: true
+          },
+          0
+        )
+        .to(
+          '.dynamic-reveal__grid-line--h1',
+          { top: '40vh', ease: 'none', autoRound: false, force3D: true },
+          0
+        )
+        .to(
+          '.dynamic-reveal__grid-line--h2',
+          { top: '85vh', ease: 'none', autoRound: false, force3D: true },
+          0
+        )
+        .to(
+          '.dynamic-reveal__figure--2',
+          {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            ease: 'none',
+            force3D: true
+          },
+          0
+        )
+        .to(
+          '.dynamic-reveal__text-panel--main',
+          { opacity: 1, y: 0, ease: 'none', duration: 0.4 },
+          0.4
+        );
+
+      tl.to(
+        '.dynamic-reveal__text-panel--main',
+        { opacity: 0, y: -20, duration: 0.1 },
+        1
+      )
+        .to(
+          '.dynamic-reveal__image-panel',
+          {
+            top: '30vh',
+            height: '35vh',
+            ease: 'none',
+            autoRound: false,
+            force3D: true
+          },
+          1
+        )
+        .to(
+          '.dynamic-reveal__grid-line--h1',
+          { top: '30vh', ease: 'none', autoRound: false, force3D: true },
+          1
+        )
+        .to(
+          '.dynamic-reveal__grid-line--h2',
+          { top: '65vh', ease: 'none', autoRound: false, force3D: true },
+          1
+        )
+        .to(
+          '.dynamic-reveal__figure--3',
+          {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            ease: 'none',
+            force3D: true
+          },
+          1
+        );
+
+      tl.to(
+        '.dynamic-reveal__image-panel',
+        {
+          left: '0vw',
+          width: '100vw',
+          top: '0vh',
+          height: '100vh',
+          ease: 'none',
+          autoRound: false,
+          force3D: true
+        },
+        1.6
+      ).to(
+        '.dynamic-reveal__grid-line, .dynamic-reveal__cross',
+        { opacity: 0, ease: 'none' },
+        1.6
+      );
+    });
+  });
+</script>

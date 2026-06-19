@@ -1,0 +1,344 @@
+---
+// src/components/Partners.astro
+import Button from './Button.astro';
+---
+
+<section
+  class="partners"
+  aria-labelledby="partners-title"
+  itemscope
+  itemtype="https://schema.org/WebPageElement"
+>
+  <div class="partners__header">
+    <div class="partners__label-wrapper">
+      <span class="partners__dot" aria-hidden="true"></span>
+      <h2 id="partners-title" class="partners__label">ΣΥΝΕΡΓΑΤΕΣ</h2>
+    </div>
+
+    <p class="partners__statement">
+      Περισσότερα από 30 χρόνια συνεργασίας με κορυφαίους αρχιτέκτονες,
+      developers και διεθνή brands.
+    </p>
+
+    <Button
+      href="/contact"
+      text="Ζητήστε δείγματα"
+      ariaLabel="Ζητήστε δείγματα υλικών"
+      className="partners__cta"
+    />
+  </div>
+
+  <div
+    class="partners__marquee-wrapper"
+    role="marquee"
+    aria-label="Ονόματα συνεργατών"
+  >
+    <div class="partners__marquee">
+      <div class="partners__marquee-group" role="list">
+        <span
+          class="partner-text"
+          role="listitem"
+          itemscope
+          itemtype="https://schema.org/Organization"
+          ><span itemprop="name">K-Studio</span></span
+        >
+        <span
+          class="partner-text"
+          role="listitem"
+          itemscope
+          itemtype="https://schema.org/Organization"
+          ><span itemprop="name">ISV Architects</span></span
+        >
+        <span
+          class="partner-text"
+          role="listitem"
+          itemscope
+          itemtype="https://schema.org/Organization"
+          ><span itemprop="name">Block722</span></span
+        >
+        <span
+          class="partner-text"
+          role="listitem"
+          itemscope
+          itemtype="https://schema.org/Organization"
+          ><span itemprop="name">Lamda Development</span></span
+        >
+        <span
+          class="partner-text"
+          role="listitem"
+          itemscope
+          itemtype="https://schema.org/Organization"
+          ><span itemprop="name">Dimand Real Estate</span></span
+        >
+        <span
+          class="partner-text"
+          role="listitem"
+          itemscope
+          itemtype="https://schema.org/Organization"
+          ><span itemprop="name">TEMES S.A.</span></span
+        >
+        <span
+          class="partner-text"
+          role="listitem"
+          itemscope
+          itemtype="https://schema.org/Organization"
+          ><span itemprop="name">Sani / Ikos Group</span></span
+        >
+        <span
+          class="partner-text"
+          role="listitem"
+          itemscope
+          itemtype="https://schema.org/Organization"
+          ><span itemprop="name">Domes Resorts</span></span
+        >
+      </div>
+
+      <div class="partners__marquee-group" aria-hidden="true">
+        <span class="partner-text">K-Studio</span>
+        <span class="partner-text">ISV Architects</span>
+        <span class="partner-text">Block722</span>
+        <span class="partner-text">Lamda Development</span>
+        <span class="partner-text">Dimand Real Estate</span>
+        <span class="partner-text">TEMES S.A.</span>
+        <span class="partner-text">Sani / Ikos Group</span>
+        <span class="partner-text">Domes Resorts</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .partners {
+    --marquee-speed: 40s;
+    --marquee-gap: var(--space-2xl);
+
+    position: relative;
+    z-index: 10;
+    inline-size: var(--width-full);
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    padding-inline: var(--space-md);
+  }
+
+  .partners__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding-block: var(--space-xl);
+    border-block-start: var(--border-thin) solid var(--color-muted);
+  }
+
+  .partners__label-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .partners__dot {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    inline-size: 8px;
+    block-size: 8px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-accent);
+    animation: core-breath 3s ease-in-out infinite;
+  }
+
+  .partners__dot::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: inherit;
+    animation: sonar-ripple 3s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  }
+
+  @keyframes core-breath {
+    0%,
+    100% {
+      transform: scale(0.9);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes sonar-ripple {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(3.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+  .partners__label {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    font-weight: 500;
+    background: linear-gradient(
+      90deg,
+      var(--color-accent) 50%,
+      var(--color-bg) 50%
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: text-wipe-pop 3s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  }
+
+  @keyframes text-wipe-pop {
+    0% {
+      background-position: 100% 0;
+      opacity: 1;
+      transform: scale(1);
+    }
+    45% {
+      background-position: 0% 0;
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      background-position: 0% 0;
+      opacity: 0;
+      transform: scale(1.03);
+    }
+    55% {
+      background-position: 100% 0;
+      transform: scale(1);
+    }
+    65%,
+    100% {
+      background-position: 100% 0;
+      opacity: 1;
+    }
+  }
+
+  .partners__statement {
+    font-size: var(--font-size-body-sm);
+    line-height: var(--leading-relaxed);
+    text-transform: uppercase;
+    max-inline-size: var(--width-full);
+  }
+
+  .partners__cta {
+    align-self: flex-start;
+  }
+
+  @media (min-width: 48rem) {
+    .partners__header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-2xl);
+    }
+    .partners__label-wrapper {
+      flex: 1;
+    }
+    .partners__statement {
+      flex: 2;
+      max-inline-size: var(--measure-subhead);
+    }
+    .partners__cta {
+      align-self: auto;
+    }
+  }
+
+  .partners__marquee-wrapper {
+    overflow: hidden;
+    padding-block: var(--space-3xl);
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+  }
+
+  .partners__marquee {
+    display: flex;
+    gap: var(--marquee-gap);
+    will-change: transform;
+  }
+
+  .partners__marquee-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--marquee-gap);
+    min-inline-size: 100%;
+    animation: scroll-x var(--marquee-speed) linear infinite;
+  }
+
+  .partners__marquee:hover .partners__marquee-group {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll-x {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--marquee-gap)));
+    }
+  }
+
+  .partner-text {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h5);
+    font-weight: var(--weight-regular);
+    letter-spacing: var(--tracking-wide);
+    opacity: 0.4;
+    white-space: nowrap;
+    cursor: default;
+    transition: opacity var(--duration-normal) var(--ease-slow);
+  }
+
+  .partner-text:hover {
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .partners__marquee-group,
+    .partners__dot,
+    .partners__label,
+    .partners__dot::before {
+      animation-play-state: paused;
+    }
+  }
+</style>

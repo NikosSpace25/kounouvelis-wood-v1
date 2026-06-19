@@ -1,6 +1,4 @@
-/* =========================================
-   1. CSS RESET & MODERN DEFAULTS
-   ========================================= */
+/* CSS RESET & MODERN DEFAULTS */
 :root {
   interpolate-size: allow-keywords;
 }
@@ -98,9 +96,7 @@ button {
   }
 }
 
-/* =========================================
-   2. SELF-HOSTED FONTS (Variable WOFF2)
-   ========================================= */
+/* SELF-HOSTED FONTS */
 
 /* source serif 4 - headings & display */
 @font-face {
@@ -113,23 +109,21 @@ button {
 
 /* manrope - body text */
 @font-face {
-  src: url('/fonts/Manrope-Variable.woff2') format('woff2'); /* Βεβαιώσου ότι το όνομα αρχείου ταιριάζει */
+  src: url('/fonts/Manrope-Variable.woff2') format('woff2');
   font-family: 'Manrope';
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
-/* =========================================
-   3. DESIGN SYSTEM
-   ========================================= */
+/*  DESIGN SYSTEM */
 :root {
   /* premium colors */
-  --color-bg: #fdfbf7; /* Warm Cream (Φόντο) */
-  --color-text: #222222; /* Charcoal (Κείμενα) */
-  --color-muted: #757169; /* Muted Taupe (Δευτερεύοντα κείμενα/περιγράμματα) */
-  --color-primary: #1a3626; /* Deep Forest Green (Τίτλοι/Brand) */
-  --color-accent: #c5a059; /* Champagne Gold (Buttons/Hover/Λεπτομέρειες) */
+  --color-bg: #fdfbf7;
+  --color-text: #222222;
+  --color-muted: #757169;
+  --color-primary: #1a3626;
+  --color-accent: #c5a059;
 
   /* premium gradients */
   --gradient-primary-fade: linear-gradient(

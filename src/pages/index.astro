@@ -1,5 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Partners from '../components/Partners.astro';
+import DynamicReveal from '../components/DynamicReveal.astro';
 
 const homePageSchema = {
   '@type': 'HomeAndConstructionBusiness',
@@ -75,6 +78,8 @@ const homePageSchema = {
   schemaData={homePageSchema}
 >
   <main>
-    <h2>Καλώς ήρθατε στο Kounouvelis Wood</h2>
+    <Hero />
+    <Partners />
+    <DynamicReveal />
   </main>
 </BaseLayout>
