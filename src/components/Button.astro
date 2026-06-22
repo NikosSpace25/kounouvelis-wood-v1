@@ -1,11 +1,9 @@
 ---
-// src/components/Button.astro
-
 interface Props {
   href: string;
   text: string;
   ariaLabel?: string;
-  className?: string; // Για να του δίνουμε π.χ. partners__btn αν θέλουμε custom alignment
+  className?: string;
 }
 
 const { href, text, ariaLabel, className = '' } = Astro.props;
@@ -18,7 +16,6 @@ const { href, text, ariaLabel, className = '' } = Astro.props;
 
   <span class="sr-only">{text}</span>
 
-  <!-- Χρησιμοποιεί το δικό σου SVG Sprite -->
   <svg class="custom-btn__icon" aria-hidden="true">
     <use href="#icon-arrow-up-right"></use>
   </svg>
@@ -50,6 +47,9 @@ const { href, text, ariaLabel, className = '' } = Astro.props;
     font-weight: var(--weight-medium);
     text-decoration: none;
     cursor: pointer;
+    width: fit-content;
+    max-width: fit-content;
+    flex-shrink: 0;
   }
 
   .custom-btn__text-wrapper {
@@ -62,7 +62,7 @@ const { href, text, ariaLabel, className = '' } = Astro.props;
     display: block;
     position: relative;
     line-height: 1.4;
-    transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+    transition: transform 0.6s var(--ease-slow);
   }
 
   .custom-btn__text::after {
@@ -76,7 +76,7 @@ const { href, text, ariaLabel, className = '' } = Astro.props;
   .custom-btn__icon {
     inline-size: 1.2em;
     block-size: 1.2em;
-    transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+    transition: transform 0.6s var(--ease-slow);
   }
 
   @media (hover: hover) {

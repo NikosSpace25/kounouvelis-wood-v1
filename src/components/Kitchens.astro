@@ -1,0 +1,606 @@
+---
+import { Picture } from 'astro:assets';
+
+const kitchens = [
+  {
+    id: '01',
+    name: 'The Monolith',
+    material: 'Σκούρα Δρυς & Μαύρο Corian',
+    img: 'https://images.unsplash.com/photo-1556910103-1c02745a872f?q=80&w=800&auto=format&fit=crop'
+  },
+  {
+    id: '02',
+    name: 'The Alchemist',
+    material: 'Καπνιστό Ξύλο & Βουρτσισμένος Ορείχαλκος',
+    img: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?q=80&w=800&auto=format&fit=crop'
+  },
+  {
+    id: '03',
+    name: 'The Purist',
+    material: 'Λευκή Δεσποτάκι & Μάρμαρο Calacatta',
+    img: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=800&auto=format&fit=crop'
+  },
+  {
+    id: '04',
+    name: 'The Brutalist',
+    material: 'Εμφανές Μπετόν & Μασίφ Καρυδιά',
+    img: 'https://images.unsplash.com/photo-1556912167-f556f1f39fdf?q=80&w=800&auto=format&fit=crop'
+  },
+  {
+    id: '05',
+    name: 'The Botanist',
+    material: 'Ξύλο Ελιάς & Πράσινο Μάρμαρο Tinos',
+    img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop'
+  }
+];
+---
+
+<section
+  class="kitchens-category"
+  aria-labelledby="kitchens-title"
+  itemscope
+  itemtype="https://schema.org/CollectionPage"
+>
+  <header class="k-intro">
+    <div class="k-intro__content">
+      <h2 id="kitchens-title" class="sr-only" itemprop="headline">
+        Αρχιτεκτονική κουζίνας όπου η λειτουργικότητα συναντά την απόλυτη
+        υλικότητα και φόρμα.
+      </h2>
+
+      <div
+        class="k-intro__heading k-intro__heading--desktop"
+        aria-hidden="true"
+      >
+        <span class="k-line k-line--indented">
+          <span class="k-line-base">Αρχιτεκτονική κουζίνας όπου η</span>
+          <span class="k-line-fill k-line-fill--gold"
+            >Αρχιτεκτονική κουζίνας όπου η</span
+          >
+          <span class="k-line-fill k-line-fill--white"
+            >Αρχιτεκτονική κουζίνας όπου η</span
+          >
+        </span>
+        <span class="k-line">
+          <span class="k-line-base">λειτουργικότητα συναντά την απόλυτη</span>
+          <span class="k-line-fill k-line-fill--gold"
+            >λειτουργικότητα συναντά την απόλυτη</span
+          >
+          <span class="k-line-fill k-line-fill--white"
+            >λειτουργικότητα συναντά την απόλυτη</span
+          >
+        </span>
+        <span class="k-line">
+          <span class="k-line-base">υλικότητα και φόρμα.</span>
+          <span class="k-line-fill k-line-fill--gold">υλικότητα και φόρμα.</span
+          >
+          <span class="k-line-fill k-line-fill--white"
+            >υλικότητα και φόρμα.</span
+          >
+        </span>
+      </div>
+
+      <div class="k-intro__heading k-intro__heading--mobile" aria-hidden="true">
+        <span class="k-line k-line--indented">
+          <span class="k-line-base">Αρχιτεκτονική</span>
+          <span class="k-line-fill k-line-fill--gold">Αρχιτεκτονική</span>
+          <span class="k-line-fill k-line-fill--white">Αρχιτεκτονική</span>
+        </span>
+        <span class="k-line">
+          <span class="k-line-base">κουζίνας όπου η</span>
+          <span class="k-line-fill k-line-fill--gold">κουζίνας όπου η</span>
+          <span class="k-line-fill k-line-fill--white">κουζίνας όπου η</span>
+        </span>
+        <span class="k-line">
+          <span class="k-line-base">λειτουργικότητα</span>
+          <span class="k-line-fill k-line-fill--gold">λειτουργικότητα</span>
+          <span class="k-line-fill k-line-fill--white">λειτουργικότητα</span>
+        </span>
+        <span class="k-line">
+          <span class="k-line-base">συναντά την</span>
+          <span class="k-line-fill k-line-fill--gold">συναντά την</span>
+          <span class="k-line-fill k-line-fill--white">συναντά την</span>
+        </span>
+        <span class="k-line">
+          <span class="k-line-base">απόλυτη υλικότητα</span>
+          <span class="k-line-fill k-line-fill--gold">απόλυτη υλικότητα</span>
+          <span class="k-line-fill k-line-fill--white">απόλυτη υλικότητα</span>
+        </span>
+        <span class="k-line">
+          <span class="k-line-base">και φόρμα.</span>
+          <span class="k-line-fill k-line-fill--gold">και φόρμα.</span>
+          <span class="k-line-fill k-line-fill--white">και φόρμα.</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="k-intro__footer">
+      <p class="k-intro__paragraph" itemprop="description">
+        Σχεδιάζουμε εστιάζοντας στις ανάγκες σας, επιλέγοντας αυστηρά υλικά
+        κορυφαίας ποιότητας για έργα που αντέχουν, ξεχωρίζουν και ορίζουν τον
+        σύγχρονο αρχιτεκτονικό χώρο.
+      </p>
+    </div>
+  </header>
+
+  <div class="k-gallery" aria-label="Συλλογή από custom κατασκευές κουζίνας">
+    <div
+      class="k-gallery__track"
+      role="list"
+      itemscope
+      itemtype="https://schema.org/ItemList"
+    >
+      <meta itemprop="name" content="Συλλογή Custom Κουζινών" />
+
+      <div class="k-gallery__group">
+        {
+          kitchens.map((k, index) => (
+            <article
+              class="k-card"
+              role="listitem"
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/Product"
+            >
+              <meta itemprop="position" content={String(index + 1)} />
+              <figure
+                class="k-card__image-wrapper"
+                itemprop="image"
+                itemscope
+                itemtype="https://schema.org/ImageObject"
+              >
+                <img
+                  src={k.img}
+                  alt={`Κουζίνα: ${k.name}`}
+                  class="k-card__image"
+                  loading="lazy"
+                  decoding="async"
+                  itemprop="contentUrl"
+                />
+              </figure>
+              <div class="k-card__meta">
+                <span class="k-card__id" itemprop="sku">
+                  {k.id}
+                </span>
+                <h3 class="k-card__name" itemprop="name">
+                  {k.name}
+                </h3>
+                <p class="k-card__material" itemprop="material">
+                  {k.material}
+                </p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+
+      <div class="k-gallery__group" aria-hidden="true">
+        {
+          kitchens.map(k => (
+            <article class="k-card">
+              <figure class="k-card__image-wrapper">
+                <img
+                  src={k.img}
+                  alt=""
+                  class="k-card__image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="k-card__meta">
+                <span class="k-card__id">{k.id}</span>
+                <h3 class="k-card__name">{k.name}</h3>
+                <p class="k-card__material">{k.material}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- styling section -->
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .kitchens-category {
+    --color-gold: #c5a059;
+    --text-dim: rgba(255, 255, 255, 0.15);
+    --noise-url: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    position: relative;
+    inline-size: 100vw;
+    overflow: hidden;
+  }
+
+  .k-intro {
+    position: relative;
+    inline-size: 100vw;
+    min-block-size: var(--height-100dvh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 5vw;
+    padding-block: 15vh 5vh;
+    gap: var(--space-2xl);
+  }
+
+  .k-intro__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .k-intro__heading {
+    font-family: var(--font-display);
+    font-size: var(--font-size-display);
+    line-height: var(--leading-none);
+    font-weight: var(--weight-medium);
+    letter-spacing: var(--tracking-tighter);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .k-intro__heading--desktop {
+    display: flex;
+  }
+  .k-intro__heading--mobile {
+    display: none;
+  }
+
+  .k-line {
+    position: relative;
+    display: block;
+    width: fit-content;
+    --fill-percent: -30%;
+  }
+
+  .k-line--indented {
+    margin-inline-start: 18vw;
+  }
+
+  .k-line-base {
+    color: var(--color-muted);
+    display: block;
+  }
+
+  .k-line-fill {
+    position: absolute;
+    inset: 0;
+    display: block;
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+    -webkit-mask-size:
+      100% 100%,
+      120px 120px;
+    mask-size:
+      100% 100%,
+      120px 120px;
+    -webkit-mask-repeat: no-repeat, repeat;
+    mask-repeat: no-repeat, repeat;
+  }
+
+  .k-line-fill--gold {
+    color: var(--color-gold);
+    -webkit-mask-image:
+      linear-gradient(
+        110deg,
+        #000 var(--fill-percent),
+        rgba(0, 0, 0, 0.4) calc(var(--fill-percent) + 15%),
+        transparent calc(var(--fill-percent) + 25%)
+      ),
+      var(--noise-url);
+    mask-image:
+      linear-gradient(
+        110deg,
+        #000 var(--fill-percent),
+        rgba(0, 0, 0, 0.4) calc(var(--fill-percent) + 15%),
+        transparent calc(var(--fill-percent) + 25%)
+      ),
+      var(--noise-url);
+    z-index: 1;
+  }
+
+  .k-line-fill--white {
+    color: var(--color-bg);
+    -webkit-mask-image:
+      linear-gradient(
+        110deg,
+        #000 calc(var(--fill-percent) - 12%),
+        rgba(0, 0, 0, 0.6) calc(var(--fill-percent) - 4%),
+        transparent calc(var(--fill-percent) + 2%)
+      ),
+      var(--noise-url);
+    mask-image:
+      linear-gradient(
+        110deg,
+        #000 calc(var(--fill-percent) - 12%),
+        rgba(0, 0, 0, 0.6) calc(var(--fill-percent) - 4%),
+        transparent calc(var(--fill-percent) + 2%)
+      ),
+      var(--noise-url);
+    z-index: 2;
+  }
+
+  .k-intro__footer {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .k-intro__paragraph {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body-sm);
+    line-height: var(--leading-loose);
+    color: var(--color-muted);
+    max-inline-size: var(--measure-lead);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+  }
+
+  .k-gallery {
+    inline-size: 100vw;
+    padding-block-start: 5vh;
+    padding-block-end: 15vh;
+    overflow: hidden;
+    perspective: 1000px;
+  }
+
+  .k-gallery__track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    transform-style: preserve-3d;
+  }
+
+  .k-gallery__group {
+    display: flex;
+    gap: 4vw;
+    padding-inline-end: 4vw;
+    transform-style: preserve-3d;
+  }
+
+  .k-card {
+    inline-size: clamp(280px, 24vw, 400px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    transform-origin: center center;
+    will-change: transform;
+    transform-style: preserve-3d;
+  }
+
+  .k-card__image-wrapper {
+    inline-size: var(--width-full);
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background-color: var(--color-text);
+  }
+
+  .k-card__image {
+    inline-size: var(--width-full);
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .k-card__meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      'id name'
+      'id material';
+    column-gap: var(--space-md);
+    align-items: baseline;
+    padding-block-start: var(--space-2xs);
+  }
+
+  .k-card__id {
+    grid-area: id;
+    font-family: var(--font-mono);
+    font-size: var(--font-size-body-sm);
+    color: var(--color-accent);
+  }
+
+  .k-card__name {
+    grid-area: name;
+    font-family: var(--font-body);
+    font-size: var(--font-size-body-lg);
+    font-weight: var(--weight-regular);
+    margin: 0;
+  }
+
+  .k-card__material {
+    grid-area: material;
+    font-size: var(--font-size-body-sm);
+    color: var(--color-muted);
+    margin: 0.2rem 0 0 0;
+  }
+
+  @media (max-width: 48rem) {
+    .k-intro__heading--desktop {
+      display: none;
+    }
+    .k-intro__heading--mobile {
+      display: flex;
+    }
+
+    .k-intro {
+      gap: var(--space-sm);
+    }
+    .k-intro__heading {
+      font-size: var(--font-size-h2);
+      line-height: var(--leading-none);
+    }
+    .k-line--indented {
+      margin-inline-start: 12vw;
+    }
+    .k-intro__content {
+      margin-block-end: 10vh;
+    }
+    .k-gallery {
+      padding-block-start: 5vh;
+    }
+    .k-gallery__group {
+      gap: 8vw;
+      padding-inline-end: 8vw;
+    }
+    .k-card {
+      inline-size: clamp(260px, 75vw, 320px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .k-line {
+      --fill-percent: 160%;
+    }
+    .k-line-fill {
+      mask-image: none;
+      -webkit-mask-image: none;
+    }
+    .k-gallery__track,
+    .k-card {
+      transform: none;
+      will-change: auto;
+    }
+  }
+</style>
+
+<!-- interactive section -->
+<script>
+  import gsap from 'gsap';
+  import ScrollTrigger from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+    if (prefersReducedMotion) return;
+
+    let mm = gsap.matchMedia();
+
+    mm.add('(min-width: 48rem)', () => {
+      const desktopLines = gsap.utils.toArray(
+        '.k-intro__heading--desktop .k-line'
+      );
+      desktopLines.forEach((line: any) => {
+        gsap.fromTo(
+          line,
+          { '--fill-percent': '-30%' },
+          {
+            '--fill-percent': '160%',
+            scrollTrigger: {
+              trigger: line,
+              start: 'top center+=30%',
+              end: 'bottom center-=20%',
+              scrub: 1.2
+            }
+          }
+        );
+      });
+    });
+
+    mm.add('(max-width: 48rem)', () => {
+      const mobileLines = gsap.utils.toArray(
+        '.k-intro__heading--mobile .k-line'
+      );
+      mobileLines.forEach((line: any) => {
+        gsap.fromTo(
+          line,
+          { '--fill-percent': '-30%' },
+          {
+            '--fill-percent': '160%',
+            scrollTrigger: {
+              trigger: line,
+              start: 'top center+=30%',
+              end: 'bottom center-=20%',
+              scrub: 1.2
+            }
+          }
+        );
+      });
+    });
+
+    const track = document.querySelector('.k-gallery__track') as HTMLElement;
+    const cards = gsap.utils.toArray('.k-card');
+
+    if (!track || cards.length === 0) return;
+
+    let getDistance = () => track.scrollWidth / 2;
+
+    let marqueeTween = gsap.to(track, {
+      x: () => -getDistance(),
+      duration: 35,
+      ease: 'none',
+      repeat: -1,
+      overwrite: 'auto',
+      modifiers: {
+        x: gsap.utils.unitize(x => parseFloat(x) % getDistance())
+      }
+    });
+
+    let proxy = { skew: 0, rotY: 0 };
+    const setSkew = gsap.quickSetter(cards, 'skewX', 'deg');
+    const setRotY = gsap.quickSetter(cards, 'rotationY', 'deg');
+
+    const clampSkew = gsap.utils.clamp(-15, 15);
+    const clampRotY = gsap.utils.clamp(-25, 25);
+
+    ScrollTrigger.create({
+      trigger: document.body,
+      start: 0,
+      end: 'max',
+      onUpdate: self => {
+        let vel = self.getVelocity();
+
+        let targetTimeScale = 1 + Math.abs(vel / 400);
+        gsap.to(marqueeTween, {
+          timeScale: targetTimeScale,
+          duration: 0.8,
+          ease: 'power2.out',
+          overwrite: true
+        });
+
+        let targetSkew = clampSkew(vel / -100);
+        let targetRotY = clampRotY(vel / -60);
+
+        if (
+          Math.abs(targetSkew) > Math.abs(proxy.skew) ||
+          Math.abs(targetRotY) > Math.abs(proxy.rotY)
+        ) {
+          proxy.skew = targetSkew;
+          proxy.rotY = targetRotY;
+
+          gsap.to(proxy, {
+            skew: 0,
+            rotY: 0,
+            duration: 1.5,
+            ease: 'elastic.out(1, 0.5)',
+            overwrite: true,
+            onUpdate: () => {
+              setSkew(proxy.skew);
+              setRotY(proxy.rotY);
+            }
+          });
+        }
+      }
+    });
+  });
+</script>

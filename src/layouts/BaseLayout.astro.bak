@@ -33,7 +33,7 @@ const finalSchema = {
 
     <link
       rel="preload"
-      href="/fonts/Source-Serif-4-Variable-Roman.woff2"
+      href="/fonts/SourceSerif4Variable-Roman.woff2"
       as="font"
       type="font/woff2"
       crossorigin="anonymous"

@@ -66,6 +66,7 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
       class="dynamic-reveal__image-panel"
       role="list"
       aria-label="Οπτική παρουσίαση έργων και εξειδίκευσης"
+      itemprop="hasPart"
       itemscope
       itemtype="https://schema.org/ImageGallery"
     >
@@ -90,7 +91,7 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
       >
       </div>
 
-      <div class="dynamic-reveal__media-bounds">
+      <div class="dynamic-reveal__media-bounds" role="presentation">
         <figure
           class="dynamic-reveal__figure dynamic-reveal__figure--1"
           role="listitem"
@@ -143,7 +144,6 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
   </div>
 </section>
 
-<!-- styling section -->
 <style>
   .sr-only {
     position: absolute;
@@ -232,7 +232,7 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
 
   .dynamic-reveal__text-panel--main {
     inset-inline-start: 5vw;
-    inset-block-start: 15vh;
+    inset-block-start: 10vh;
     inline-size: 90vw;
     opacity: 0;
     transform: translateY(20px);
@@ -249,7 +249,7 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
 
   .dynamic-reveal__btn {
     align-self: flex-start;
-    margin-block-start: 0.5rem;
+    margin-block-start: var(--space-2xs);
   }
 
   .dynamic-reveal__image-panel {
@@ -291,7 +291,7 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
   }
 
   .dynamic-reveal__cross::before {
-    inline-size: 100%;
+    inline-size: var(--width-full);
     block-size: 1px;
     inset-block-start: 50%;
     inset-inline-start: 0;
@@ -338,9 +338,17 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
     clip-path: polygon(100% 0, 100% 0, 120% 100%, 120% 100%);
   }
 
+  .dynamic-reveal__figure :global(picture) {
+    display: block;
+    position: absolute;
+    inset: 0;
+    inline-size: var(--width-full);
+    block-size: 100%;
+  }
+
   .dynamic-reveal__image {
     display: block;
-    inline-size: 100%;
+    inline-size: var(--width-full);
     block-size: 100%;
     object-fit: cover;
     transform: translateZ(0);
@@ -390,32 +398,13 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
   }
 </style>
 
-<!-- interactive section -->
 <script>
   import gsap from 'gsap';
   import ScrollTrigger from 'gsap/ScrollTrigger';
-  import Lenis from '@studio-freight/lenis';
 
   gsap.registerPlugin(ScrollTrigger);
 
   document.addEventListener('DOMContentLoaded', () => {
-    const lenis = new Lenis({
-      duration: 1.4,
-      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-      infinite: false
-    });
-
-    lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add(time => {
-      lenis.raf(time * 1000);
-    });
-    gsap.ticker.lagSmoothing(0);
-
     const section = document.querySelector('.dynamic-reveal');
     const pinWrapper = document.querySelector('.dynamic-reveal__pin');
 
@@ -431,7 +420,8 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
           end: '+=400%',
           scrub: true,
           pin: pinWrapper,
-          anticipatePin: 1
+          anticipatePin: 1,
+          invalidateOnRefresh: true
         }
       });
 
@@ -542,20 +532,48 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
           left: '0vw',
           width: '100vw',
           top: '0vh',
-          height: '100vh',
+          height: '100dvh',
           ease: 'none',
           autoRound: false,
           force3D: true
         },
         1.6
-      ).to(
-        '.dynamic-reveal__grid-line, .dynamic-reveal__cross',
-        { opacity: 0, ease: 'none' },
-        1.6
-      );
+      )
+        .to(
+          '.dynamic-reveal__image',
+          { scale: 1.12, ease: 'none', force3D: true },
+          1.6
+        )
+        .to(
+          '.dynamic-reveal__grid-line--v1',
+          { left: '0vw', ease: 'none', autoRound: false, force3D: true },
+          1.6
+        )
+        .to(
+          '.dynamic-reveal__grid-line--v2',
+          { left: '100vw', ease: 'none', autoRound: false, force3D: true },
+          1.6
+        )
+        .to(
+          '.dynamic-reveal__grid-line--h1',
+          { top: '0vh', ease: 'none', autoRound: false, force3D: true },
+          1.6
+        )
+        .to(
+          '.dynamic-reveal__grid-line--h2',
+          { top: '100dvh', ease: 'none', autoRound: false, force3D: true },
+          1.6
+        )
+        .to(
+          '.dynamic-reveal__grid-line, .dynamic-reveal__cross',
+          { opacity: 0, ease: 'none' },
+          2.0
+        );
+
+      tl.to({}, { duration: 0.4 });
     });
 
-    mm.add('(max-width: 47.9rem)', () => {
+    mm.add('(max-width: 47.99rem)', () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
@@ -563,7 +581,8 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
           end: '+=400%',
           scrub: true,
           pin: pinWrapper,
-          anticipatePin: 1
+          anticipatePin: 1,
+          invalidateOnRefresh: true
         }
       });
 
@@ -575,8 +594,8 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
         .to(
           '.dynamic-reveal__image-panel',
           {
-            top: '40vh',
-            height: '45vh',
+            top: '50vh',
+            height: '40vh',
             ease: 'none',
             autoRound: false,
             force3D: true
@@ -585,12 +604,12 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
         )
         .to(
           '.dynamic-reveal__grid-line--h1',
-          { top: '40vh', ease: 'none', autoRound: false, force3D: true },
+          { top: '50vh', ease: 'none', autoRound: false, force3D: true },
           0
         )
         .to(
           '.dynamic-reveal__grid-line--h2',
-          { top: '85vh', ease: 'none', autoRound: false, force3D: true },
+          { top: '90vh', ease: 'none', autoRound: false, force3D: true },
           0
         )
         .to(
@@ -616,8 +635,8 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
         .to(
           '.dynamic-reveal__image-panel',
           {
-            top: '30vh',
-            height: '35vh',
+            top: '35vh',
+            height: '40vh',
             ease: 'none',
             autoRound: false,
             force3D: true
@@ -626,12 +645,12 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
         )
         .to(
           '.dynamic-reveal__grid-line--h1',
-          { top: '30vh', ease: 'none', autoRound: false, force3D: true },
+          { top: '35vh', ease: 'none', autoRound: false, force3D: true },
           1
         )
         .to(
           '.dynamic-reveal__grid-line--h2',
-          { top: '65vh', ease: 'none', autoRound: false, force3D: true },
+          { top: '75vh', ease: 'none', autoRound: false, force3D: true },
           1
         )
         .to(
@@ -644,23 +663,53 @@ import imgPhil3 from '../assets/modern-walk-in-closet.jpg';
           1
         );
 
-      tl.to(
+      tl.fromTo(
         '.dynamic-reveal__image-panel',
+        { left: '5vw', width: '90vw' },
         {
           left: '0vw',
           width: '100vw',
           top: '0vh',
-          height: '100vh',
+          height: '100dvh',
           ease: 'none',
           autoRound: false,
-          force3D: true
+          force3D: true,
+          immediateRender: false
         },
         1.6
-      ).to(
-        '.dynamic-reveal__grid-line, .dynamic-reveal__cross',
-        { opacity: 0, ease: 'none' },
-        1.6
-      );
+      )
+        .to(
+          '.dynamic-reveal__image',
+          { scale: 1.12, ease: 'none', force3D: true },
+          1.6
+        )
+        .to(
+          '.dynamic-reveal__grid-line--v1',
+          { left: '0vw', ease: 'none', autoRound: false, force3D: true },
+          1.6
+        )
+        .to(
+          '.dynamic-reveal__grid-line--v2',
+          { left: '100vw', ease: 'none', autoRound: false, force3D: true },
+          1.6
+        )
+        .to(
+          '.dynamic-reveal__grid-line--h1',
+          { top: '0vh', ease: 'none', autoRound: false, force3D: true },
+          1.6
+        )
+        .to(
+          '.dynamic-reveal__grid-line--h2',
+          { top: '100dvh', ease: 'none', autoRound: false, force3D: true },
+          1.6
+        )
+        .to(
+          '.dynamic-reveal__grid-line, .dynamic-reveal__cross',
+          { opacity: 0, ease: 'none' },
+          2.0
+        );
+
+      tl.to({}, { duration: 0.6 });
     });
   });
 </script>
