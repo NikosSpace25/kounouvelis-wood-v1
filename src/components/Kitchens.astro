@@ -1,42 +1,46 @@
 ---
 import { Picture } from 'astro:assets';
 
+import imgKitchenMarble from '../assets/kitchen-marble.jpg';
+import imgKitchenOven from '../assets/kitchen-with-counter-oven.jpg';
+
 const kitchens = [
   {
     id: '01',
     name: 'The Monolith',
     material: 'Σκούρα Δρυς & Μαύρο Corian',
-    img: 'https://images.unsplash.com/photo-1556910103-1c02745a872f?q=80&w=800&auto=format&fit=crop'
+    img: imgKitchenMarble
   },
   {
     id: '02',
     name: 'The Alchemist',
     material: 'Καπνιστό Ξύλο & Βουρτσισμένος Ορείχαλκος',
-    img: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?q=80&w=800&auto=format&fit=crop'
+    img: imgKitchenOven
   },
   {
     id: '03',
     name: 'The Purist',
     material: 'Λευκή Δεσποτάκι & Μάρμαρο Calacatta',
-    img: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=800&auto=format&fit=crop'
+    img: imgKitchenMarble
   },
   {
     id: '04',
     name: 'The Brutalist',
     material: 'Εμφανές Μπετόν & Μασίφ Καρυδιά',
-    img: 'https://images.unsplash.com/photo-1556912167-f556f1f39fdf?q=80&w=800&auto=format&fit=crop'
+    img: imgKitchenOven
   },
   {
     id: '05',
     name: 'The Botanist',
     material: 'Ξύλο Ελιάς & Πράσινο Μάρμαρο Tinos',
-    img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop'
+    img: imgKitchenMarble
   }
 ];
 ---
 
 <section
   class="kitchens-category"
+  role="region"
   aria-labelledby="kitchens-title"
   itemscope
   itemtype="https://schema.org/CollectionPage"
@@ -123,7 +127,11 @@ const kitchens = [
     </div>
   </header>
 
-  <div class="k-gallery" aria-label="Συλλογή από custom κατασκευές κουζίνας">
+  <div
+    class="k-gallery"
+    role="region"
+    aria-label="Συλλογή από custom κατασκευές κουζίνας"
+  >
     <div
       class="k-gallery__track"
       role="list"
@@ -138,36 +146,46 @@ const kitchens = [
             <article
               class="k-card"
               role="listitem"
+              tabindex="0"
               itemprop="itemListElement"
               itemscope
-              itemtype="https://schema.org/Product"
+              itemtype="https://schema.org/ListItem"
             >
               <meta itemprop="position" content={String(index + 1)} />
-              <figure
-                class="k-card__image-wrapper"
-                itemprop="image"
+
+              <div
+                class="k-card__inner"
+                itemprop="item"
                 itemscope
-                itemtype="https://schema.org/ImageObject"
+                itemtype="https://schema.org/Product"
               >
-                <img
-                  src={k.img}
-                  alt={`Κουζίνα: ${k.name}`}
-                  class="k-card__image"
-                  loading="lazy"
-                  decoding="async"
-                  itemprop="contentUrl"
-                />
-              </figure>
-              <div class="k-card__meta">
-                <span class="k-card__id" itemprop="sku">
-                  {k.id}
-                </span>
-                <h3 class="k-card__name" itemprop="name">
-                  {k.name}
-                </h3>
-                <p class="k-card__material" itemprop="material">
-                  {k.material}
-                </p>
+                <figure
+                  class="k-card__image-wrapper"
+                  itemprop="image"
+                  itemscope
+                  itemtype="https://schema.org/ImageObject"
+                >
+                  <Picture
+                    src={k.img}
+                    formats={['avif', 'webp']}
+                    alt={`Αρχιτεκτονική κατασκευή κουζίνας: ${k.name}`}
+                    class="k-card__image"
+                    loading="lazy"
+                    decoding="async"
+                    itemprop="contentUrl"
+                  />
+                </figure>
+                <div class="k-card__meta">
+                  <span class="k-card__id" itemprop="sku">
+                    {k.id}
+                  </span>
+                  <h3 class="k-card__name" itemprop="name">
+                    {k.name}
+                  </h3>
+                  <p class="k-card__material" itemprop="material">
+                    {k.material}
+                  </p>
+                </div>
               </div>
             </article>
           ))
@@ -178,19 +196,22 @@ const kitchens = [
         {
           kitchens.map(k => (
             <article class="k-card">
-              <figure class="k-card__image-wrapper">
-                <img
-                  src={k.img}
-                  alt=""
-                  class="k-card__image"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-              <div class="k-card__meta">
-                <span class="k-card__id">{k.id}</span>
-                <h3 class="k-card__name">{k.name}</h3>
-                <p class="k-card__material">{k.material}</p>
+              <div class="k-card__inner">
+                <figure class="k-card__image-wrapper">
+                  <Picture
+                    src={k.img}
+                    formats={['avif', 'webp']}
+                    alt=""
+                    class="k-card__image"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+                <div class="k-card__meta">
+                  <span class="k-card__id">{k.id}</span>
+                  <h3 class="k-card__name">{k.name}</h3>
+                  <p class="k-card__material">{k.material}</p>
+                </div>
               </div>
             </article>
           ))
@@ -384,6 +405,16 @@ const kitchens = [
     transform-origin: center center;
     will-change: transform;
     transform-style: preserve-3d;
+    border-radius: var(--radius-sm);
+  }
+
+  .k-card:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  .k-card__inner {
+    display: contents;
   }
 
   .k-card__image-wrapper {
@@ -391,6 +422,13 @@ const kitchens = [
     aspect-ratio: 4 / 5;
     overflow: hidden;
     background-color: var(--color-text);
+    margin: 0;
+  }
+
+  .k-card__image-wrapper :global(picture) {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
   }
 
   .k-card__image {
@@ -432,7 +470,7 @@ const kitchens = [
     margin: 0.2rem 0 0 0;
   }
 
-  @media (max-width: 48rem) {
+  @media (max-width: 47.99rem) {
     .k-intro__heading--desktop {
       display: none;
     }
@@ -492,6 +530,7 @@ const kitchens = [
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;
+
     if (prefersReducedMotion) return;
 
     let mm = gsap.matchMedia();
@@ -517,7 +556,7 @@ const kitchens = [
       });
     });
 
-    mm.add('(max-width: 48rem)', () => {
+    mm.add('(max-width: 47.99rem)', () => {
       const mobileLines = gsap.utils.toArray(
         '.k-intro__heading--mobile .k-line'
       );
