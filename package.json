@@ -21,6 +21,8 @@
     "three": "^0.184.0"
   },
   "devDependencies": {
-    "@types/three": "^0.184.1"
+    "@types/three": "^0.184.1",
+    "prettier": "^3.8.4",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

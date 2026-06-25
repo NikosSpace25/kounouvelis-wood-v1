@@ -1,0 +1,574 @@
+---
+const reviewsCol1 = [
+  {
+    name: 'Αλέξανδρος Παππάς',
+    text: 'Η προσοχή στη λεπτομέρεια είναι ασύλληπτη. Η walk-in ντουλάπα μας μοιάζει με μπουτίκ υψηλής ραπτικής.',
+    rating: 5
+  },
+  {
+    name: 'Μαρία Κοντογιάννη',
+    text: 'Το Corian και ο κρυφός φωτισμός δημιούργησαν ένα μονολιθικό, απόλυτα καθαρό αποτέλεσμα. Εξαιρετικοί επαγγελματίες.',
+    rating: 5
+  },
+  {
+    name: 'Δημήτρης Βασιλείου',
+    text: 'Από τον αρχικό σχεδιασμό μέχρι την τελική τοποθέτηση, η εμπειρία ήταν απόλυτα sur-mesure. Το ξύλο ευκαλύπτου είναι μαγικό.',
+    rating: 5
+  },
+  {
+    name: 'Σοφία Λινού',
+    text: 'Κατάφεραν να ενσωματώσουν τις ντουλάπες στην αρχιτεκτονική του υπνοδωματίου μας με τρόπο που δεν έχω ξαναδεί.',
+    rating: 5
+  },
+  {
+    name: 'Κωνσταντίνος Γεωργίου',
+    text: 'Η brutalist αισθητική του Nero Marquina σε συνδυασμό με τις γυάλινες προθήκες άλλαξε εντελώς την αίσθηση του χώρου.',
+    rating: 5
+  }
+];
+
+const reviewsCol2 = [
+  {
+    name: 'Ελένη Μακρή',
+    text: 'Απλά κορυφαίοι. Η αισθητική, τα υλικά και η λειτουργικότητα βρίσκονται σε απόλυτη αρμονία.',
+    rating: 5
+  },
+  {
+    name: 'Νίκος Αντωνιάδης',
+    text: 'Δεν φτιάχνουν απλά ντουλάπες, δημιουργούν αρχιτεκτονικές εμπειρίες. Η ποιότητα κατασκευής είναι αψεγάδιαστη.',
+    rating: 5
+  },
+  {
+    name: 'Άννα Παναγιώτου',
+    text: 'Ο φωτισμός μέσα στις προθήκες και η επένδυση από δέρμα έκαναν τον χώρο μου να θυμίζει showroom ιταλικού οίκου.',
+    rating: 5
+  },
+  {
+    name: 'Γιώργος Σταύρου',
+    text: 'Σπάνια συναντάς τέτοια συνέπεια στην ποιότητα των υλικών. Οι μηχανισμοί είναι εντελώς αθόρυβοι και στιβαροί.',
+    rating: 5
+  },
+  {
+    name: 'Κατερίνα Μιχαήλ',
+    text: 'Το επίπεδο του custom design είναι μοναδικό. Διάβασαν ακριβώς τις ανάγκες μου και το αποτέλεσμα είναι ένα έργο τέχνης.',
+    rating: 5
+  }
+];
+
+const reviewsCol3 = [
+  {
+    name: 'Χρήστος Ιωάννου',
+    text: 'Η επικοινωνία, ο σχεδιασμός και το τελικό fit and finish είναι σε επίπεδα που σπάνια βρίσκεις στην Ελλάδα.',
+    rating: 5
+  },
+  {
+    name: 'Βασιλική Ρήγα',
+    text: 'Μια πραγματική ιεροτελεστία πολυτέλειας. Κάθε πρωί που διαλέγω ρούχα, νιώθω ότι βρίσκομαι στο δικό μου private atelier.',
+    rating: 5
+  },
+  {
+    name: 'Πέτρος Νικολάου',
+    text: 'Καθαρές γραμμές, minimal αισθητική και μια ποιότητα ξύλου που μαγνητίζει το βλέμμα. Τους συνιστώ ανεπιφύλακτα.',
+    rating: 5
+  },
+  {
+    name: 'Μυρτώ Σαμαρά',
+    text: 'Η εντοιχισμένη κατασκευή που μας έφτιαξαν εξαφάνισε την ακαταστασία και έδωσε αρχιτεκτονική πνοή στο δωμάτιο.',
+    rating: 5
+  },
+  {
+    name: 'Ανδρέας Λουκά',
+    text: 'Masterpiece. Από τα bespoke χερούλια μέχρι τον ατμοσφαιρικό φωτισμό, η δουλειά τους είναι απλά αξεπέραστη.',
+    rating: 5
+  }
+];
+
+const allColumns = [reviewsCol1, reviewsCol2, reviewsCol3];
+---
+
+<section
+  class="reviews-section"
+  aria-labelledby="reviews-heading"
+  itemscope
+  itemtype="https://schema.org/ItemList"
+>
+  <h2 id="reviews-heading" class="sr-only" itemprop="name">
+    Αξιολογήσεις Πελατών
+  </h2>
+
+  <header class="rev-header">
+    <span class="rev-header-label">[ ΤΙ ΛΕΝΕ ΓΙΑ ΕΜΑΣ ]</span>
+
+    <a
+      href="https://g.page/r/YOUR_GOOGLE_LINK/review"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="rev-header-link"
+      aria-label="Αξιολόγησε την εμπειρία σου στην Google"
+    >
+      <span class="cta-text-wrapper">
+        ΑΞΙΟΛΟΓΗΣΕ ΤΗΝ ΕΜΠΕΙΡΙΑ ΣΟΥ
+        <span class="cta-line"></span>
+      </span>
+      <span class="rev-header-plus">+</span>
+    </a>
+  </header>
+
+  <div class="rev-container">
+    <div class="rev-grid">
+      {
+        allColumns.map((column, colIndex) => (
+          <div
+            class={`rev-track rev-track--${colIndex + 1}`}
+            data-track-index={colIndex}
+          >
+            <ul class="rev-list" role="list">
+              {column.map((review, i) => (
+                <li
+                  class="rev-card"
+                  role="listitem"
+                  tabindex="0"
+                  itemprop="itemListElement"
+                  itemscope
+                  itemtype="https://schema.org/Review"
+                >
+                  {/* Schema.org Rating */}
+                  <div
+                    itemprop="reviewRating"
+                    itemscope
+                    itemtype="https://schema.org/Rating"
+                    class="sr-only"
+                  >
+                    <meta
+                      itemprop="ratingValue"
+                      content={String(review.rating)}
+                    />
+                    <meta itemprop="bestRating" content="5" />
+                  </div>
+
+                  <div class="rev-stars" aria-hidden="true">
+                    {'★★★★★'}
+                  </div>
+
+                  <blockquote class="rev-quote">
+                    <p itemprop="reviewBody">{review.text}</p>
+                  </blockquote>
+
+                  <div
+                    class="rev-author"
+                    itemprop="author"
+                    itemscope
+                    itemtype="https://schema.org/Person"
+                  >
+                    <span itemprop="name">{review.name}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="rev-cursor" aria-hidden="true">
+    <span class="rev-cursor-text">[ ΣΥΡΕ ]</span>
+  </div>
+</section>
+
+<!-- styling section -->
+<style>
+  .sr-only {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .reviews-section {
+    position: relative;
+    inline-size: 100vw;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    overflow: hidden;
+    padding-block-start: 10vh;
+    padding-block-end: 20vh;
+    cursor: default;
+  }
+
+  .rev-header {
+    position: relative;
+    inline-size: var(--width-full);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    margin-block-end: 10vh;
+    z-index: 20;
+    font-family: var(--font-body);
+    font-size: var(--font-size-caption);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+  }
+
+  .rev-header-label {
+    color: var(--color-bg);
+  }
+
+  .rev-header-link {
+    color: var(--color-bg);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    cursor: pointer;
+  }
+
+  .cta-text-wrapper {
+    position: relative;
+    display: inline-flex;
+    padding-block-end: var(--space-2xs);
+    overflow: hidden;
+  }
+
+  .cta-line {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inline-size: var(--width-full);
+    block-size: 1px;
+    background-color: currentColor;
+    transform: translateX(0);
+    transition: transform 0.55s var(--ease-smooth);
+  }
+
+  .rev-header-link:hover .cta-line {
+    transform: translateX(-95%);
+  }
+
+  .rev-header-plus {
+    font-size: var(--font-size-body-lg);
+    font-weight: var(--weight-light);
+  }
+
+  .rev-cursor {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    padding: 0.1rem var(--space-2xs);
+    background-color: var(--color-accent);
+    pointer-events: none;
+    z-index: var(--z-sticky);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    opacity: 0;
+  }
+
+  .rev-cursor.is-dragging {
+    background-color: var(--color-bg);
+  }
+
+  .rev-cursor-text {
+    font-family: var(--font-body);
+    font-size: var(--font-size-caption);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-caps);
+    white-space: nowrap;
+  }
+
+  .rev-container {
+    inline-size: 100vw;
+  }
+
+  .rev-grid {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 4vw, 4rem);
+    inline-size: var(--width-full);
+  }
+
+  .rev-track {
+    inline-size: 100vw;
+    cursor: grab;
+    user-select: none;
+    will-change: transform;
+  }
+
+  .rev-track:active {
+    cursor: grabbing;
+  }
+
+  .rev-list {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(1.5rem, 3vw, 3rem);
+    padding-inline: 5vw;
+    inline-size: max-content;
+    will-change: transform;
+  }
+
+  .rev-card {
+    inline-size: clamp(280px, 30vw, 420px);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: var(--border-thin) solid var(--color-muted);
+    border-radius: 8px;
+    padding: clamp(2rem, 3vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition:
+      background-color 0.3s var(--ease-smooth),
+      border-color 0.3s var(--ease-smooth);
+    outline: none;
+    will-change: transform, opacity, clip-path;
+  }
+
+  .rev-card:hover,
+  .rev-card:focus-visible {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .rev-card:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-accent);
+  }
+
+  .rev-stars {
+    font-size: var(--font-size-body-lg);
+    color: var(--color-accent);
+    letter-spacing: var(--tracking-caps);
+  }
+
+  .rev-quote {
+    margin: 0;
+    flex: 1;
+  }
+  .rev-quote p {
+    font-family: var(--font-display);
+    font-size: var(--font-size-body);
+    line-height: var(--leading-relaxed);
+    font-weight: var(--weight-light);
+    color: var(--color-bg);
+    margin: 0;
+  }
+
+  .rev-author {
+    font-family: var(--font-body);
+    font-size: var(--font-size-caption);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: rgba(255, 255, 255, 0.5);
+    border-block-start: var(--border-thin) solid rgba(255, 255, 255, 0.1);
+    padding-block-start: var(--space-md);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rev-track {
+      transform: none;
+    }
+    .rev-list {
+      transform: none;
+      flex-wrap: wrap;
+      inline-size: var(--width-full);
+      justify-content: center;
+    }
+
+    .rev-card {
+      opacity: 1;
+      clip-path: none;
+    }
+    .rev-cursor {
+      display: none;
+    }
+    .reviews-section {
+      cursor: default;
+    }
+  }
+</style>
+
+<!-- interactive section -->
+<script>
+  import gsap from 'gsap';
+  import ScrollTrigger from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  interface DragState {
+    setX: (v: number) => void;
+    isDragging: boolean;
+    startX: number;
+    current: number;
+    initial: number;
+    getLimits: () => { min: number; max: number };
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const section = document.querySelector(
+      '.reviews-section'
+    ) as HTMLElement | null;
+    if (!section) return;
+
+    const tracks = gsap.utils.toArray<HTMLElement>('.rev-track');
+    const cards = gsap.utils.toArray<HTMLElement>('.rev-card');
+    const cursor = document.querySelector('.rev-cursor') as HTMLElement | null;
+
+    const pointX = (e: MouseEvent | TouchEvent): number =>
+      'touches' in e ? e.touches[0].clientX : e.clientX;
+
+    cards.forEach(card => {
+      gsap.fromTo(
+        card,
+        { opacity: 0, clipPath: 'inset(10% 0% 10% 0% round 8px)' },
+        {
+          opacity: 1,
+          clipPath: 'inset(0% 0% 0% 0% round 8px)',
+          duration: 1.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 95%',
+            toggleActions: 'play none none none'
+          }
+        }
+      );
+    });
+
+    const directions = [
+      { from: 0, to: -12 }, // 1η → αριστερά
+      { from: -12, to: 0 }, // 2η → δεξιά
+      { from: 0, to: -12 } // 3η → αριστερά
+    ];
+
+    tracks.forEach(track => {
+      const index = parseInt(track.dataset.trackIndex || '0', 10);
+      const d = directions[index] ?? { from: 0, to: -12 };
+
+      gsap.fromTo(
+        track,
+        { x: `${d.from}vw` },
+        {
+          x: `${d.to}vw`,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true
+          }
+        }
+      );
+    });
+
+    if (cursor) {
+      gsap.set(cursor, { xPercent: -50, yPercent: -50, scale: 0, opacity: 0 });
+
+      const xTo = gsap.quickTo(cursor, 'x', { duration: 0.4, ease: 'power3' });
+      const yTo = gsap.quickTo(cursor, 'y', { duration: 0.4, ease: 'power3' });
+
+      window.addEventListener('mousemove', e => {
+        xTo(e.clientX);
+        yTo(e.clientY);
+      });
+    }
+
+    const showCursor = () => {
+      if (cursor)
+        gsap.to(cursor, {
+          scale: 1,
+          opacity: 1,
+          duration: 0.35,
+          ease: 'power3.out'
+        });
+    };
+    const hideCursor = () => {
+      if (cursor)
+        gsap.to(cursor, {
+          scale: 0,
+          opacity: 0,
+          duration: 0.35,
+          ease: 'power3.out'
+        });
+    };
+
+    let currentDrag: DragState | null = null;
+
+    tracks.forEach(track => {
+      const list = track.querySelector('.rev-list') as HTMLElement;
+      const setX = gsap.quickTo(list, 'x', { duration: 0.45, ease: 'power3' });
+
+      const getLimits = () => {
+        const min =
+          window.innerWidth - list.scrollWidth - window.innerWidth * 0.05;
+        return { min: Math.min(0, min), max: 0 };
+      };
+
+      const state: DragState = {
+        setX,
+        isDragging: false,
+        startX: 0,
+        current: 0,
+        initial: 0,
+        getLimits
+      };
+
+      const onDown = (e: MouseEvent | TouchEvent) => {
+        if ((e.target as HTMLElement).closest('a')) return;
+        currentDrag = state;
+        state.isDragging = true;
+        state.startX = pointX(e);
+        state.initial = state.current;
+        cursor?.classList.add('is-dragging');
+        document.body.style.userSelect = 'none';
+      };
+
+      track.addEventListener('mouseenter', showCursor);
+      track.addEventListener('mouseleave', hideCursor);
+
+      track.addEventListener('mousedown', onDown);
+      track.addEventListener('touchstart', onDown, { passive: false });
+    });
+
+    const onMove = (e: MouseEvent | TouchEvent) => {
+      if (!currentDrag?.isDragging) return;
+      if (e.cancelable) e.preventDefault();
+
+      const s = currentDrag;
+      const limits = s.getLimits();
+      let next = s.initial + (pointX(e) - s.startX) * 1.8;
+
+      if (next > limits.max) next = limits.max + (next - limits.max) * 0.15;
+      if (next < limits.min) next = limits.min + (next - limits.min) * 0.15;
+
+      s.current = next;
+      s.setX(next);
+    };
+
+    const onUp = () => {
+      if (!currentDrag?.isDragging) return;
+
+      const s = currentDrag;
+      s.isDragging = false;
+      const limits = s.getLimits();
+      s.current = Math.max(limits.min, Math.min(limits.max, s.current));
+      s.setX(s.current);
+
+      cursor?.classList.remove('is-dragging');
+      document.body.style.userSelect = '';
+      currentDrag = null;
+    };
+
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onUp);
+    window.addEventListener('touchmove', onMove, { passive: false });
+    window.addEventListener('touchend', onUp);
+  });
+</script>
