@@ -1,6 +1,5 @@
 ---
 import { getImage } from 'astro:assets';
-
 import imgWalkIn from '../assets/modern-walk-in-closet.jpg';
 import imgBuiltIn from '../assets/bedroom-with-closet.jpg';
 import imgBoutique from '../assets/bedroom-wooden-panel.jpg';
@@ -112,52 +111,61 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
 
       <div id="three-canvas-container" class="w-canvas-container"></div>
       <div class="w-overlay"></div>
-    </div>
 
-    <div class="w-content">
-      <div class="w-titles-wrapper">
-        <div
-          class="w-titles-track"
-          role="tablist"
-          aria-label="Wardrobe Samples"
-        >
+      <div class="w-content">
+        <div class="w-titles-wrapper">
+          <div
+            class="w-titles-track"
+            role="tablist"
+            aria-label="Wardrobe Samples"
+          >
+            {
+              wardrobes.map((w, i) => (
+                <button
+                  class={`w-title-item ${i === 0 ? 'is-active' : ''}`}
+                  role="tab"
+                  aria-selected={i === 0 ? 'true' : 'false'}
+                  aria-controls={`desc-panel-${i}`}
+                  id={`tab-${i}`}
+                  tabindex="0"
+                  data-index={i}
+                >
+                  {w.name}
+                </button>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="w-divider" aria-hidden="true">
+          <span class="w-divider__number">01</span>
+          <span class="w-divider__label">Ντουλάπες</span>
+        </div>
+
+        <div class="w-desc-wrapper">
           {
             wardrobes.map((w, i) => (
-              <button
-                class={`w-title-item ${i === 0 ? 'is-active' : ''}`}
-                role="tab"
-                aria-selected={i === 0 ? 'true' : 'false'}
-                aria-controls={`desc-panel-${i}`}
-                id={`tab-${i}`}
-                tabindex="0"
-                data-index={i}
-              >
-                {w.name}
-              </button>
+              <p
+                id={`desc-panel-${i}`}
+                role="tabpanel"
+                aria-labelledby={`tab-${i}`}
+                aria-hidden={i === 0 ? 'false' : 'true'}
+                class={`w-desc w-desc--${i} ${i === 0 ? 'is-active' : ''}`}
+                data-text={w.desc}
+              />
             ))
           }
         </div>
       </div>
+    </div>
 
-      <div class="w-divider" aria-hidden="true">
-        <span class="w-divider__number">01</span>
-        <span class="w-divider__label">Ντουλάπες</span>
-      </div>
+    <div class="w-green-wash"></div>
 
-      <div class="w-desc-wrapper">
-        {
-          wardrobes.map((w, i) => (
-            <p
-              id={`desc-panel-${i}`}
-              role="tabpanel"
-              aria-labelledby={`tab-${i}`}
-              aria-hidden={i === 0 ? 'false' : 'true'}
-              class={`w-desc w-desc--${i} ${i === 0 ? 'is-active' : ''}`}
-              data-text={w.desc}
-            />
-          ))
-        }
-      </div>
+    <div class="w-next-title-wrapper" aria-hidden="true">
+      <h2 class="w-next-title">
+        <span class="w-next-line"><span class="w-next-word">ΣΠΑΝΙΑ</span></span>
+        <span class="w-next-line"><span class="w-next-word">ΥΛΙΚΑ</span></span>
+      </h2>
     </div>
   </div>
 </section>
@@ -208,6 +216,7 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
     user-select: none;
     text-decoration: none;
     cursor: pointer;
+    will-change: opacity, transform;
   }
   .w-premium-badge__text-wrapper {
     position: relative;
@@ -230,7 +239,7 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
     inset: 0;
     z-index: 1;
     overflow: hidden;
-    will-change: clip-path;
+    will-change: clip-path, transform;
     clip-path: inset(30vh 35vw 30vh 35vw round 16px);
   }
 
@@ -294,6 +303,7 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
     padding-inline: 5vw;
     opacity: 0;
     visibility: hidden;
+    will-change: opacity, transform;
   }
 
   .w-titles-wrapper {
@@ -380,6 +390,64 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
     will-change: transform;
   }
 
+  .w-green-wash {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-primary);
+    z-index: 5;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 33.3%,
+      black 66.6%,
+      black 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 33.3%,
+      black 66.6%,
+      black 100%
+    );
+    -webkit-mask-size: 100% 300%;
+    mask-size: 100% 300%;
+    -webkit-mask-position: 0% 0%;
+    mask-position: 0% 0%;
+    will-change:
+      mask-position,
+      -webkit-mask-position;
+  }
+
+  .w-next-title-wrapper {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+    pointer-events: none;
+  }
+  .w-next-title {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 15vw, 18rem);
+    text-transform: uppercase;
+    color: var(--color-bg);
+    margin: 0;
+    text-align: center;
+    line-height: var(--leading-minus);
+  }
+  .w-next-line {
+    display: block;
+    overflow: hidden;
+  }
+  .w-next-word {
+    display: inline-block;
+    transform: translateY(110%);
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
   @media (min-width: 48rem) {
     .w-desc-wrapper {
       margin-inline-start: auto;
@@ -420,6 +488,7 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
     .w-content {
       opacity: 1;
       visibility: visible;
+      scale: 1 !important;
     }
     button.w-title-item {
       transition: none;
@@ -433,7 +502,7 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
   }
 </style>
 
-<!-- interactive & webgl section -->
+<!-- interactive section -->
 <script>
   import gsap from 'gsap';
   import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -463,11 +532,14 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
     const numberLabel = document.querySelector(
       '.w-divider__number'
     ) as HTMLElement;
+    const greenWash = document.querySelector('.w-green-wash') as HTMLElement;
+    const nextWords = document.querySelectorAll('.w-next-word');
+    const badge = document.querySelector('.w-premium-badge') as HTMLElement;
 
     if (!section || !pin || !track || titles.length === 0 || !canvasContainer)
       return;
 
-    const badge = document.querySelector('.w-premium-badge');
+    // --- Badge Hover Effect ---
     const badgeOriginal = document.querySelector(
       '.w-premium-badge__text-original'
     );
@@ -541,10 +613,23 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
     });
 
     const initialWords = descriptions[0].querySelectorAll('.w-word-inner');
+    const divider = document.querySelector('.w-divider') as HTMLElement;
+
+    gsap.set(content, { autoAlpha: 0, scale: 0.95 });
+    gsap.set(initialWords, { y: '0%' });
+
+    setTimeout(() => {
+      if (titles.length > 0) {
+        const startPadding =
+          window.innerWidth < 768
+            ? window.innerWidth * 0.05
+            : window.innerWidth * 0.1;
+        gsap.set(track, { x: -titles[0].offsetLeft + startPadding });
+      }
+    }, 50);
 
     const rawImagesAttr = section.getAttribute('data-images');
     const imageUrls = rawImagesAttr ? JSON.parse(rawImagesAttr) : [];
-
     let isThreeReady = false;
 
     const scene = new THREE.Scene();
@@ -557,76 +642,30 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
     canvasContainer.appendChild(renderer.domElement);
 
     const geometry = new THREE.PlaneGeometry(2, 2);
-
-    const vertexShader = `
-      varying vec2 vUv;
-      void main() {
-        vUv = uv;
-        gl_Position = vec4(position, 1.0);
-      }
-    `;
-
+    const vertexShader = `varying vec2 vUv; void main() { vUv = uv; gl_Position = vec4(position, 1.0); }`;
     const fragmentShader = `
-      varying vec2 vUv;
-      uniform sampler2D texture1;
-      uniform sampler2D texture2;
-      uniform float uTransition;
-      uniform float uTime;
-      uniform vec2 uResolution;
-      uniform vec2 uImageRes;
-
+      varying vec2 vUv; uniform sampler2D texture1; uniform sampler2D texture2;
+      uniform float uTransition; uniform float uTime; uniform vec2 uResolution; uniform vec2 uImageRes;
       vec2 getCoverUV(vec2 uv, vec2 res, vec2 texRes) {
-        vec2 ratio = vec2(
-          min((res.x / res.y) / (texRes.x / texRes.y), 1.0),
-          min((res.y / res.x) / (texRes.y / texRes.x), 1.0)
-        );
+        vec2 ratio = vec2( min((res.x / res.y) / (texRes.x / texRes.y), 1.0), min((res.y / res.x) / (texRes.y / texRes.x), 1.0) );
         return uv * ratio + (1.0 - ratio) * 0.5;
       }
-
-      mat2 rotate(float angle) {
-        float s = sin(angle); float c = cos(angle);
-        return mat2(c, -s, s, c);
-      }
-
+      mat2 rotate(float angle) { float s = sin(angle); float c = cos(angle); return mat2(c, -s, s, c); }
       float borderMask(vec2 uv) {
-        float e = 0.05; // 5% softness
-        float x = smoothstep(0.0, e, uv.x) * smoothstep(1.0, 1.0 - e, uv.x);
-        float y = smoothstep(0.0, e, uv.y) * smoothstep(1.0, 1.0 - e, uv.y);
-        return x * y;
+        float e = 0.05; float x = smoothstep(0.0, e, uv.x) * smoothstep(1.0, 1.0 - e, uv.x);
+        float y = smoothstep(0.0, e, uv.y) * smoothstep(1.0, 1.0 - e, uv.y); return x * y;
       }
-
       void main() {
         vec2 coveredUV = getCoverUV(vUv, uResolution, uImageRes);
-
-        float tL = uTransition; 
-        vec2 uvL = coveredUV - 0.5; 
-        
-        uvL *= 1.0 + (tL * 2.0);
-        float windRotL = sin(uTime * 0.05 + coveredUV.y * 3.0) * 0.15;
-        uvL = rotate(tL * 0.6 + windRotL) * uvL;
-        uvL.x += sin(uvL.y * 10.0 + uTime * 0.1) * 0.08 * tL;
-        uvL -= vec2(tL * 1.2, -tL * 0.6);
-        uvL += 0.5; 
-
-        float tE = 1.0 - uTransition; 
-        vec2 uvE = coveredUV - 0.5;
-        
-        uvE *= 1.0 + (tE * 2.0);
-        float windRotE = sin(uTime * 0.05 + coveredUV.y * 3.0) * 0.15;
-        uvE = rotate(-tE * 0.6 + windRotE) * uvE;
-        uvE.x += sin(uvE.y * 10.0 + uTime * 0.1) * 0.08 * tE;
-        uvE += vec2(tE * 1.2, -tE * 0.6);
-        uvE += 0.5;
-
-        vec4 col1 = texture2D(texture1, clamp(uvL, 0.001, 0.999));
-        vec4 col2 = texture2D(texture2, clamp(uvE, 0.001, 0.999));
-
-        col1 *= borderMask(uvL);
-        col2 *= borderMask(uvE);
-
-        float alpha1 = smoothstep(1.0, 0.3, uTransition); 
-        float alpha2 = smoothstep(0.0, 0.7, uTransition); 
-
+        float tL = uTransition; vec2 uvL = coveredUV - 0.5; uvL *= 1.0 + (tL * 2.0);
+        float windRotL = sin(uTime * 0.05 + coveredUV.y * 3.0) * 0.15; uvL = rotate(tL * 0.6 + windRotL) * uvL;
+        uvL.x += sin(uvL.y * 10.0 + uTime * 0.1) * 0.08 * tL; uvL -= vec2(tL * 1.2, -tL * 0.6); uvL += 0.5; 
+        float tE = 1.0 - uTransition; vec2 uvE = coveredUV - 0.5; uvE *= 1.0 + (tE * 2.0);
+        float windRotE = sin(uTime * 0.05 + coveredUV.y * 3.0) * 0.15; uvE = rotate(-tE * 0.6 + windRotE) * uvE;
+        uvE.x += sin(uvE.y * 10.0 + uTime * 0.1) * 0.08 * tE; uvE += vec2(tE * 1.2, -tE * 0.6); uvE += 0.5;
+        vec4 col1 = texture2D(texture1, clamp(uvL, 0.001, 0.999)); vec4 col2 = texture2D(texture2, clamp(uvE, 0.001, 0.999));
+        col1 *= borderMask(uvL); col2 *= borderMask(uvE);
+        float alpha1 = smoothstep(1.0, 0.3, uTransition); float alpha2 = smoothstep(0.0, 0.7, uTransition); 
         gl_FragColor = col1 * alpha1 + col2 * alpha2;
       }
     `;
@@ -655,7 +694,6 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
     const renderScene = () => {
       if (isThreeReady) renderer.render(scene, camera);
     };
-
     window.addEventListener('resize', () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
       uniforms.uResolution.value.set(window.innerWidth, window.innerHeight);
@@ -664,7 +702,6 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
 
     const textureLoader = new THREE.TextureLoader();
     const loadedTextures: THREE.Texture[] = [];
-
     Promise.all(
       imageUrls.map((url: string) =>
         fetch(url)
@@ -673,7 +710,6 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
       )
     ).then((blobUrls: string[]) => {
       let loadedCount = 0;
-
       blobUrls.forEach((blobUrl: string, i: number) => {
         textureLoader.load(blobUrl, (texture: any) => {
           texture.minFilter = THREE.LinearFilter;
@@ -682,10 +718,8 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
           texture.colorSpace = THREE.SRGBColorSpace;
           texture.wrapS = THREE.ClampToEdgeWrapping;
           texture.wrapT = THREE.ClampToEdgeWrapping;
-
           loadedTextures[i] = texture;
           loadedCount++;
-
           if (loadedCount >= 2 && !isThreeReady) {
             isThreeReady = true;
             uniforms.texture1.value = loadedTextures[0];
@@ -694,7 +728,6 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
               texture.image.width,
               texture.image.height
             );
-
             section.classList.add('is-webgl-active');
             gsap.to(canvasContainer, {
               opacity: 1,
@@ -708,71 +741,25 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
     });
 
     let currentIndex = 0;
-    let introPlayed = false;
+    const isMobile = window.innerWidth < 768;
+    const startInset = isMobile
+      ? 'inset(30vh 15vw 30vh 15vw round 12px)'
+      : 'inset(30vh 35vw 30vh 35vw round 16px)';
 
     const masterTl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
         start: 'top top',
-        end: `+=400%`,
+        end: '+=600%',
         pin: pin,
         scrub: 1.5,
         snap: {
-          snapTo: [0, 0.25, 0.625, 1],
+          snapTo: [0, 0.15, 0.4, 0.65],
           duration: { min: 0.3, max: 0.8 },
           ease: 'power2.inOut'
-        },
-        onUpdate: self => {
-          let p = self.progress;
-
-          if (isThreeReady) {
-            uniforms.uVelocity.value = gsap.utils.clamp(
-              -300,
-              300,
-              self.getVelocity()
-            );
-          }
-
-          if (p >= 0.16 && !introPlayed) {
-            introPlayed = true;
-            gsap.to(content, {
-              autoAlpha: 1,
-              duration: 0.4,
-              ease: 'power2.out'
-            });
-            descriptions[0].classList.add('is-active');
-            gsap.fromTo(
-              initialWords,
-              { y: '-100%' },
-              { y: '0%', duration: 0.8, stagger: 0.015, ease: 'power4.out' }
-            );
-          } else if (p < 0.15 && introPlayed) {
-            introPlayed = false;
-            gsap.to(content, { autoAlpha: 0, duration: 0.3 });
-          }
-
-          let newIndex = 0;
-          if (p >= 0.7) newIndex = 2;
-          else if (p >= 0.4) newIndex = 1;
-          else newIndex = 0;
-
-          if (newIndex !== currentIndex && p >= 0.2) {
-            triggerTransition(newIndex, currentIndex);
-            currentIndex = newIndex;
-          }
         }
       }
     });
-
-    masterTl.eventCallback('onUpdate', () => {
-      uniforms.uTime.value += 0.05;
-      renderScene();
-    });
-
-    const isMobile = window.innerWidth < 768;
-    const startInset = isMobile
-      ? 'inset(30vh 15vw 30vh 15vw round 12px)'
-      : 'inset(30vh 35vw 30vh 35vw round 16px)';
 
     masterTl.fromTo(
       mediaWrapper,
@@ -780,35 +767,100 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
       {
         clipPath: 'inset(0vh 0vw 0vh 0vw round 0px)',
         ease: 'none',
-        duration: 0.2
+        duration: 0.15
       },
       0
     );
-    masterTl.to({}, { duration: 0.8 });
+
+    masterTl.to(
+      content,
+      { autoAlpha: 1, scale: 1, ease: 'power2.out', duration: 0.05 },
+      0.1
+    );
+
+    masterTl.to({}, { duration: 0.55 }, 0.15);
+
+    masterTl.to(
+      [content, badge],
+      { autoAlpha: 0, y: -30, ease: 'power2.inOut', duration: 0.05 },
+      0.7
+    );
+
+    masterTl.fromTo(
+      greenWash,
+      { webkitMaskPosition: '0% 0%', maskPosition: '0% 0%' },
+      {
+        webkitMaskPosition: '0% 100%',
+        maskPosition: '0% 100%',
+        ease: 'none',
+        duration: 0.25
+      },
+      0.75
+    );
+    masterTl.to(
+      mediaWrapper,
+      { yPercent: 15, ease: 'none', duration: 0.25 },
+      0.75
+    );
+
+    masterTl.fromTo(
+      nextWords,
+      { y: '110%', opacity: 0 },
+      {
+        y: '0%',
+        opacity: 1,
+        stagger: 0.05,
+        ease: 'power2.out',
+        duration: 0.25
+      },
+      0.75
+    );
+
+    masterTl.eventCallback('onUpdate', () => {
+      let p = masterTl.progress();
+
+      if (isThreeReady) {
+        uniforms.uVelocity.value = gsap.utils.clamp(
+          -300,
+          300,
+          masterTl.scrollTrigger?.getVelocity() || 0
+        );
+      }
+
+      let newIndex = 0;
+      if (p >= 0.5) newIndex = 2;
+      else if (p >= 0.25) newIndex = 1;
+      else newIndex = 0;
+
+      if (newIndex !== currentIndex && p >= 0.15 && p < 0.7) {
+        triggerTransition(newIndex, currentIndex);
+        currentIndex = newIndex;
+      }
+
+      uniforms.uTime.value += 0.05;
+      renderScene();
+    });
 
     titles.forEach((btn, idx) => {
       const handleFocusClick = () => {
         const st = masterTl.scrollTrigger;
         if (st) {
-          const targetProgress = idx === 0 ? 0 : idx === 1 ? 0.5 : 1;
+          const targetProgress = idx === 0 ? 0 : idx === 1 ? 0.35 : 0.65;
           const targetY = st.start + (st.end - st.start) * targetProgress;
           window.scrollTo({ top: targetY, behavior: 'smooth' });
         }
       };
-
       btn.addEventListener('focus', handleFocusClick);
       btn.addEventListener('click', handleFocusClick);
     });
 
     function triggerTransition(newIdx: number, oldIdx: number) {
       if (numberLabel) numberLabel.textContent = `0${newIdx + 1}`;
-
       titles.forEach((el, i) => {
         const isActive = i === newIdx;
         el.classList.toggle('is-active', isActive);
         el.setAttribute('aria-selected', isActive ? 'true' : 'false');
       });
-
       fallbackImgs.forEach((img, i) =>
         img.classList.toggle('is-active', i === newIdx)
       );
@@ -819,7 +871,6 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
           ? window.innerWidth * 0.05
           : window.innerWidth * 0.1;
       const moveX = -activeTitle.offsetLeft + startPadding;
-
       gsap.to(track, {
         x: moveX,
         duration: 1.2,
@@ -857,7 +908,6 @@ const serializedImages = JSON.stringify(wardrobes.map(w => w.img));
 
       if (isThreeReady && loadedTextures[newIdx]) {
         uniforms.texture2.value = loadedTextures[newIdx];
-
         gsap.to(uniforms.uTransition, {
           value: 1,
           duration: 1.2,

@@ -1,0 +1,586 @@
+---
+import { getImage } from 'astro:assets';
+
+import imgCorian from '../assets/modern-walk-in-closet.jpg';
+import imgMarble from '../assets/bedroom-with-closet.jpg';
+import imgWood from '../assets/bedroom-wooden-panel.jpg';
+
+const optCorian = await getImage({
+  src: imgCorian,
+  format: 'webp',
+  width: 1000
+});
+const optMarble = await getImage({
+  src: imgMarble,
+  format: 'webp',
+  width: 1000
+});
+const optWood = await getImage({ src: imgWood, format: 'webp', width: 1000 });
+
+const materials = [
+  {
+    id: 'mat-01',
+    category: 'SURFACES',
+    title: 'CORIAN® SOLID',
+    date: 'ΑΠΡΙΛΙΟΣ 2024',
+    desc: 'Μη πορώδες, αντιβακτηριδιακό, χωρίς ορατούς αρμούς. Ιδανικό για sur-mesure νησίδες και ράφια όπου απαιτείται μονολιθική, γλυπτική αισθητική και απόλυτη αντοχή στη φθορά.',
+    img: optCorian.src
+  },
+  {
+    id: 'mat-02',
+    category: 'NATURAL STONE',
+    title: 'NERO MARQUINA',
+    date: 'ΟΚΤΩΒΡΙΟΣ 2025',
+    desc: 'Βαθιά μαύρη βάση με έντονες, απρόβλεπτες λευκές φλέβες. Αποτελεί την ιδανική επιλογή για premium επενδύσεις προσδίδοντας brutalist πολυτέλεια.',
+    img: optMarble.src
+  },
+  {
+    id: 'mat-03',
+    category: 'RARE WOODS',
+    title: 'SMOKED EUCALYPTUS',
+    date: 'ΙΑΝΟΥΑΡΙΟΣ 2026',
+    desc: 'Θερμικά επεξεργασμένο ξύλο με βαθιές, μεταξένιες αντανακλάσεις. Η τέλεια επένδυση για τις εσωτερικές πόρτες, αναδεικνύοντας τα ρούχα μέσα από ένα ζεστό φόντο.',
+    img: optWood.src
+  }
+];
+
+const splitText = (text: string) => {
+  return text.split('').map((char, index) => ({
+    char: char === ' ' ? '\u00A0' : char,
+    index
+  }));
+};
+---
+
+<section
+  class="rm-section"
+  aria-labelledby="rm-heading"
+  itemscope
+  itemtype="https://schema.org/ItemList"
+>
+  <h2 id="rm-heading" class="sr-only" itemprop="name">
+    Κατάλογος Σπάνιων Υλικών
+  </h2>
+
+  <div class="rm-cursor-label" aria-hidden="true">
+    <span class="rm-cursor-text">HOVER ΓΙΑ ΠΛΗΡΟΦΟΡΙΕΣ</span>
+  </div>
+
+  <div class="rm-container">
+    <div class="rm-images" aria-hidden="true">
+      <div class="rm-images-inner">
+        {
+          materials.map((mat, i) => (
+            <div
+              class={`rm-img-layer rm-img-layer--${i}`}
+              style={`z-index: ${i}`}
+            >
+              <img src={mat.img} alt="" class="rm-image-asset" />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <ul class="rm-list" role="list">
+      {
+        materials.map((mat, i) => (
+          <li
+            class={`rm-row rm-row--${i}`}
+            role="listitem"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/Product"
+          >
+            <meta itemprop="position" content={String(i + 1)} />
+            <meta itemprop="releaseDate" content={mat.date} />
+
+            <div class="rm-mobile-img">
+              <img
+                src={mat.img}
+                alt={mat.title}
+                loading={i === 0 ? 'eager' : 'lazy'}
+                itemprop="image"
+              />
+            </div>
+
+            <article class="rm-row-content">
+              <div class="rm-col-cat">
+                <span class="rm-category">{mat.category}</span>
+              </div>
+
+              <div class="rm-col-main">
+                <div class="rm-title-wrapper" tabindex="0">
+                  <h3 class="rm-title" itemprop="name">
+                    <div class="rm-title-original" aria-hidden="true">
+                      {splitText(mat.title).map(({ char, index }) => (
+                        <span class="char" style={`--i: ${index}`}>
+                          {char}
+                        </span>
+                      ))}
+                    </div>
+                    <div class="rm-title-clone" aria-hidden="true">
+                      {splitText(mat.title).map(({ char, index }) => (
+                        <span class="char" style={`--i: ${index}`}>
+                          {char}
+                        </span>
+                      ))}
+                    </div>
+                    <span class="sr-only">{mat.title}</span>
+                  </h3>
+
+                  <div class="rm-desc-reveal">
+                    <div class="rm-desc-inner">
+                      <p class="rm-desc" itemprop="description">
+                        {mat.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rm-col-date">
+                <time class="rm-date">{mat.date}</time>
+              </div>
+            </article>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<!-- styling section -->
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .rm-section {
+    position: relative;
+    width: 100vw;
+    background-color: #1a3626;
+    color: var(--color-bg);
+    cursor: default;
+    padding-block-start: 0;
+    padding-block-end: 10vh;
+  }
+
+  .rm-cursor-label {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    z-index: var(--z-dropdown);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    will-change: transform, opacity;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+    padding: 0.1rem var(--space-xs);
+    background-color: var(--color-text);
+    white-space: nowrap;
+  }
+
+  .rm-cursor-label.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .rm-cursor-label.is-hidden-on-title {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .rm-cursor-text {
+    font-family: var(--font-body);
+    font-size: var(--font-size-caption);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-accent);
+    text-transform: uppercase;
+  }
+
+  .rm-container {
+    position: relative;
+    width: 95vw;
+    max-inline-size: 1700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .rm-images {
+    display: none;
+  }
+
+  .rm-list {
+    grid-area: 1 / 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: var(--width-full);
+    padding-block-end: 10vh;
+  }
+
+  .rm-row {
+    width: 100%;
+    padding-block: var(--space-md);
+    border-block-start: var(--border-thin) solid var(--color-muted);
+  }
+  .rm-row:first-child {
+    border-top: none;
+  }
+
+  .rm-mobile-img {
+    width: var(--width-full);
+    aspect-ratio: var(--aspect-square);
+    overflow: hidden;
+    margin-bottom: var(--space-md);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  .rm-mobile-img img {
+    width: var(--width-full);
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .rm-row-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    position: relative;
+  }
+
+  .rm-category,
+  .rm-date {
+    font-family: var(--font-body);
+    font-size: var(--font-size-caption);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  .rm-title-wrapper {
+    outline: none;
+    position: relative;
+  }
+  .rm-title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-tight);
+    margin: 0;
+    position: relative;
+  }
+  .rm-title-original,
+  .rm-title-clone {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .rm-title-clone {
+    display: none;
+  }
+
+  .rm-desc-reveal {
+    display: block;
+    margin-block-start: var(--space-sm);
+  }
+  .rm-desc {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body-sm);
+    line-height: var(--leading-loose);
+    color: var(--color-bg);
+    margin: 0;
+  }
+
+  @media (min-width: 64rem) {
+    .rm-images {
+      display: flex;
+      grid-area: 1 / 1;
+      position: sticky;
+      top: 0;
+      width: clamp(280px, 24vw, 450px);
+      height: var(--height-100dvh);
+      align-items: center;
+      z-index: var(--z-raised);
+      pointer-events: none;
+    }
+
+    .rm-images-inner {
+      position: relative;
+      width: var(--width-full);
+      aspect-ratio: var(--aspect-square);
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    .rm-img-layer {
+      position: absolute;
+      inset: 0;
+      width: var(--width-full);
+      height: 100%;
+      will-change: clip-path;
+    }
+
+    .rm-img-layer:not(.rm-img-layer--0) {
+      clip-path: inset(100% 0 0 0);
+    }
+
+    .rm-image-asset {
+      width: var(--width-full);
+      height: 100%;
+      object-fit: cover;
+      will-change: transform;
+    }
+
+    .rm-mobile-img {
+      display: none;
+    }
+
+    .rm-row {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      border-block-start: var(--border-thin) solid var(--color-muted);
+      padding-block: 10vh;
+      position: relative;
+    }
+
+    .rm-row:first-child {
+      border-block-start: var(--border-thin) solid var(--color-muted);
+    }
+
+    .rm-row-content {
+      width: var(--width-full);
+      padding-inline-start: calc(clamp(280px, 24vw, 450px) + 5vw);
+      display: grid;
+      grid-template-columns: 120px 1fr 120px;
+      align-items: center;
+      gap: 3vw;
+      pointer-events: auto;
+    }
+
+    .rm-col-cat {
+      text-align: left;
+    }
+    .rm-col-main {
+      text-align: center;
+    }
+    .rm-col-date {
+      text-align: right;
+    }
+
+    .rm-title {
+      font-size: var(--font-size-h2);
+      letter-spacing: var(--tracking-tight);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .rm-title-original,
+    .rm-title-clone {
+      justify-content: center;
+      position: relative;
+    }
+    .rm-title-clone {
+      display: flex;
+      position: absolute;
+      inset-block-start: 100%;
+      inset-inline-start: 0;
+      inline-size: var(--width-full);
+    }
+
+    .char {
+      display: inline-block;
+      transition: transform 0.7s var(--ease-smooth);
+      transition-delay: calc(var(--i) * 0.012s);
+    }
+
+    .rm-title-wrapper:hover .rm-title-original .char,
+    .rm-title-wrapper:focus-visible .rm-title-original .char {
+      transform: translateY(-110%);
+    }
+    .rm-title-wrapper:hover .rm-title-clone .char,
+    .rm-title-wrapper:focus-visible .rm-title-clone .char {
+      transform: translateY(-100%);
+    }
+
+    .rm-desc-reveal {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.7s var(--ease-smooth);
+      margin-block-start: 0;
+    }
+    .rm-desc-inner {
+      overflow: hidden;
+    }
+    .rm-desc {
+      padding-block-start: var(--space-2xs);
+      max-inline-size: 500px;
+      margin: 0 auto;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.6s var(--ease-smooth);
+      text-align: center;
+    }
+
+    .rm-title-wrapper:hover .rm-desc-reveal,
+    .rm-title-wrapper:focus-visible .rm-desc-reveal {
+      grid-template-rows: 1fr;
+    }
+    .rm-title-wrapper:hover .rm-desc,
+    .rm-title-wrapper:focus-visible .rm-desc {
+      transform: translateY(0);
+      opacity: 1;
+      transition-delay: 0.1s;
+    }
+  }
+</style>
+
+<!-- interactive section -->
+<script>
+  import gsap from 'gsap';
+  import ScrollTrigger from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+    if (prefersReducedMotion) return;
+
+    let mm = gsap.matchMedia();
+    const section = document.querySelector('.rm-section') as HTMLElement;
+
+    mm.add('(min-width: 768px)', () => {
+      const rows = gsap.utils.toArray('.rm-row') as HTMLElement[];
+      const imagesInner = document.querySelector(
+        '.rm-images-inner'
+      ) as HTMLElement;
+
+      if (!imagesInner) return;
+
+      rows.forEach((row, index) => {
+        if (index === 0) return;
+
+        const imgLayer = document.querySelector(`.rm-img-layer--${index}`);
+        const imgAsset = imgLayer?.querySelector('.rm-image-asset');
+        if (!imgLayer || !imgAsset) return;
+
+        const getStartTrigger = () =>
+          `top ${window.innerHeight / 2 + imagesInner.offsetHeight / 2}px`;
+        const getEndTrigger = () =>
+          `top ${window.innerHeight / 2 - imagesInner.offsetHeight / 2}px`;
+
+        gsap.fromTo(
+          imgLayer,
+          { clipPath: 'inset(100% 0% 0% 0%)' },
+          {
+            clipPath: 'inset(0% 0% 0% 0%)',
+            ease: 'none',
+            scrollTrigger: {
+              trigger: row,
+              start: getStartTrigger,
+              end: getEndTrigger,
+              scrub: true,
+              invalidateOnRefresh: true
+            }
+          }
+        );
+
+        gsap.fromTo(
+          imgAsset,
+          { scale: 1.15, yPercent: 15 },
+          {
+            scale: 1,
+            yPercent: 0,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: row,
+              start: getStartTrigger,
+              end: getEndTrigger,
+              scrub: true,
+              invalidateOnRefresh: true
+            }
+          }
+        );
+      });
+    });
+
+    mm.add('(max-width: 767px)', () => {
+      const imgBoxes = document.querySelectorAll('.rm-mobile-img');
+      imgBoxes.forEach(box => {
+        gsap.fromTo(
+          box,
+          { clipPath: 'inset(100% 0% 0% 0%)' },
+          {
+            clipPath: 'inset(0% 0% 0% 0%)',
+            ease: 'none',
+            scrollTrigger: {
+              trigger: box,
+              start: 'top 90%',
+              end: 'bottom 85%',
+              scrub: true
+            }
+          }
+        );
+      });
+    });
+
+    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+
+    if (!isTouchDevice && section) {
+      const label = document.querySelector('.rm-cursor-label') as HTMLElement;
+      const titleWrappers = document.querySelectorAll('.rm-title-wrapper');
+
+      if (label) {
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let cursorX = mouseX;
+        let cursorY = mouseY;
+
+        window.addEventListener('mousemove', e => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        });
+
+        gsap.ticker.add(() => {
+          const dt = 1.0 - Math.pow(1.0 - 0.12, gsap.ticker.deltaRatio());
+
+          cursorX += (mouseX + 20 - cursorX) * dt;
+          cursorY += (mouseY + 15 - cursorY) * dt;
+
+          gsap.set(label, { x: cursorX, y: cursorY });
+        });
+
+        section.addEventListener('mouseenter', () =>
+          label.classList.add('is-visible')
+        );
+        section.addEventListener('mouseleave', () =>
+          label.classList.remove('is-visible')
+        );
+
+        // Fade-out όταν κάνουμε hover πάνω στον τίτλο
+        titleWrappers.forEach(wrapper => {
+          wrapper.addEventListener('mouseenter', () =>
+            label.classList.add('is-hidden-on-title')
+          );
+          wrapper.addEventListener('mouseleave', () =>
+            label.classList.remove('is-hidden-on-title')
+          );
+        });
+      }
+    }
+  });
+</script>
