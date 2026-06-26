@@ -404,17 +404,16 @@ import imgKitchenOven from '../assets/kitchen-with-counter-oven.jpg';
             anticipatePin: 1,
             onRefresh: (self: any) => {
               if (self.pin) {
-                self.pin.style.setProperty('width', '100%', 'important');
-                self.pin.style.setProperty('max-width', '100%', 'important');
+                self.pin.style.setProperty('width', '100%');
+                self.pin.style.setProperty('max-width', '100%');
               }
               if (self.spacer) {
-                self.spacer.style.setProperty('display', 'block', 'important');
-                self.spacer.style.setProperty('width', '100%', 'important');
-                self.spacer.style.setProperty('max-width', '100%', 'important');
+                self.spacer.style.setProperty('display', 'block');
+                self.spacer.style.setProperty('width', '100%');
+                self.spacer.style.setProperty('max-width', '100%');
                 self.spacer.style.setProperty(
                   'background-color',
-                  'var(--color-text)',
-                  'important'
+                  'var(--color-text)'
                 );
               }
             }
