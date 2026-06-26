@@ -147,7 +147,7 @@ import imgKitchenOven from '../assets/kitchen-with-counter-oven.jpg';
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-block: var(--space-xl);
+    padding-block: var(--space-3xl);
     padding-inline: var(--space-md);
   }
 
@@ -400,7 +400,24 @@ import imgKitchenOven from '../assets/kitchen-with-counter-oven.jpg';
             start: 'top top',
             end: '+=200%',
             pin: true,
-            scrub: 1
+            scrub: 1,
+            anticipatePin: 1,
+            onRefresh: (self: any) => {
+              if (self.pin) {
+                self.pin.style.setProperty('width', '100%', 'important');
+                self.pin.style.setProperty('max-width', '100%', 'important');
+              }
+              if (self.spacer) {
+                self.spacer.style.setProperty('display', 'block', 'important');
+                self.spacer.style.setProperty('width', '100%', 'important');
+                self.spacer.style.setProperty('max-width', '100%', 'important');
+                self.spacer.style.setProperty(
+                  'background-color',
+                  'var(--color-text)',
+                  'important'
+                );
+              }
+            }
           }
         });
 
