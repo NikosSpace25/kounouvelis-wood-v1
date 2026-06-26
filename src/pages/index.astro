@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import Partners from '../components/Partners.astro';
 import DynamicReveal from '../components/DynamicReveal.astro';
@@ -82,6 +84,8 @@ const homePageSchema = {
   description="Εξειδικευμένη κατασκευή premium επίπλων κουζίνας, ντουλάπας και ειδικών ξύλινων εφαρμογών. Κορυφαία υλικά και αψεγάδιαστη εφαρμογή."
   schemaData={homePageSchema}
 >
+  <Navbar />
+
   <main>
     <Hero />
     <Partners />

@@ -1,0 +1,261 @@
+---
+
+---
+
+<header
+  class="navbar"
+  id="smart-navbar"
+  itemscope
+  itemtype="https://schema.org/WPHeader"
+>
+  <nav
+    class="nav-container"
+    role="navigation"
+    aria-label="Κύριο Μενού Περιήγησης"
+    itemscope
+    itemtype="https://schema.org/SiteNavigationElement"
+  >
+    <div class="nav-left">
+      <a href="/projects" class="nav-link" itemprop="url">
+        <span itemprop="name">ΕΡΓΑ</span>
+      </a>
+      <a href="/services" class="nav-link" itemprop="url">
+        <span itemprop="name">ΥΠΗΡΕΣΙΕΣ</span>
+      </a>
+    </div>
+
+    <div class="nav-center">
+      <a
+        href="/"
+        class="brand-link"
+        aria-label="Αρχική Σελίδα KOUNOUVELIS"
+        itemprop="url"
+      >
+        <img
+          src="/mobile-logo.png"
+          alt="Λογότυπο Kounouvelis"
+          class="mobile-img mobile-only"
+        />
+
+        <span class="desktop-text desktop-only" itemprop="name"
+          >KOUNOUVELIS</span
+        >
+      </a>
+    </div>
+
+    <div class="nav-right">
+      <a href="/about" class="nav-link" itemprop="url">
+        <span itemprop="name">ΕΤΑΙΡΕΙΑ</span>
+      </a>
+      <a href="/contact" class="nav-link" itemprop="url">
+        <span itemprop="name">ΕΠΙΚΟΙΝΩΝΙΑ</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- styling section -->
+<style>
+  .navbar {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100vw;
+    z-index: var(--z-modal);
+    background-color: transparent;
+    color: var(--color-bg);
+    padding-block-start: var(--space-md);
+    padding-block-end: var(--space-md);
+    transition:
+      transform var(--duration-normal) cubic-bezier(0.19, 1, 0.22, 1),
+      padding 0.3s var(--ease-smooth);
+    will-change: transform;
+    mix-blend-mode: difference;
+  }
+
+  .navbar.is-hidden {
+    transform: translateY(-100%);
+  }
+
+  .navbar.is-scrolled {
+    padding-block-start: var(--space-sm);
+    padding-block-end: var(--space-sm);
+  }
+
+  .nav-container {
+    inline-size: 90vw;
+    max-inline-size: 1800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  .nav-left {
+    justify-self: start;
+    display: flex;
+  }
+
+  .nav-center {
+    justify-self: center;
+  }
+
+  .nav-right {
+    justify-self: end;
+    display: flex;
+  }
+
+  .nav-link {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body-sm);
+    font-weight: var(--weight-medium);
+    letter-spacing: var(--tracking-wide);
+    color: currentColor;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+      opacity var(--duration-fast) var(--ease-smooth),
+      outline var(--duration-fast) var(--ease-smooth);
+  }
+
+  .nav-link:hover,
+  .nav-link:focus-visible {
+    opacity: 0.5;
+    outline: none;
+  }
+
+  .nav-link:focus-visible {
+    opacity: 1;
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  .brand-link {
+    display: block;
+    text-decoration: none;
+    color: currentColor;
+    transition: outline var(--duration-fast) var(--ease-smooth);
+  }
+
+  .brand-link:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  @keyframes premiumBlink {
+    0% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.6;
+    }
+  }
+
+  .brand-link:hover .desktop-text,
+  .brand-link:focus-visible .desktop-text {
+    animation: premiumBlink 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  @media (max-width: 48rem) {
+    .desktop-only {
+      display: none;
+    }
+
+    .mobile-only {
+      display: block;
+    }
+
+    .navbar {
+      padding-block-end: var(--space-lg);
+    }
+
+    .nav-container {
+      align-items: center;
+    }
+
+    .nav-left {
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .nav-right {
+      flex-direction: column;
+      gap: var(--space-sm);
+      align-items: flex-end;
+    }
+
+    .mobile-img {
+      inline-size: 50px;
+      block-size: 50px;
+      object-fit: contain;
+      overflow: hidden;
+      transition: transform 0.3s var(--ease-smooth);
+    }
+
+    .brand-link:active .mobile-img,
+    .brand-link:focus-visible .mobile-img {
+      transform: scale(0.9);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .mobile-only {
+      display: none;
+    }
+
+    .nav-left {
+      gap: 3vw;
+    }
+    .nav-right {
+      gap: 3vw;
+    }
+
+    .desktop-text {
+      font-family: var(--font-display);
+      font-size: var(--font-size-h3);
+      font-weight: var(--weight-bold);
+      letter-spacing: var(--tracking-ultra-tight);
+      line-height: var(--leading-none);
+      text-transform: uppercase;
+    }
+  }
+</style>
+
+<!-- interactive section -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.getElementById('smart-navbar');
+    if (!navbar) return;
+
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    const updateNavbar = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 50) {
+        navbar.classList.remove('is-hidden');
+        navbar.classList.remove('is-scrolled');
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        navbar.classList.add('is-hidden');
+        navbar.classList.add('is-scrolled');
+      } else if (currentScrollY < lastScrollY) {
+        navbar.classList.remove('is-hidden');
+        navbar.classList.add('is-scrolled');
+      }
+
+      lastScrollY = currentScrollY;
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateNavbar);
+        ticking = true;
+      }
+    });
+  });
+</script>
