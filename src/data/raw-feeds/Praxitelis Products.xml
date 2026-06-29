@@ -1,0 +1,3752 @@
+﻿<?xml version="1.0" encoding="utf-8"?><?mso-application progid="Excel.Sheet"?><Workbook xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x2="urn:schemas-microsoft-com:office:excel2" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+ <x:ExcelWorkbook>
+  <x:ActiveSheet>0</x:ActiveSheet>
+ </x:ExcelWorkbook>
+ <o:DocumentProperties>
+  <o:Author>Stefanos Tziotas</o:Author>
+  <o:Created>2025-10-16T11:00:43Z</o:Created>
+  <o:LastSaved>2025-10-16T11:01:39Z</o:LastSaved>
+ </o:DocumentProperties>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <ss:Alignment ss:Vertical="Bottom" />
+   <ss:Font ss:Color="#000000" ss:FontName="Aptos Narrow" ss:Size="11" />
+  </Style>
+  <Style ss:ID="S21" ss:Name="Hyperlink">
+   <ss:Alignment ss:Vertical="Bottom" />
+   <ss:Font ss:Color="#467886" ss:FontName="Aptos Narrow" ss:Size="11" ss:Underline="Single" />
+  </Style>
+  <Style ss:ID="S22">
+   <ss:Alignment ss:Horizontal="Center" ss:Vertical="Top" />
+   <ss:Borders>
+    <ss:Border ss:Position="Left" ss:Color="#000000" ss:LineStyle="Continuous" ss:Weight="1" />
+    <ss:Border ss:Position="Top" ss:Color="#000000" ss:LineStyle="Continuous" ss:Weight="1" />
+    <ss:Border ss:Position="Right" ss:Color="#000000" ss:LineStyle="Continuous" ss:Weight="1" />
+    <ss:Border ss:Position="Bottom" ss:Color="#000000" ss:LineStyle="Continuous" ss:Weight="1" />
+   </ss:Borders>
+   <ss:Font ss:Bold="1" ss:FontName="Calibri" ss:Size="11" />
+   <ss:Interior ss:Color="#156082" ss:Pattern="Solid" />
+  </Style>
+  <Style ss:ID="S23">
+   <ss:Alignment ss:Horizontal="Center" ss:Vertical="Top" />
+   <ss:Borders>
+    <ss:Border ss:Position="Top" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+    <ss:Border ss:Position="Bottom" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+   </ss:Borders>
+   <ss:Font ss:Bold="1" ss:FontName="Calibri" ss:Size="11" />
+   <ss:Interior ss:Color="#156082" ss:Pattern="Solid" />
+  </Style>
+  <Style ss:ID="S24">
+   <ss:Alignment ss:Vertical="Bottom" />
+   <ss:Borders>
+    <ss:Border ss:Position="Left" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+    <ss:Border ss:Position="Top" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+    <ss:Border ss:Position="Bottom" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+   </ss:Borders>
+   <ss:Font ss:Color="#000000" ss:FontName="Aptos Narrow" ss:Size="11" />
+   <ss:Interior ss:Color="#C1E5F5" ss:Pattern="Solid" />
+  </Style>
+  <Style ss:ID="S25">
+   <ss:Alignment ss:Vertical="Bottom" />
+   <ss:Borders>
+    <ss:Border ss:Position="Top" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+    <ss:Border ss:Position="Bottom" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+   </ss:Borders>
+   <ss:Font ss:Color="#000000" ss:FontName="Aptos Narrow" ss:Size="11" />
+   <ss:Interior ss:Color="#C1E5F5" ss:Pattern="Solid" />
+  </Style>
+  <Style ss:ID="S26" ss:Parent="S21">
+   <ss:Alignment ss:Vertical="Bottom" />
+   <ss:Borders>
+    <ss:Border ss:Position="Top" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+    <ss:Border ss:Position="Bottom" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+   </ss:Borders>
+   <ss:Font ss:Color="#467886" ss:FontName="Aptos Narrow" ss:Size="11" ss:Underline="Single" />
+   <ss:Interior ss:Color="#C1E5F5" ss:Pattern="Solid" />
+  </Style>
+  <Style ss:ID="S27">
+   <ss:Alignment ss:Vertical="Bottom" />
+   <ss:Borders>
+    <ss:Border ss:Position="Left" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+    <ss:Border ss:Position="Top" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+    <ss:Border ss:Position="Bottom" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+   </ss:Borders>
+   <ss:Font ss:Color="#000000" ss:FontName="Aptos Narrow" ss:Size="11" />
+  </Style>
+  <Style ss:ID="S28">
+   <ss:Alignment ss:Vertical="Bottom" />
+   <ss:Borders>
+    <ss:Border ss:Position="Top" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+    <ss:Border ss:Position="Bottom" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+   </ss:Borders>
+   <ss:Font ss:Color="#000000" ss:FontName="Aptos Narrow" ss:Size="11" />
+  </Style>
+  <Style ss:ID="S29" ss:Parent="S21">
+   <ss:Alignment ss:Vertical="Bottom" />
+   <ss:Borders>
+    <ss:Border ss:Position="Top" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+    <ss:Border ss:Position="Bottom" ss:Color="#46B1E1" ss:LineStyle="Continuous" ss:Weight="1" />
+   </ss:Borders>
+   <ss:Font ss:Color="#467886" ss:FontName="Aptos Narrow" ss:Size="11" ss:Underline="Single" />
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <ss:Names />
+  <ss:Table ss:DefaultRowHeight="15" ss:DefaultColumnWidth="48" ss:ExpandedRowCount="202" ss:ExpandedColumnCount="8">
+   <Row ss:Index="1">
+    <Cell ss:StyleID="S22"><Data ss:Type="String">ID</Data>
+    </Cell>
+    <Cell ss:StyleID="S22"><Data ss:Type="String">Χρώμα</Data>
+    </Cell>
+    <Cell ss:StyleID="S22"><Data ss:Type="String">Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S22"><Data ss:Type="String">Είδος Επιφάνειας</Data>
+    </Cell>
+    <Cell ss:StyleID="S22"><Data ss:Type="String">InStock</Data>
+    </Cell>
+    <Cell ss:StyleID="S22"><Data ss:Type="String">Description</Data>
+    </Cell>
+    <Cell ss:StyleID="S23"><Data ss:Type="String">PhotoPath</Data>
+    </Cell>
+    <Cell ss:StyleID="S23"><Data ss:Type="String">PhotoAlt</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="2">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">702</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σατινέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/702/702.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/702/702.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">702</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="3">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">712</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σατινέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/712/01_712_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/712/01_712_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">712</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="4">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">720</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/720/01_720_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/720/01_720_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">720</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="5">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">728</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Βανίλια</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σατινέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/728/01_728_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/728/01_728_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">728</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="6">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">729</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ανοιχτό Κόκκινο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/729/01_729_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/729/01_729_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">729</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="7">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">730</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σατινέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/730/01_730_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/730/01_730_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">730</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="8">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">731</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/731/01_731_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/731/01_731_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">731</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="9">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">733</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/733/01_733_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/733/01_733_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">733</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="10">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">760</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/760/01_760_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/760/01_760_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">760</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="11">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">778</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λευκό - Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Με Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/778/01_778_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/778/01_778_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">778</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="12">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">781</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μπορντό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/781/01_781_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/781/01_781_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">781</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="13">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">782</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/782/782.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/782/782.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">782</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="14">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">786</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/786/01_786_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/786/01_786_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">786</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="15">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">787</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/787/01_787_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/787/01_787_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">787</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="16">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">788</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/788/01_788_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/788/01_788_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">788</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="17">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">792</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/792/01_792_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/792/01_792_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">792</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="18">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">793</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι Σκούρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/793/01_793_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/793/01_793_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">793</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="19">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7104</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7104/01_7104_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7104/01_7104_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7104</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="20">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7111</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7111/01_7111_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7111/01_7111_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7111</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="21">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7115</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/863/01_863_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/863/01_863_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7115</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="22">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7116</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Με Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7116/01_7116_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7116/01_7116_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7116</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="23">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7118</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/862/01_862_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/862/01_862_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7118</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="24">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7119</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Super Mat</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7119/01_878_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7119/01_878_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7119</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="25">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7121</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Super Mat</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7121/01_7121_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7121/01_7121_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7121</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="26">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7122</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Super Mat</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7122/01_7122_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7122/01_7122_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7122</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="27">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7132</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/886/01_886_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/886/01_886_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7132</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="28">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7133</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Natural Wood</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/887/01_887_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/887/01_887_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7133</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="29">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7134</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/889/01_889_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/889/01_889_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7134</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="30">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7137</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8012/01_8012_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8012/01_8012_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7137</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="31">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7146</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ανοιχτό Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Super Mat</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7146/01_7146_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7146/01_7146_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7146</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="32">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7149</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8013/01_8013_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8013/01_8013_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7149</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="33">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7150</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8014/01_8014_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8014/01_8014_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7150</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="34">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7153</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7153/01_7153_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7153/01_7153_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7153</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="35">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7154</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8011/01_8011_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8011/01_8011_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7154</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="36">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7156</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι Σκούρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7156/01_7156_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7156/01_7156_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7156</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="37">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7157</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7157/01_7157_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7157/01_7157_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7157</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="38">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7158</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8020/01_8020_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8020/01_8020_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7158</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="39">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7159</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8021/01_8021_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8021/01_8021_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7159</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="40">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7160</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι Ανοιχτό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Με Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7160/01_7160_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7160/01_7160_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7160</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="41">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7161</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Υφή</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Mat</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7161/01_7161_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7161/01_7161_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7161</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="42">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7163</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό - Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Super Mat</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/880/01_880_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/880/01_880_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7163</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="43">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7165</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λευκό - Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/858/01_858_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/858/01_858_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7165</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="44">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7166</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7166/7166.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7166/7166.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7166</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="45">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7167</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8027/01_8027_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8027/01_8027_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7167</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="46">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7168</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8032/01_8032_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8032/01_8032_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7168</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="47">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7169</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7169/7169.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7169/7169.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7169</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="48">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7170</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7170/01_7170_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7170/01_7170_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7170</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="49">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7172</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7172/01_7172_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7172/01_7172_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7172</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="50">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7173</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι - Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7173/01_7173_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7173/01_7173_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7173</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="51">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7174</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Taupe</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7174/01_7174_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7174/01_7174_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7174</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="52">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7176</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι - Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7176/01_7176_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7176/01_7176_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7176</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="53">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7177</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ανοιχτό Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7177/01_7177_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7177/01_7177_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7177</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="54">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7178</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι - Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7178/01_7178_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7178/01_7178_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7178</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="55">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7179</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι - Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7179/01_7179_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7179/01_7179_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7179</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="56">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7180</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μέντα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7180/01_7180_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7180/01_7180_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7180</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="57">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7181</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7181/01_7181_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7181/01_7181_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7181</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="58">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7182</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Χακί</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7182/01_7182_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-NEW-ARRIVALS/7182/01_7182_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7182</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="59">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7184</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπλέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7184/01_7184_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7184/01_7184_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7184</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="60">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7185</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8021/01_8021_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8021/01_8021_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7185</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="61">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">7186</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8012/01_8012_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8012/01_8012_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">7186</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="62">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">7187</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πορτάκια κουζίνας, πόρτες ντουλαπιών, ράφια, κ.α.</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7148/01_7148_HPL_POSTFORMING_700_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/700-HPL-POSTFORMING/7148/01_7148_HPL_POSTFORMING_700_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7187</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="63">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">801</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">801</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="64">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">802</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό - Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/802/01_802_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">802</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="65">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">810</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/810/01_810_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">810</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="66">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">814</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μπεζ - Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/814/01_814_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">814</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="67">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">820</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/820/01_820_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">820</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="68">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">828</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Κρεμ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/828/01_828_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">828</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="69">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">832</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καρυδί</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/832/01_832_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">832</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="70">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">834</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Φυσικό Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/834/01_834_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">834</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="71">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">847</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/847/01_847_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">847</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="72">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">848</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/848/01_848_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">848</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="73">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">849</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Κρεμ - Ασημί</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/849/01_849_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">849</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="74">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">850</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μαύρο - Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μωσαϊκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/850/01_850_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">850</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="75">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">853</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπεζ - Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/853/01_853_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">853</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="76">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">855</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/855/01_855_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">855</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="77">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">858</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λευκό - Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/858/01_858_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">858</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="78">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">859</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/859/01_859_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">859</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="79">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">860</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/860/01_860_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">860</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="80">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">862</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/862/01_862_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">862</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="81">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">863</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/863/01_863_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">863</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="82">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">864</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι Ανοιχτό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/864/01_864_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">864</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="83">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">865</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/865/01_865_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">865</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="84">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">866</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/866/01_866_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">866</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="85">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">867</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/867/01_867_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">867</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="86">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">868</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μαύρο - Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/868/01_868_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">868</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="87">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">869</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/869/01_869_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">869</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="88">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">870</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/870/01_870_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">870</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="89">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">871</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Με Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/871/01_871_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">871</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="90">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">872</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μπεζ - Ασημί</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/872/01_872_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">872</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="91">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">874</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Κρεμ - Ασημί</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/874/01_874_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">874</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="92">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">875</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό - Χρυσό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μωσαϊκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/875/01_875_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">875</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="93">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">876</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ - Χρυσό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/876/01_876_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">876</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="94">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">877</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μαύρο - Χρυσό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/877/01_877_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">877</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="95">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">883</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Super Mat</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/883/01_883_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">883</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="96">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">884</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Με Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Super Mat</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/884/01_884_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">884</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="97">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">885</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Με Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/885/01_885_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">885</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="98">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">887</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/887/01_887_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">887</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="99">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">888</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/888/01_888_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">888</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="100">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">889</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/889/01_889_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">889</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="101">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">890</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/890/01_890_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">890</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="102">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">891</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι - Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/891/01_891_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">891</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="103">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">892</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι - Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/892/01_892_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">892</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="104">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">893</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/893/01_893_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">893</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="105">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">894</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο - Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/894/01_894_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">894</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="106">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">896</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μωσαϊκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/896/01_896_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">896</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="107">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">897</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ - Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/897/01_897_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">897</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="108">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">898</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι - Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/898/01_898_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">898</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="109">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">899</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λευκό - Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Με Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/899/01_899_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">899</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="110">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8011</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8011/01_8011_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8011</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="111">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8012</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8012/01_8012_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8012</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="112">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8013</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8013/01_8013_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8013</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="113">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8014</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8014/01_8014_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8014</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="114">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8015</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι - Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μωσαϊκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8015/01_8015_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8015</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="115">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8016</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο - Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γυαλιστερό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8016/01_8016_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8016</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="116">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8019</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι - Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Με Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8019/01_8019_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8019</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="117">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8021</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8021/01_8021_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8021</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="118">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8024</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8024/01_8024_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8024</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="119">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8025</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8025/01_8025_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8025</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="120">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8026</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8026/01_8026_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8026</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="121">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8027</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8027/01_8027_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8027</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="122">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8028</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό - Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8028/01_8028_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8028</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="123">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8029</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Με Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8029/01_8029_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8029</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="124">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8030</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι - Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8030/01_8030_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8030</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="125">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8031</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8031/01_8031_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8031</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="126">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8032</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8032/01_8032_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8032</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="127">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8033</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8012/01_8012_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8033</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="128">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8034</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8021/01_8021_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8034</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="129">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8035</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπεζ - Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Υφή Πέτρας</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8035/01_8035_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8035</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="130">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8036</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό - Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Υφή Πέτρας</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8036/01_8036_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8036</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="131">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8037</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονόχρωμο με ανάγλυφα Σχέδια</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8037/01_8037_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8037</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="132">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8038</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Υφή Πέτρας</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8038/01_8038_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8038</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="133">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8039</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λευκό - Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/880/01_880_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8039</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="134">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8040</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8040/01_8040_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8040</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="135">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8041</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/863/01_863_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8041</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="136">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8042</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/862/01_862_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8042</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="137">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8043</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/886/01_886_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8043</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="138">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8044</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/878/02_878_HPL_PAGOI_800_LINE.png</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8044</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="139">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8045</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Με Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8045/01_8045_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8045</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="140">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8046</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Με Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/881/01_881_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8046</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="141">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8047</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι Σκούρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/879/01_879_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8047</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="142">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8048</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8022/01_8022_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8048</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="143">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8049</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο - Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8017/01_8017_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8049</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="144">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8050</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό - Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/8018/01_8018_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8050</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="145">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8051</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Με Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/851/01_851_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8051</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="146">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">8052</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Soft</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/883/01_883_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">8052</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="147">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">8053</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λευκό - Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Υφή Πέτρας</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/801/01_801_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/800-HPL-PAGOI/880/01_880_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">8053</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="148">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">615</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σαγρέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/615/615.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/615/615.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">615</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="149">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">618</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Υφή</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/618/618.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/618/618.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">618</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="150">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">630</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Υφή</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/630/630.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/630/630.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">630</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="151">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">637</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/637/637.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/637/637.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">637</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="152">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">639</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/639/639.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/639/639.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">639</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="153">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">646</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Υφή</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Matt</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/646/646.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/646/646.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">646</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="154">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">649</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/649/649.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/649/649.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">649</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="155">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">651</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/651/651.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/651/651.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">651</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="156">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">654</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/654/654.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/654/654.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">654</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="157">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">660</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Πέτρα</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/660/660.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/660/660.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">660</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="158">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">664</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/664/664.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/664/664.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">664</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="159">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">665</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/665/665.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/665/665.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">665</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="160">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">671</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/671/671.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/671/671.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">671</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="161">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">672</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ - Ανοιχτό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/672/01_672_ELITE_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/672/01_672_ELITE_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">672</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="162">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">673</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/673/01_673_ELITE_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/673/01_673_ELITE_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">673</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="163">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">674</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/674/01_674_ELITE_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/674/01_674_ELITE_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">674</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="164">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">675</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Taupe</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/675/01_675_ELITE_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/675/01_675_ELITE_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">675</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="165">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">676</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι - Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/676/01_676_ELITE_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/676/01_676_ELITE_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">676</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="166">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">677</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ανοιχτό Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/677/01_677_ELITE_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/677/01_677_ELITE_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">677</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="167">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">678</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/678/01_678_ELITE_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/678/01_678_ELITE_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">678</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="168">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">679</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ανάγλυφα κάθετα "Νερά"</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/679/01_679_ELITE_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/679/01_679_ELITE_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">679</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="169">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">680</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ανάγλυφα κάθετα "Νερά"</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/680/01_680_ELITE_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/680/01_680_ELITE_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">680</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="170">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">681</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Taupe</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ανάγλυφα κάθετα "Νερά"</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/681/01_681_ELITE_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/681/01_681_ELITE_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">681</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="171">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">682</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι - Μπεζ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ανάγλυφα κάθετα "Νερά"</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/681/01_681_ELITE_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/681/01_681_ELITE_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">682</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="172">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">683</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ανοιχτό Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ανάγλυφα κάθετα "Νερά"</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/683/01_683_ELITE_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/ELITE/683/01_683_ELITE_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">683</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="173">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">4002</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Με Σχέδιο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4002/01_4002_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4002/01_4002_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">4002</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="174">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">4003</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4003/01_4003_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4003/01_4003_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">4003</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="175">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">4004</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μπεζ - Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4004/01_4004_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4004/01_4004_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">4004</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="176">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">4005</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Απομίμηση Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Νερά Ξύλου</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4005/01_4005_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4005/01_4005_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">4005</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="177">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">4006</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μονοχρωμία</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Σατινέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4006/01_4006_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4006/01_4006_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">4006</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="178">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">4007</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ - Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Σατινέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4007/01_4007_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4007/01_4007_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">4007</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="179">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">4008</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4008/02_4008_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4008/02_4008_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">4008</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="180">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">4009</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μαύρο - Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4009/01_4009_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4009/01_4009_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">7009</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="181">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">4010</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λευκό - Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4010/01_4010_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4010/01_4010_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">4010</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="182">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">4020</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Καφέ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4020/01_4020_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4020/01_4020_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">4020</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="183">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">4030</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μαύρο - Γκρι</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Μάρμαρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ματ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4030/01_4030_HPL_PAGOI_800_LINE.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/COMPACT/4030/01_4030_HPL_PAGOI_800_LINE.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">4030</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="184">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">80</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ιβουάρ Λούστρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/80/80_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/80/80_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">80</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="185">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">94</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λούστρο Λίλιουμ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/94/94_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/94/94_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">94</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="186">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">231</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λούστρο Λίλιουμ</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/231/231_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/231/231_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">231</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="187">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">235</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λούστρο Αχάτης</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/235/235.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/235/235.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">235</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="188">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">251</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λούστρο "Αχάτης"</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/251/251_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/251/251_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">251</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="189">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">253</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λούστρο "Ελιά"</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/253-Elia/253_Elia_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/253-Elia/253_Elia_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">253</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="190">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">253</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λούστρο Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/253-White/253_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/253-White/253_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">253</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="191">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">333</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λούστρο "Φυσικό"</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/333/333_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/333/333_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">333</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="192">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">335</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λούστρο "Βανίλια"</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/335-Vanilla/335_Vanilla_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/335-Vanilla/335_Vanilla_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">335</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="193">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">335</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λιλίουμ</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/335-Lilium/335_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/335-Lilium/335_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">335</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="194">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">335</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λούστρο "Αχάτης"</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/335-Grey/335_Axis_Grey.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/335-Grey/335_Axis_Grey.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">335</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="195">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">502</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λούστρο "Βανίλια"</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/502/502_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/502/502_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">502</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="196">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">503</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λούστρο Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/503/503_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/503/503_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">503</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="197">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">507</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λούστρο Λευκό</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/507/507_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/507/507_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">507</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="198">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">510</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λούστρο "Αιγαίο"</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/510-Aegean/510_Aegean_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/510-Aegean/510_Aegean_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">510</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="199">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">510</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λούστρο"Βανίλια"</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/510-Vanilla/510_Vanilla_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/510-Vanilla/510_Vanilla_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">510</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="200">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">512</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λούστρο "Λίλιουμ"</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/512/512_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/512/512_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">512</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="201">
+    <Cell ss:StyleID="S27"><Data ss:Type="Number">2200</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Λούστρο"Αχάτης"</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S29" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/2200-Axatis/2200_Axatis_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/2200-Axatis/2200_Axatis_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S28"><Data ss:Type="Number">2200</Data>
+    </Cell>
+   </Row>
+   <Row ss:Index="202">
+    <Cell ss:StyleID="S24"><Data ss:Type="Number">2200</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Λευκό Λούστρο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Ξύλο</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">Δρυς</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Boolean">1</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="String">HPL (high pressure laminate) φύλλο για εφαρμογή σε πάγκους</Data>
+    </Cell>
+    <Cell ss:StyleID="S26" ss:HRef="https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/2200-White/2200_Imimasif.jpg"><Data ss:Type="String">https://www.orismos.gr/praxitelis/products/upload/portfolio/IMIMASIF/2200-White/2200_Imimasif.jpg</Data>
+    </Cell>
+    <Cell ss:StyleID="S25"><Data ss:Type="Number">2200</Data>
+    </Cell>
+   </Row>
+  </ss:Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3" />
+    <Footer x:Margin="0.3" />
+    <PageMargins x:Top="0.75" x:Bottom="0.75" x:Left="0.7" x:Right="0.7" />
+   </PageSetup>
+   <Print>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R202C8</RangeSelection>
+    </Pane>
+   </Panes>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

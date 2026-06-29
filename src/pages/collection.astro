@@ -1,0 +1,1260 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import productsDataRaw from '../data/master-products.json';
+
+interface Product {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  image: string;
+  supplier: string;
+  material: string;
+  usage: string;
+}
+
+const displayProducts = productsDataRaw as Product[];
+
+const formatNumber = (num: number) => String(num).padStart(2, '0');
+
+const BATCH_SIZE = 48;
+
+// Ελαφρύ payload για τον client (χωρίς description)
+const clientProducts = displayProducts.map(p => ({
+  id: p.id,
+  title: p.title,
+  image: p.image,
+  supplier: p.supplier,
+  category: p.category,
+  material: p.material,
+  usage: p.usage
+}));
+
+const firstBatch = displayProducts.slice(0, BATCH_SIZE);
+const catalogJson = JSON.stringify(clientProducts).replace(/</g, '\\u003c');
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Συλλογή Υλικών & Προϊόντων | Kounouvelis Wood',
+  description:
+    'Πλήρης κατάλογος premium υλικών επιπλοποιίας, HPL, μελαμινών και custom κατασκευών.',
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: displayProducts.map((product, index) => {
+      const productSchema: any = {
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'Product',
+          name: product.title,
+          category: product.category,
+          brand: {
+            '@type': 'Brand',
+            name: product.supplier
+          }
+        }
+      };
+
+      if (product.image) {
+        productSchema.item.image = product.image;
+      }
+
+      return productSchema;
+    })
+  }
+};
+---
+
+<BaseLayout
+  title="Collection | Premium Υλικά & Προϊόντα | Kounouvelis Wood"
+  description="Ανακαλύψτε την πλήρη συλλογή μας..."
+  schemaData={collectionSchema}
+>
+  <Navbar />
+
+  <main id="main-content" tabindex="-1" class="catalog-main">
+    <h1 class="sr-only">Συλλογή Premium Υλικών και Προϊόντων</h1>
+
+    <section
+      aria-label="Εργαλεία ταξινόμησης και προβολής"
+      class="catalog-toolbar"
+    >
+      <div role="toolbar" aria-orientation="horizontal" class="toolbar-inner">
+        <div class="toolbar-filters">
+          <button
+            type="button"
+            id="filter-toggle-btn"
+            aria-expanded="false"
+            aria-controls="filter-dropdown"
+            aria-haspopup="true"
+            class="filter-toggle"
+          >
+            φίλτρα <span aria-hidden="true" class="plus-icon">+</span>
+          </button>
+        </div>
+
+        <div
+          class="toolbar-view"
+          role="group"
+          aria-label="Επιλογές διάταξης καταλόγου"
+        >
+          <button
+            type="button"
+            id="btn-view-feed"
+            class="view-btn"
+            aria-pressed="false"
+          >
+            Στήλη
+          </button>
+          <span class="separator" aria-hidden="true">|</span>
+          <button
+            type="button"
+            id="btn-view-grid"
+            class="view-btn is-active"
+            aria-pressed="true"
+          >
+            Πλέγμα
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="filter-dropdown"
+        class="filter-dropdown"
+        role="region"
+        aria-labelledby="filter-toggle-btn"
+        hidden
+      >
+        <div class="filter-panel-inner">
+          <fieldset class="filter-group">
+            <legend class="filter-group-title">Εφαρμογή</legend>
+            <div class="checkbox-list">
+              <label class="custom-checkbox">
+                <input type="checkbox" name="usage" value="kitchen" />
+                <span class="checkmark" aria-hidden="true">
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 5L4.5 8L10.5 2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="label-text">Κουζίνα</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="usage" value="wardrobe" />
+                <span class="checkmark" aria-hidden="true">
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 5L4.5 8L10.5 2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="label-text">Ντουλάπα</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="usage" value="other" />
+                <span class="checkmark" aria-hidden="true">
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 5L4.5 8L10.5 2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="label-text">Ειδικές Κατασκευές</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend class="filter-group-title">Υλικό</legend>
+            <div class="checkbox-list">
+              <label class="custom-checkbox">
+                <input type="checkbox" name="material" value="hpl" />
+                <span class="checkmark" aria-hidden="true">
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 5L4.5 8L10.5 2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="label-text">HPL</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="material" value="melamine" />
+                <span class="checkmark" aria-hidden="true">
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 5L4.5 8L10.5 2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="label-text">Μελαμίνη</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="material" value="mdf" />
+                <span class="checkmark" aria-hidden="true">
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 5L4.5 8L10.5 2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="label-text">MDF / Λάκα</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="material" value="wood" />
+                <span class="checkmark" aria-hidden="true">
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 5L4.5 8L10.5 2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="label-text">Μασίφ / Καπλαμάς</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend class="filter-group-title">Προμηθευτής</legend>
+            <div class="checkbox-list">
+              <label class="custom-checkbox">
+                <input type="checkbox" name="supplier" value="alfawood" />
+                <span class="checkmark" aria-hidden="true">
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 5L4.5 8L10.5 2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="label-text">Alfawood</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="supplier" value="decostar" />
+                <span class="checkmark" aria-hidden="true">
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 5L4.5 8L10.5 2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="label-text">Decostar</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="supplier" value="bensios" />
+                <span class="checkmark" aria-hidden="true">
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 5L4.5 8L10.5 2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="label-text">Bensios</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="supplier" value="eleftheriou" />
+                <span class="checkmark" aria-hidden="true">
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 5L4.5 8L10.5 2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="label-text">Ελευθερίου</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="supplier" value="praxitelis" />
+                <span class="checkmark" aria-hidden="true">
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 5L4.5 8L10.5 2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span class="label-text">Πραξιτέλης</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="filter-actions">
+          <button type="button" class="btn-clear-filters">Καθαρισμός</button>
+          <button type="button" class="btn-apply-filters"
+            >Εφαρμογή Φίλτρων</button
+          >
+        </div>
+      </div>
+
+      <div class="toolbar-meta" aria-live="polite" aria-atomic="true">
+        <span class="sr-only"
+          >Εμφανίζονται <span id="products-count-sr"
+            >{displayProducts.length}</span
+          > προϊόντα</span
+        >
+        <span class="item-count" aria-hidden="true"
+          >(<span id="products-count-visual"
+            >{formatNumber(displayProducts.length)}</span
+          >)</span
+        >
+        <span class="meta-label">όλα τα προϊόντα</span>
+      </div>
+    </section>
+
+    <section aria-labelledby="catalog-heading" class="catalog-grid-section">
+      <h2 id="catalog-heading" class="sr-only">Λίστα Προϊόντων</h2>
+
+      <ul class="editorial-grid" id="product-grid" role="list">
+        {
+          firstBatch.map((product, index) => {
+            const isPriority = index < 6;
+            return (
+              <li
+                class="product-item"
+                data-flip-id={product.id}
+                data-supplier={
+                  product.supplier ? product.supplier.toLowerCase() : ''
+                }
+                data-material={product.material || 'other'}
+                data-usage={product.usage || 'other'}
+              >
+                <article
+                  class="product-card"
+                  itemscope
+                  itemtype="https://schema.org/Product"
+                >
+                  {/* @ts-ignore */}
+                  
+                    href={`/product/${product.id}`}
+                    class="product-card__link"
+                    aria-labelledby={`title-${product.id}`}
+                  >
+                    <figure class="product-card__figure">
+                      <div class="image-wrapper">
+                        {product.image ? (
+                          <img
+                            src={product.image}
+                            alt={`Φωτογραφία του προϊόντος: ${product.title}`}
+                            class="product-img"
+                            loading={isPriority ? 'eager' : 'lazy'}
+                            fetchpriority={isPriority ? 'high' : 'auto'}
+                            decoding="async"
+                            itemprop="image"
+                          />
+                        ) : (
+                          <div class="placeholder-img" aria-hidden="true">
+                            No Image
+                          </div>
+                        )}
+                      </div>
+
+                      <figcaption class="product-card__info">
+                        <span class="product-index" aria-hidden="true">
+                          ({formatNumber(index + 1)})
+                        </span>
+                        <h3
+                          id={`title-${product.id}`}
+                          class="product-title"
+                          itemprop="name"
+                        >
+                          {product.title}
+                        </h3>
+                        <meta itemprop="brand" content={product.supplier} />
+                        <meta itemprop="category" content={product.category} />
+                        <span
+                          itemprop="offers"
+                          itemscope
+                          itemtype="https://schema.org/Offer"
+                        >
+                          <meta
+                            itemprop="availability"
+                            content="https://schema.org/InStock"
+                          />
+                          <meta itemprop="priceCurrency" content="EUR" />
+                        </span>
+                      </figcaption>
+                    </figure>
+                  </a>
+                </article>
+              </li>
+            );
+          })
+        }
+      </ul>
+
+      <div id="scroll-sentinel" aria-hidden="true"></div>
+
+      <script
+        id="catalog-data"
+        type="application/json"
+        is:inline
+        set:html={catalogJson}></script>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :root {
+    --color-bg: #f8f6f3;
+    --color-text: #2c2a28;
+    --color-text-muted: #888888;
+    --color-border: rgba(44, 42, 40, 0.1);
+    --color-surface: #efece7;
+    --color-focus: #c8a97e;
+    --color-accent: #c8a97e;
+
+    --font-sans: system-ui, -apple-system, sans-serif;
+    --font-serif: 'Playfair Display', 'Georgia', serif;
+
+    --space-3xs: 0.125rem;
+    --space-2xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+    --space-3xl: 6rem;
+
+    --radius-sm: 4px;
+    --aspect-square: 1 / 1;
+    --width-full: 100%;
+
+    --duration-fast: 0.2s;
+    --duration-normal: 0.4s;
+    --duration-slow: 0.8s;
+    --ease-fast: cubic-bezier(0.19, 1, 0.22, 1);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .sr-only {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  button,
+  a {
+    outline-color: transparent;
+    transition: outline-color 0.3s var(--ease-smooth);
+  }
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+  }
+  ul[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  button {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .catalog-main {
+    outline: none;
+    padding-block-start: 2rem;
+    background-color: var(--color-text);
+    color: var(--color-bg);
+  }
+
+  .catalog-toolbar {
+    position: sticky;
+    inset-block-start: 5rem;
+    z-index: 50;
+    background-color: var(--color-text);
+    border-block-end: 1px solid rgba(255, 255, 255, 0.1);
+    padding-block: var(--space-md);
+    padding-inline: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .catalog-toolbar::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 30rem;
+    background-color: var(--color-text);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .toolbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    position: relative;
+  }
+  .toolbar-filters {
+    display: flex;
+    align-items: center;
+  }
+  .filter-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    text-transform: capitalize;
+    color: var(--color-bg);
+  }
+  .plus-icon {
+    display: inline-block;
+    transition: transform var(--duration-normal) var(--ease-fast);
+  }
+  .filter-toggle:hover .plus-icon,
+  .filter-toggle[aria-expanded='true'] .plus-icon {
+    transform: rotate(45deg);
+    color: var(--color-accent);
+  }
+
+  .filter-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-text);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-xl) var(--space-md);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .filter-dropdown:not([hidden]) {
+    visibility: visible;
+  }
+
+  .filter-panel-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .filter-group-title {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--color-bg);
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-2xs);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+  }
+  .checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+  }
+  .custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+  }
+  .custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: transparent;
+    border: 1px solid var(--color-text-muted);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--duration-fast) var(--ease-smooth);
+  }
+  .custom-checkbox:hover input ~ .checkmark {
+    border-color: var(--color-bg);
+  }
+  .custom-checkbox input:checked ~ .checkmark {
+    background-color: var(--color-focus);
+    border-color: var(--color-focus);
+  }
+
+  .check-icon {
+    width: 12px;
+    height: 10px;
+    color: var(--color-text);
+  }
+  .check-icon path {
+    stroke-dasharray: 20;
+    stroke-dashoffset: 20;
+  }
+  .label-text {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    transition: color var(--duration-fast) var(--ease-smooth);
+  }
+  .custom-checkbox input:checked ~ .label-text {
+    color: var(--color-bg);
+  }
+
+  .filter-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    max-width: 90rem;
+    margin-inline: auto;
+  }
+  .btn-clear-filters {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .btn-clear-filters:hover {
+    color: var(--color-bg);
+  }
+  .btn-apply-filters {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+    border-radius: var(--radius-sm);
+    transition: background-color var(--duration-fast) var(--ease-smooth);
+  }
+  .btn-apply-filters:hover {
+    background-color: var(--color-focus);
+  }
+
+  .toolbar-view {
+    display: flex;
+    gap: var(--space-2xs);
+    color: var(--color-text-muted);
+  }
+  .toolbar-view .is-active {
+    color: var(--color-bg);
+    text-decoration: underline;
+    text-underline-offset: var(--space-3xs);
+  }
+  .toolbar-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--color-bg);
+  }
+  .item-count {
+    font-family: var(--font-serif);
+    font-style: italic;
+  }
+
+  /* Αλλαγή για να δώσουμε "αέρα" στο πρώτο row */
+  .catalog-grid-section {
+    padding-block-start: 4rem;
+    padding-block-end: var(--space-3xl);
+    padding-inline: var(--space-md);
+  }
+
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg) var(--space-sm);
+    position: relative; /* για το Flip absoluteOnLeave στο layout switch */
+  }
+
+  /* Feed View: Κρατάμε το πλάτος στα 30rem ώστε να περισσεύει χώρος για να βλέπεις την επόμενη/προηγούμενη κάρτα */
+  .editorial-grid.view-feed {
+    grid-template-columns: minmax(0, 30rem);
+    justify-content: center;
+    gap: 5rem;
+  }
+  .editorial-grid.view-feed .product-card__figure {
+    align-items: center;
+  }
+  .editorial-grid.view-feed .image-wrapper {
+    inline-size: var(--width-full);
+    max-inline-size: 30rem;
+  }
+  .editorial-grid.view-feed .product-card__info {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .product-item {
+    display: flex;
+    flex-direction: column;
+    /* Ο browser παραλείπει render των off-screen cards = γρήγορο scroll */
+    content-visibility: auto;
+    contain-intrinsic-size: auto 360px;
+  }
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    block-size: 100%;
+  }
+  .product-card__link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    block-size: 100%;
+    gap: var(--space-sm);
+  }
+  .product-card__figure {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-block: 0;
+    margin-inline: 0;
+  }
+  .image-wrapper {
+    aspect-ratio: var(--aspect-square);
+    background-color: #1a1a1a;
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--radius-sm);
+  }
+  .product-img {
+    inline-size: var(--width-full);
+    block-size: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-slow) var(--ease-fast);
+  }
+  .product-card__link:hover .product-img {
+    transform: scale(1.05);
+  }
+  .placeholder-img {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+  }
+  .product-card__info {
+    display: flex;
+    gap: var(--space-2xs);
+    align-items: baseline;
+    color: var(--color-bg);
+  }
+  .product-index {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+  .product-title {
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  #scroll-sentinel {
+    block-size: 1px;
+    inline-size: var(--width-full);
+  }
+
+  @media (min-width: 48rem) {
+    .catalog-toolbar {
+      padding-block: var(--space-md);
+      padding-inline: var(--space-lg);
+    }
+    .filter-dropdown {
+      padding: var(--space-xl) var(--space-lg);
+    }
+    .filter-panel-inner {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6rem;
+    }
+
+    .catalog-grid-section {
+      padding-block-start: 6rem;
+      padding-inline: var(--space-lg);
+    }
+
+    /* 3 μεγάλες στήλες αντί για 5! */
+    .editorial-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-2xl) var(--space-xl);
+    }
+    .product-title {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .editorial-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-3xl) var(--space-2xl);
+    }
+  }
+</style>
+
+<script >
+  import gsap from 'gsap';
+  import ScrollTrigger from 'gsap/ScrollTrigger';
+  import Flip from 'gsap/Flip';
+
+  gsap.registerPlugin(ScrollTrigger, Flip);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const reduceMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    const dataEl = document.getElementById('catalog-data');
+    const ALL: any[] = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
+
+    const grid = document.getElementById('product-grid');
+    const sentinel = document.getElementById('scroll-sentinel');
+    const countVisual = document.getElementById('products-count-visual');
+    const countSR = document.getElementById('products-count-sr');
+
+    const filterBtn = document.getElementById('filter-toggle-btn');
+    const filterMenu = document.getElementById('filter-dropdown');
+    const btnClear = document.querySelector('.btn-clear-filters');
+    const btnApply = document.querySelector('.btn-apply-filters');
+    const checkboxes = document.querySelectorAll(
+      '.custom-checkbox input[type="checkbox"]'
+    );
+    const btnFeed = document.getElementById('btn-view-feed');
+    const btnGrid = document.getElementById('btn-view-grid');
+
+    const BATCH = 48;
+    let currentList: any[] = ALL.slice();
+    let rendered = grid ? grid.children.length : 0; // SSR firstBatch ήδη εκεί
+    let isFeed = false;
+    let isFilterAnimating = false;
+    let isViewAnimating = false;
+    let loading = false;
+
+    const pad2 = (n: number) => String(n).padStart(2, '0');
+    const esc = (s: any) =>
+      String(s ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+
+    // ---------- CARD TEMPLATE (ταυτόσημο με το SSR markup) ----------
+    const cardHTML = (p: any, i: number) => {
+      const supplier = (p.supplier || '').toLowerCase();
+      const material = p.material || 'other';
+      const usage = p.usage || 'other';
+      const img = p.image
+        ? `<img src="${esc(p.image)}" alt="Φωτογραφία του προϊόντος - ${esc(p.title)}" class="product-img" loading="lazy" decoding="async" itemprop="image" />`
+        : `<div class="placeholder-img" aria-hidden="true">No Image</div>`;
+
+      return `
+      <li class="product-item" data-flip-id="${esc(p.id)}" data-supplier="${esc(supplier)}" data-material="${esc(material)}" data-usage="${esc(usage)}">
+        <article class="product-card" itemscope itemtype="https://schema.org/Product">
+          <a href="/product/${esc(p.id)}" class="product-card__link" aria-labelledby="title-${esc(p.id)}">
+            <figure class="product-card__figure">
+              <div class="image-wrapper">${img}</div>
+              <figcaption class="product-card__info">
+                <span class="product-index" aria-hidden="true">(${pad2(i + 1)})</span>
+                <h3 id="title-${esc(p.id)}" class="product-title" itemprop="name">${esc(p.title)}</h3>
+                <meta itemprop="brand" content="${esc(p.supplier)}" />
+                <meta itemprop="category" content="${esc(p.category)}" />
+                <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  <meta itemprop="availability" content="https://schema.org/InStock" />
+                  <meta itemprop="priceCurrency" content="EUR" />
+                </span>
+              </figcaption>
+            </figure>
+          </a>
+        </article>
+      </li>`;
+    };
+
+    // ---------- ENTRANCE: scale-in + leaf unfurl ----------
+    const entrance = (els: Element[]) => {
+      gsap.fromTo(
+        els,
+        {
+          opacity: 0,
+          scale: 0.9,
+          y: 24,
+          clipPath: 'inset(8% 8% 8% 8% round 4px)'
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          clipPath: 'inset(0% 0% 0% 0% round 4px)',
+          duration: 0.8,
+          ease: 'power3.out',
+          stagger: 0.06,
+          overwrite: true,
+          onComplete: () => gsap.set(els, { clearProps: 'transform,clipPath' })
+        }
+      );
+    };
+
+    const buildEls = (list: any[], startIndex: number, count: number) => {
+      if (!grid) return [];
+      const slice = list.slice(startIndex, startIndex + count);
+      const html = slice.map((p, k) => cardHTML(p, startIndex + k)).join('');
+      const frag = document.createRange().createContextualFragment(html);
+      const els = Array.from(frag.children);
+      grid.appendChild(frag);
+      return els;
+    };
+
+    // ---------- INFINITE SCROLL: επόμενη παρτίδα ----------
+    const renderNext = () => {
+      if (!grid || rendered >= currentList.length) return;
+      const els = buildEls(currentList, rendered, BATCH);
+      rendered += els.length;
+      if (reduceMotion) gsap.set(els, { opacity: 1 });
+      else entrance(els);
+    };
+
+    if (sentinel) {
+      const io = new IntersectionObserver(
+        entries => {
+          if (entries[0].isIntersecting && !loading) {
+            loading = true;
+            renderNext();
+            loading = false;
+          }
+        },
+        { rootMargin: '800px 0px' }
+      );
+      io.observe(sentinel);
+    }
+
+    // Αρχικό entrance στα SSR cards
+    if (grid && !reduceMotion) {
+      const initial = Array.from(grid.children);
+      gsap.set(initial, { opacity: 0 });
+      entrance(initial);
+    }
+
+    // ---------- FILTER MENU (open / close) ----------
+    const closeMenu = () => {
+      if (!filterMenu || filterMenu.hidden || isFilterAnimating) return;
+      isFilterAnimating = true;
+      filterBtn?.setAttribute('aria-expanded', 'false');
+      gsap.to(filterMenu, {
+        clipPath: 'inset(0% 0% 100% 0%)',
+        opacity: 0,
+        duration: 0.4,
+        ease: 'power3.inOut',
+        onComplete: () => {
+          filterMenu.hidden = true;
+          isFilterAnimating = false;
+        }
+      });
+    };
+
+    const openMenu = () => {
+      if (!filterMenu || !filterMenu.hidden || isFilterAnimating) return;
+      isFilterAnimating = true;
+      filterBtn?.setAttribute('aria-expanded', 'true');
+      filterMenu.hidden = false;
+      gsap.fromTo(
+        filterMenu,
+        { clipPath: 'inset(0% 0% 100% 0%)', opacity: 0 },
+        {
+          clipPath: 'inset(0% 0% 0% 0%)',
+          opacity: 1,
+          duration: 0.5,
+          ease: 'power4.out',
+          onComplete: () => (isFilterAnimating = false)
+        }
+      );
+    };
+
+    filterBtn?.addEventListener('click', e => {
+      e.stopPropagation();
+      filterMenu?.hidden ? openMenu() : closeMenu();
+    });
+    btnApply?.addEventListener('click', closeMenu);
+
+    document.addEventListener('click', e => {
+      if (
+        filterMenu &&
+        !filterMenu.hidden &&
+        !filterMenu.contains(e.target as Node) &&
+        !filterBtn?.contains(e.target as Node)
+      )
+        closeMenu();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    // ---------- FILTER: scale-out -> render fresh -> leaf entrance ----------
+    const renderFresh = () => {
+      if (!grid) return;
+      rendered = 0;
+      grid.innerHTML = '';
+      const els = buildEls(currentList, 0, BATCH);
+      rendered = els.length;
+      if (reduceMotion) {
+        gsap.set(els, { opacity: 1 });
+      } else {
+        gsap.set(els, { opacity: 0 });
+        entrance(els);
+      }
+      window.scrollTo({ top: 0, behavior: 'instant' as any });
+      ScrollTrigger.refresh();
+    };
+
+    const applyFilters = () => {
+      const selectedSuppliers = Array.from(
+        document.querySelectorAll('input[name="supplier"]:checked')
+      ).map((cb: any) => cb.value);
+      const selectedMaterials = Array.from(
+        document.querySelectorAll('input[name="material"]:checked')
+      ).map((cb: any) => cb.value);
+      const selectedUsages = Array.from(
+        document.querySelectorAll('input[name="usage"]:checked')
+      ).map((cb: any) => cb.value);
+
+      currentList = ALL.filter(p => {
+        const s = (p.supplier || '').toLowerCase();
+        const m = p.material || 'other';
+        const u = p.usage || 'other';
+        const okS =
+          selectedSuppliers.length === 0 || selectedSuppliers.includes(s);
+        const okM =
+          selectedMaterials.length === 0 || selectedMaterials.includes(m);
+        const okU = selectedUsages.length === 0 || selectedUsages.includes(u);
+        return okS && okM && okU;
+      });
+
+      if (countVisual) countVisual.textContent = pad2(currentList.length);
+      if (countSR) countSR.textContent = String(currentList.length);
+
+      if (reduceMotion || !grid) {
+        renderFresh();
+        return;
+      }
+
+      const oldEls = Array.from(grid.children);
+      if (oldEls.length) {
+        gsap.to(oldEls, {
+          opacity: 0,
+          scale: 0.95,
+          y: 12,
+          duration: 0.25,
+          ease: 'power2.in',
+          stagger: { amount: 0.12 },
+          onComplete: renderFresh
+        });
+      } else {
+        renderFresh();
+      }
+    };
+
+    checkboxes.forEach((cb: any) => {
+      cb.addEventListener('change', (e: Event) => {
+        const target = e.target as HTMLInputElement;
+        const checkmark = target.nextElementSibling as HTMLElement;
+        const svgPath = checkmark.querySelector('path');
+
+        if (target.checked) {
+          gsap.fromTo(
+            checkmark,
+            { scale: 0.8 },
+            { scale: 1, duration: 0.3, ease: 'back.out(1.5)' }
+          );
+          if (svgPath)
+            gsap.to(svgPath, {
+              strokeDashoffset: 0,
+              duration: 0.3,
+              ease: 'power2.out',
+              delay: 0.1
+            });
+        } else {
+          if (svgPath)
+            gsap.to(svgPath, { strokeDashoffset: 20, duration: 0.2 });
+        }
+        applyFilters();
+      });
+    });
+
+    btnClear?.addEventListener('click', () => {
+      checkboxes.forEach((cb: any) => {
+        if (cb.checked) {
+          cb.checked = false;
+          const checkmark = cb.nextElementSibling as HTMLElement;
+          const svgPath = checkmark.querySelector('path');
+          if (svgPath)
+            gsap.to(svgPath, { strokeDashoffset: 20, duration: 0.2 });
+        }
+      });
+      applyFilters();
+    });
+
+    // ---------- VIEW SWITCH: FLIP πύργος (στήλη) / άπλωμα (πλέγμα) ----------
+    const switchView = (toFeed: boolean) => {
+      if (isViewAnimating || !grid) return;
+
+      btnFeed?.setAttribute('aria-pressed', String(toFeed));
+      btnGrid?.setAttribute('aria-pressed', String(!toFeed));
+      btnFeed?.classList.toggle('is-active', toFeed);
+      btnGrid?.classList.toggle('is-active', !toFeed);
+      isFeed = toFeed;
+
+      if (reduceMotion) {
+        grid.classList.toggle('view-feed', toFeed);
+        return;
+      }
+
+      isViewAnimating = true;
+      window.scrollTo({ top: 0, behavior: 'instant' as any });
+
+      const els = Array.from(grid.children);
+      const state = Flip.getState(els);
+      grid.classList.toggle('view-feed', toFeed);
+
+      Flip.from(state, {
+        duration: 0.75,
+        ease: 'power3.inOut',
+        scale: true,
+        stagger: toFeed
+          ? { amount: 0.4, from: 'start' } // στήλη: μαζεύονται σαν πύργος
+          : { amount: 0.4, from: 'center' }, // πλέγμα: ανοίγουν προς τα έξω
+        onComplete: () => {
+          isViewAnimating = false;
+          ScrollTrigger.refresh();
+        }
+      });
+    };
+
+    btnFeed?.addEventListener('click', () => {
+      if (btnFeed.getAttribute('aria-pressed') !== 'true') switchView(true);
+    });
+    btnGrid?.addEventListener('click', () => {
+      if (btnGrid.getAttribute('aria-pressed') !== 'true') switchView(false);
+    });
+  });
+</script>
