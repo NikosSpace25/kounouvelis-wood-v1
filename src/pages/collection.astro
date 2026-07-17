@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.astro';
+import Button from '../components/Button.astro';
 import productsDataRaw from '../data/master-products.json';
 
 interface Product {
@@ -18,9 +19,9 @@ const displayProducts = productsDataRaw as Product[];
 
 const formatNumber = (num: number) => String(num).padStart(2, '0');
 
-const BATCH_SIZE = 48;
+// Φορτώνουμε 39 προϊόντα (ακριβώς 13 σειρές των 3) για απόλυτη ομοιομορφία!
+const BATCH_SIZE = 39;
 
-// Ελαφρύ payload για τον client (χωρίς description)
 const clientProducts = displayProducts.map(p => ({
   id: p.id,
   title: p.title,
@@ -32,6 +33,7 @@ const clientProducts = displayProducts.map(p => ({
 }));
 
 const firstBatch = displayProducts.slice(0, BATCH_SIZE);
+const hideLoadMore = displayProducts.length <= BATCH_SIZE;
 const catalogJson = JSON.stringify(clientProducts).replace(/</g, '\\u003c');
 
 const collectionSchema = {
@@ -125,7 +127,7 @@ const collectionSchema = {
         class="filter-dropdown"
         role="region"
         aria-labelledby="filter-toggle-btn"
-        hidden
+        style="display: none; opacity: 0; transform: translateY(-15px);"
       >
         <div class="filter-panel-inner">
           <fieldset class="filter-group">
@@ -139,14 +141,13 @@ const collectionSchema = {
                     viewBox="0 0 12 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
+                    ><path
                       d="M1.5 5L4.5 8L10.5 2"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
+                      stroke-linejoin="round"></path></svg
+                  >
                 </span>
                 <span class="label-text">Κουζίνα</span>
               </label>
@@ -158,14 +159,13 @@ const collectionSchema = {
                     viewBox="0 0 12 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
+                    ><path
                       d="M1.5 5L4.5 8L10.5 2"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
+                      stroke-linejoin="round"></path></svg
+                  >
                 </span>
                 <span class="label-text">Ντουλάπα</span>
               </label>
@@ -177,14 +177,13 @@ const collectionSchema = {
                     viewBox="0 0 12 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
+                    ><path
                       d="M1.5 5L4.5 8L10.5 2"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
+                      stroke-linejoin="round"></path></svg
+                  >
                 </span>
                 <span class="label-text">Ειδικές Κατασκευές</span>
               </label>
@@ -202,14 +201,13 @@ const collectionSchema = {
                     viewBox="0 0 12 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
+                    ><path
                       d="M1.5 5L4.5 8L10.5 2"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
+                      stroke-linejoin="round"></path></svg
+                  >
                 </span>
                 <span class="label-text">HPL</span>
               </label>
@@ -221,14 +219,13 @@ const collectionSchema = {
                     viewBox="0 0 12 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
+                    ><path
                       d="M1.5 5L4.5 8L10.5 2"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
+                      stroke-linejoin="round"></path></svg
+                  >
                 </span>
                 <span class="label-text">Μελαμίνη</span>
               </label>
@@ -240,14 +237,13 @@ const collectionSchema = {
                     viewBox="0 0 12 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
+                    ><path
                       d="M1.5 5L4.5 8L10.5 2"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
+                      stroke-linejoin="round"></path></svg
+                  >
                 </span>
                 <span class="label-text">MDF / Λάκα</span>
               </label>
@@ -259,14 +255,13 @@ const collectionSchema = {
                     viewBox="0 0 12 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
+                    ><path
                       d="M1.5 5L4.5 8L10.5 2"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
+                      stroke-linejoin="round"></path></svg
+                  >
                 </span>
                 <span class="label-text">Μασίφ / Καπλαμάς</span>
               </label>
@@ -284,14 +279,13 @@ const collectionSchema = {
                     viewBox="0 0 12 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
+                    ><path
                       d="M1.5 5L4.5 8L10.5 2"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
+                      stroke-linejoin="round"></path></svg
+                  >
                 </span>
                 <span class="label-text">Alfawood</span>
               </label>
@@ -303,14 +297,13 @@ const collectionSchema = {
                     viewBox="0 0 12 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
+                    ><path
                       d="M1.5 5L4.5 8L10.5 2"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
+                      stroke-linejoin="round"></path></svg
+                  >
                 </span>
                 <span class="label-text">Decostar</span>
               </label>
@@ -322,14 +315,13 @@ const collectionSchema = {
                     viewBox="0 0 12 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
+                    ><path
                       d="M1.5 5L4.5 8L10.5 2"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
+                      stroke-linejoin="round"></path></svg
+                  >
                 </span>
                 <span class="label-text">Bensios</span>
               </label>
@@ -341,14 +333,13 @@ const collectionSchema = {
                     viewBox="0 0 12 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
+                    ><path
                       d="M1.5 5L4.5 8L10.5 2"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
+                      stroke-linejoin="round"></path></svg
+                  >
                 </span>
                 <span class="label-text">Ελευθερίου</span>
               </label>
@@ -360,14 +351,13 @@ const collectionSchema = {
                     viewBox="0 0 12 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
+                    ><path
                       d="M1.5 5L4.5 8L10.5 2"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
+                      stroke-linejoin="round"></path></svg
+                  >
                 </span>
                 <span class="label-text">Πραξιτέλης</span>
               </label>
@@ -407,8 +397,7 @@ const collectionSchema = {
             const isPriority = index < 6;
             return (
               <li
-                class="product-item"
-                data-flip-id={product.id}
+                class="product-item in-viewport"
                 data-supplier={
                   product.supplier ? product.supplier.toLowerCase() : ''
                 }
@@ -420,8 +409,7 @@ const collectionSchema = {
                   itemscope
                   itemtype="https://schema.org/Product"
                 >
-                  {/* @ts-ignore */}
-                  
+                  <a
                     href={`/product/${product.id}`}
                     class="product-card__link"
                     aria-labelledby={`title-${product.id}`}
@@ -479,18 +467,33 @@ const collectionSchema = {
         }
       </ul>
 
-      <div id="scroll-sentinel" aria-hidden="true"></div>
+      <div
+        class="load-more-container"
+        id="load-more-container"
+        style={hideLoadMore ? 'display: none;' : ''}
+      >
+        <div
+          id="load-more-btn-trigger"
+          class="custom-btn-wrapper"
+          tabindex="0"
+          role="button"
+          aria-label="Φόρτωση περισσότερων προϊόντων"
+        >
+          <Button text="Δες Περισσότερα" href="#" />
+        </div>
+      </div>
 
       <script
         id="catalog-data"
         type="application/json"
         is:inline
-        set:html={catalogJson}></script>
+        set:html={catalogJson}
+      />
     </section>
   </main>
 </BaseLayout>
 
-<style>
+<style is:global>
   :root {
     --color-bg: #f8f6f3;
     --color-text: #2c2a28;
@@ -534,17 +537,26 @@ const collectionSchema = {
     white-space: nowrap;
     border: 0;
   }
+
   button,
   a {
     outline-color: transparent;
     transition: outline-color 0.3s var(--ease-smooth);
   }
+
   button:focus-visible,
-  a:focus-visible {
+  a:focus-visible,
+  .custom-btn-wrapper:focus-visible {
     outline: 2px solid var(--color-focus);
     outline-offset: 4px;
     border-radius: var(--radius-sm);
   }
+
+  .custom-checkbox input:focus-visible ~ .checkmark {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 4px;
+  }
+
   ul[role='list'] {
     list-style: none;
     padding: 0;
@@ -563,6 +575,7 @@ const collectionSchema = {
     padding-block-start: 2rem;
     background-color: var(--color-text);
     color: var(--color-bg);
+    min-height: 100vh; /* Αποτρέπει το λευκό φόντο στο ύψος της σελίδας */
   }
 
   .catalog-toolbar {
@@ -607,6 +620,8 @@ const collectionSchema = {
     gap: var(--space-2xs);
     text-transform: capitalize;
     color: var(--color-bg);
+    padding: 0.25rem 0.5rem;
+    margin-left: -0.5rem;
   }
   .plus-icon {
     display: inline-block;
@@ -627,11 +642,6 @@ const collectionSchema = {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: var(--space-xl) var(--space-md);
     z-index: 100;
-    opacity: 0;
-    visibility: hidden;
-  }
-  .filter-dropdown:not([hidden]) {
-    visibility: visible;
   }
 
   .filter-panel-inner {
@@ -641,7 +651,6 @@ const collectionSchema = {
     max-width: 90rem;
     margin: 0 auto;
   }
-
   fieldset {
     border: none;
     padding: 0;
@@ -731,6 +740,7 @@ const collectionSchema = {
     color: var(--color-text-muted);
     text-decoration: underline;
     text-underline-offset: 4px;
+    padding: 0.25rem;
   }
   .btn-clear-filters:hover {
     color: var(--color-bg);
@@ -752,6 +762,10 @@ const collectionSchema = {
     gap: var(--space-2xs);
     color: var(--color-text-muted);
   }
+  .toolbar-view .view-btn {
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+  }
   .toolbar-view .is-active {
     color: var(--color-bg);
     text-decoration: underline;
@@ -768,7 +782,6 @@ const collectionSchema = {
     font-style: italic;
   }
 
-  /* Αλλαγή για να δώσουμε "αέρα" στο πρώτο row */
   .catalog-grid-section {
     padding-block-start: 4rem;
     padding-block-end: var(--space-3xl);
@@ -779,10 +792,11 @@ const collectionSchema = {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg) var(--space-sm);
-    position: relative; /* για το Flip absoluteOnLeave στο layout switch */
+    position: relative;
+    /* ΑΦΑΙΡΕΘΗΚΕ το contain: content — έκοβε (paint clip) τα items
+       εκτός grid κατά το Flip και έσπρωχνε το κουμπί εκτός οθόνης */
   }
 
-  /* Feed View: Κρατάμε το πλάτος στα 30rem ώστε να περισσεύει χώρος για να βλέπεις την επόμενη/προηγούμενη κάρτα */
   .editorial-grid.view-feed {
     grid-template-columns: minmax(0, 30rem);
     justify-content: center;
@@ -803,15 +817,23 @@ const collectionSchema = {
   .product-item {
     display: flex;
     flex-direction: column;
-    /* Ο browser παραλείπει render των off-screen cards = γρήγορο scroll */
-    content-visibility: auto;
-    contain-intrinsic-size: auto 360px;
+    background-color: var(--color-text);
+    position: relative;
+    z-index: 1;
   }
+
   .product-card {
     display: flex;
     flex-direction: column;
     block-size: 100%;
+    transform: scale(0.92);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
   }
+  .product-item.in-viewport .product-card {
+    transform: scale(1);
+  }
+
   .product-card__link {
     text-decoration: none;
     color: inherit;
@@ -826,32 +848,45 @@ const collectionSchema = {
     gap: var(--space-sm);
     margin-block: 0;
     margin-inline: 0;
+    width: 100%;
   }
+
   .image-wrapper {
-    aspect-ratio: var(--aspect-square);
+    width: 100%;
+    aspect-ratio: 1 / 1;
     background-color: #1a1a1a;
     overflow: hidden;
     position: relative;
     border-radius: var(--radius-sm);
   }
+
   .product-img {
-    inline-size: var(--width-full);
-    block-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: transform var(--duration-slow) var(--ease-fast);
   }
   .product-card__link:hover .product-img {
     transform: scale(1.05);
   }
+
   .placeholder-img {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-text-muted);
     font-size: 0.8rem;
+    background-color: #1a1a1a;
   }
+
   .product-card__info {
     display: flex;
     gap: var(--space-2xs);
@@ -874,9 +909,28 @@ const collectionSchema = {
     overflow: hidden;
   }
 
-  #scroll-sentinel {
-    block-size: 1px;
-    inline-size: var(--width-full);
+  /* Κλειδώνουμε το container του κουμπιού με z-index για να μην κρύβεται */
+  .load-more-container {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--space-2xl);
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    clear: both;
+  }
+
+  .custom-btn-wrapper {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .custom-btn-wrapper :global(svg) {
+    display: none !important;
+  }
+  .custom-btn-wrapper :global(a),
+  .custom-btn-wrapper :global(button) {
+    justify-content: center !important;
+    text-align: center;
   }
 
   @media (min-width: 48rem) {
@@ -891,13 +945,10 @@ const collectionSchema = {
       grid-template-columns: repeat(3, 1fr);
       gap: 6rem;
     }
-
     .catalog-grid-section {
       padding-block-start: 6rem;
       padding-inline: var(--space-lg);
     }
-
-    /* 3 μεγάλες στήλες αντί για 5! */
     .editorial-grid {
       grid-template-columns: repeat(3, 1fr);
       gap: var(--space-2xl) var(--space-xl);
@@ -915,23 +966,17 @@ const collectionSchema = {
   }
 </style>
 
-<script >
+<script>
   import gsap from 'gsap';
-  import ScrollTrigger from 'gsap/ScrollTrigger';
-  import Flip from 'gsap/Flip';
-
-  gsap.registerPlugin(ScrollTrigger, Flip);
+  import { Flip } from 'gsap/Flip';
 
   document.addEventListener('DOMContentLoaded', () => {
-    const reduceMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    ).matches;
+    gsap.registerPlugin(Flip);
 
     const dataEl = document.getElementById('catalog-data');
-    const ALL: any[] = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
+    const ALL_PRODUCTS = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
 
     const grid = document.getElementById('product-grid');
-    const sentinel = document.getElementById('scroll-sentinel');
     const countVisual = document.getElementById('products-count-visual');
     const countSR = document.getElementById('products-count-sr');
 
@@ -942,16 +987,18 @@ const collectionSchema = {
     const checkboxes = document.querySelectorAll(
       '.custom-checkbox input[type="checkbox"]'
     );
+
     const btnFeed = document.getElementById('btn-view-feed');
     const btnGrid = document.getElementById('btn-view-grid');
 
-    const BATCH = 48;
-    let currentList: any[] = ALL.slice();
-    let rendered = grid ? grid.children.length : 0; // SSR firstBatch ήδη εκεί
-    let isFeed = false;
+    const loadMoreContainer = document.getElementById('load-more-container');
+    const loadMoreBtnTrigger = document.getElementById('load-more-btn-trigger');
+
+    const BATCH = 39;
+    let currentList = ALL_PRODUCTS.slice();
+    let renderedCount = grid ? grid.children.length : 0;
+    let isMenuOpen = false;
     let isFilterAnimating = false;
-    let isViewAnimating = false;
-    let loading = false;
 
     const pad2 = (n: number) => String(n).padStart(2, '0');
     const esc = (s: any) =>
@@ -961,17 +1008,16 @@ const collectionSchema = {
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;');
 
-    // ---------- CARD TEMPLATE (ταυτόσημο με το SSR markup) ----------
-    const cardHTML = (p: any, i: number) => {
+    const generateCardHTML = (p: any, i: number) => {
       const supplier = (p.supplier || '').toLowerCase();
       const material = p.material || 'other';
       const usage = p.usage || 'other';
       const img = p.image
-        ? `<img src="${esc(p.image)}" alt="Φωτογραφία του προϊόντος - ${esc(p.title)}" class="product-img" loading="lazy" decoding="async" itemprop="image" />`
+        ? `<img src="${esc(p.image)}" alt="Φωτογραφία του προϊόντος: ${esc(p.title)}" class="product-img" loading="lazy" decoding="async" itemprop="image" />`
         : `<div class="placeholder-img" aria-hidden="true">No Image</div>`;
 
       return `
-      <li class="product-item" data-flip-id="${esc(p.id)}" data-supplier="${esc(supplier)}" data-material="${esc(material)}" data-usage="${esc(usage)}">
+      <li class="product-item in-viewport" data-supplier="${esc(supplier)}" data-material="${esc(material)}" data-usage="${esc(usage)}">
         <article class="product-card" itemscope itemtype="https://schema.org/Product">
           <a href="/product/${esc(p.id)}" class="product-card__link" aria-labelledby="title-${esc(p.id)}">
             <figure class="product-card__figure">
@@ -992,142 +1038,169 @@ const collectionSchema = {
       </li>`;
     };
 
-    // ---------- ENTRANCE: scale-in + leaf unfurl ----------
-    const entrance = (els: Element[]) => {
+    const zoomObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach((entry: any) => {
+          if (entry.isIntersecting) entry.target.classList.add('in-viewport');
+          else entry.target.classList.remove('in-viewport');
+        });
+      },
+      { rootMargin: '-5% 0px -5% 0px', threshold: 0 }
+    );
+
+    if (grid)
+      Array.from(grid.children).forEach(item => zoomObserver.observe(item));
+
+    const checkLoadMoreVisibility = () => {
+      if (!loadMoreContainer) return;
+      loadMoreContainer.style.display =
+        renderedCount < currentList.length ? 'flex' : 'none';
+    };
+
+    const loadMoreData = (e?: Event) => {
+      if (e) e.preventDefault();
+      if (!grid || renderedCount >= currentList.length) return;
+
+      const nextBatch = currentList.slice(renderedCount, renderedCount + BATCH);
+      const htmlString = nextBatch
+        .map((p: any, k: number) => generateCardHTML(p, renderedCount + k))
+        .join('');
+
+      grid.insertAdjacentHTML('beforeend', htmlString);
+
+      const newItems = Array.from(grid.children).slice(renderedCount);
+      renderedCount += nextBatch.length;
+
+      newItems.forEach(item => zoomObserver.observe(item));
+
       gsap.fromTo(
-        els,
+        newItems,
+        { scale: 0.9, opacity: 0 },
         {
-          opacity: 0,
-          scale: 0.9,
-          y: 24,
-          clipPath: 'inset(8% 8% 8% 8% round 4px)'
-        },
-        {
-          opacity: 1,
           scale: 1,
-          y: 0,
-          clipPath: 'inset(0% 0% 0% 0% round 4px)',
-          duration: 0.8,
-          ease: 'power3.out',
-          stagger: 0.06,
-          overwrite: true,
-          onComplete: () => gsap.set(els, { clearProps: 'transform,clipPath' })
-        }
-      );
-    };
-
-    const buildEls = (list: any[], startIndex: number, count: number) => {
-      if (!grid) return [];
-      const slice = list.slice(startIndex, startIndex + count);
-      const html = slice.map((p, k) => cardHTML(p, startIndex + k)).join('');
-      const frag = document.createRange().createContextualFragment(html);
-      const els = Array.from(frag.children);
-      grid.appendChild(frag);
-      return els;
-    };
-
-    // ---------- INFINITE SCROLL: επόμενη παρτίδα ----------
-    const renderNext = () => {
-      if (!grid || rendered >= currentList.length) return;
-      const els = buildEls(currentList, rendered, BATCH);
-      rendered += els.length;
-      if (reduceMotion) gsap.set(els, { opacity: 1 });
-      else entrance(els);
-    };
-
-    if (sentinel) {
-      const io = new IntersectionObserver(
-        entries => {
-          if (entries[0].isIntersecting && !loading) {
-            loading = true;
-            renderNext();
-            loading = false;
-          }
-        },
-        { rootMargin: '800px 0px' }
-      );
-      io.observe(sentinel);
-    }
-
-    // Αρχικό entrance στα SSR cards
-    if (grid && !reduceMotion) {
-      const initial = Array.from(grid.children);
-      gsap.set(initial, { opacity: 0 });
-      entrance(initial);
-    }
-
-    // ---------- FILTER MENU (open / close) ----------
-    const closeMenu = () => {
-      if (!filterMenu || filterMenu.hidden || isFilterAnimating) return;
-      isFilterAnimating = true;
-      filterBtn?.setAttribute('aria-expanded', 'false');
-      gsap.to(filterMenu, {
-        clipPath: 'inset(0% 0% 100% 0%)',
-        opacity: 0,
-        duration: 0.4,
-        ease: 'power3.inOut',
-        onComplete: () => {
-          filterMenu.hidden = true;
-          isFilterAnimating = false;
-        }
-      });
-    };
-
-    const openMenu = () => {
-      if (!filterMenu || !filterMenu.hidden || isFilterAnimating) return;
-      isFilterAnimating = true;
-      filterBtn?.setAttribute('aria-expanded', 'true');
-      filterMenu.hidden = false;
-      gsap.fromTo(
-        filterMenu,
-        { clipPath: 'inset(0% 0% 100% 0%)', opacity: 0 },
-        {
-          clipPath: 'inset(0% 0% 0% 0%)',
           opacity: 1,
-          duration: 0.5,
-          ease: 'power4.out',
-          onComplete: () => (isFilterAnimating = false)
+          duration: 0.4,
+          stagger: 0.05,
+          ease: 'power2.out',
+          onComplete: () => gsap.set(newItems, { clearProps: 'all' })
         }
       );
+
+      checkLoadMoreVisibility();
+      (window as any).lenis?.resize();
+    };
+
+    loadMoreBtnTrigger?.addEventListener('click', loadMoreData);
+    loadMoreBtnTrigger?.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        loadMoreData();
+      }
+    });
+
+    const toggleMenu = () => {
+      if (!filterMenu || isFilterAnimating) return;
+      isFilterAnimating = true;
+
+      if (isMenuOpen) {
+        filterBtn?.setAttribute('aria-expanded', 'false');
+        gsap.to(filterMenu, {
+          y: -15,
+          opacity: 0,
+          duration: 0.3,
+          ease: 'power2.in',
+          onComplete: () => {
+            filterMenu.style.display = 'none';
+            isFilterAnimating = false;
+            isMenuOpen = false;
+          }
+        });
+      } else {
+        filterBtn?.setAttribute('aria-expanded', 'true');
+        filterMenu.style.display = 'block';
+        gsap.fromTo(
+          filterMenu,
+          { y: -15, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.4,
+            ease: 'power3.out',
+            onComplete: () => {
+              isFilterAnimating = false;
+              isMenuOpen = true;
+            }
+          }
+        );
+      }
+    };
+
+    const closeMenuSafely = () => {
+      if (isMenuOpen && !isFilterAnimating) toggleMenu();
     };
 
     filterBtn?.addEventListener('click', e => {
       e.stopPropagation();
-      filterMenu?.hidden ? openMenu() : closeMenu();
+      toggleMenu();
     });
-    btnApply?.addEventListener('click', closeMenu);
+    btnApply?.addEventListener('click', closeMenuSafely);
 
     document.addEventListener('click', e => {
       if (
+        isMenuOpen &&
         filterMenu &&
-        !filterMenu.hidden &&
         !filterMenu.contains(e.target as Node) &&
         !filterBtn?.contains(e.target as Node)
-      )
-        closeMenu();
-    });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeMenu();
+      ) {
+        closeMenuSafely();
+      }
     });
 
-    // ---------- FILTER: scale-out -> render fresh -> leaf entrance ----------
-    const renderFresh = () => {
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeMenuSafely();
+    });
+
+    // --- RENDER ΝΕΑΣ ΠΑΡΤΙΔΑΣ (πάντα ξεκλειδώνει ύψος + ελέγχει κουμπί) ---
+    const renderFreshBatch = () => {
       if (!grid) return;
-      rendered = 0;
+
       grid.innerHTML = '';
-      const els = buildEls(currentList, 0, BATCH);
-      rendered = els.length;
-      if (reduceMotion) {
-        gsap.set(els, { opacity: 1 });
-      } else {
-        gsap.set(els, { opacity: 0 });
-        entrance(els);
-      }
-      window.scrollTo({ top: 0, behavior: 'instant' as any });
-      ScrollTrigger.refresh();
+      renderedCount = 0;
+      const batch = currentList.slice(0, BATCH);
+      grid.innerHTML = batch
+        .map((p: any, k: number) => generateCardHTML(p, k))
+        .join('');
+      renderedCount = batch.length;
+
+      // ΑΜΕΣΟ ξεκλείδωμα ύψους + ενημέρωση κουμπιού — τρέχει ΠΑΝΤΑ,
+      // ακόμα και με 0 αποτελέσματα (όπου το tween δεν θα έπαιζε onComplete)
+      grid.style.minHeight = '';
+      (window as any).lenis?.resize();
+      checkLoadMoreVisibility();
+
+      const newItems = Array.from(grid.children) as HTMLElement[];
+      newItems.forEach(item => zoomObserver.observe(item));
+      if (newItems.length === 0) return;
+
+      // scale/opacity = transform, δεν αλλάζει layout → το κουμπί μένει στη θέση του
+      gsap.fromTo(
+        newItems,
+        { scale: 0.8, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.4,
+          stagger: { amount: 0.15 },
+          ease: 'power3.out',
+          onComplete: () => gsap.set(newItems, { clearProps: 'all' })
+        }
+      );
     };
 
-    const applyFilters = () => {
+    // --- ΦΙΛΤΡΑΡΙΣΜΑ ---
+    const runFiltering = () => {
+      if (!grid) return;
+
       const selectedSuppliers = Array.from(
         document.querySelectorAll('input[name="supplier"]:checked')
       ).map((cb: any) => cb.value);
@@ -1138,7 +1211,7 @@ const collectionSchema = {
         document.querySelectorAll('input[name="usage"]:checked')
       ).map((cb: any) => cb.value);
 
-      currentList = ALL.filter(p => {
+      currentList = ALL_PRODUCTS.filter((p: any) => {
         const s = (p.supplier || '').toLowerCase();
         const m = p.material || 'other';
         const u = p.usage || 'other';
@@ -1153,25 +1226,29 @@ const collectionSchema = {
       if (countVisual) countVisual.textContent = pad2(currentList.length);
       if (countSR) countSR.textContent = String(currentList.length);
 
-      if (reduceMotion || !grid) {
-        renderFresh();
+      const currentItems = Array.from(grid.children) as HTMLElement[];
+
+      // Καμία υπάρχουσα κάρτα → render κατευθείαν (το renderFreshBatch τα κάνει όλα)
+      if (currentItems.length === 0) {
+        renderFreshBatch();
         return;
       }
 
-      const oldEls = Array.from(grid.children);
-      if (oldEls.length) {
-        gsap.to(oldEls, {
-          opacity: 0,
-          scale: 0.95,
-          y: 12,
-          duration: 0.25,
-          ease: 'power2.in',
-          stagger: { amount: 0.12 },
-          onComplete: renderFresh
-        });
-      } else {
-        renderFresh();
-      }
+      // Κλειδώνουμε ύψος ΜΟΝΟ για το out-animation (να μην πηδήξει το scroll)
+      const currentHeight = grid.getBoundingClientRect().height;
+      grid.style.minHeight = currentHeight + 'px';
+
+      gsap.to(currentItems, {
+        scale: 0.8,
+        opacity: 0,
+        duration: 0.25,
+        stagger: { amount: 0.1 },
+        ease: 'power2.in',
+        onComplete: () => {
+          window.scrollTo({ top: 0, behavior: 'instant' as any });
+          renderFreshBatch(); // ξεκλειδώνει ύψος + ενημερώνει κουμπί μέσα του
+        }
+      });
     };
 
     checkboxes.forEach((cb: any) => {
@@ -1179,12 +1256,11 @@ const collectionSchema = {
         const target = e.target as HTMLInputElement;
         const checkmark = target.nextElementSibling as HTMLElement;
         const svgPath = checkmark.querySelector('path');
-
         if (target.checked) {
           gsap.fromTo(
             checkmark,
             { scale: 0.8 },
-            { scale: 1, duration: 0.3, ease: 'back.out(1.5)' }
+            { scale: 1, duration: 0.3, ease: 'power3.out' }
           );
           if (svgPath)
             gsap.to(svgPath, {
@@ -1197,7 +1273,14 @@ const collectionSchema = {
           if (svgPath)
             gsap.to(svgPath, { strokeDashoffset: 20, duration: 0.2 });
         }
-        applyFilters();
+        runFiltering();
+      });
+      cb.addEventListener('keydown', (e: KeyboardEvent) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          cb.checked = !cb.checked;
+          cb.dispatchEvent(new Event('change'));
+        }
       });
     });
 
@@ -1211,41 +1294,49 @@ const collectionSchema = {
             gsap.to(svgPath, { strokeDashoffset: 20, duration: 0.2 });
         }
       });
-      applyFilters();
+      runFiltering();
     });
 
-    // ---------- VIEW SWITCH: FLIP πύργος (στήλη) / άπλωμα (πλέγμα) ----------
+    // --- VIEW TOGGLE (κλειδώνει στο ΤΕΛΙΚΟ ύψος → το κουμπί μένει ορατό) ---
+    let isViewAnimating = false;
+
     const switchView = (toFeed: boolean) => {
       if (isViewAnimating || !grid) return;
+      isViewAnimating = true;
 
       btnFeed?.setAttribute('aria-pressed', String(toFeed));
       btnGrid?.setAttribute('aria-pressed', String(!toFeed));
       btnFeed?.classList.toggle('is-active', toFeed);
       btnGrid?.classList.toggle('is-active', !toFeed);
-      isFeed = toFeed;
 
-      if (reduceMotion) {
-        grid.classList.toggle('view-feed', toFeed);
-        return;
-      }
+      const items = Array.from(
+        grid.querySelectorAll('.product-item')
+      ) as HTMLElement[];
 
-      isViewAnimating = true;
-      window.scrollTo({ top: 0, behavior: 'instant' as any });
+      // 1. Κατάσταση ΠΡΙΝ την αλλαγή layout
+      const state = Flip.getState(items);
 
-      const els = Array.from(grid.children);
-      const state = Flip.getState(els);
+      // 2. Αλλάζουμε layout ΚΑΙ μετράμε το νέο (τελικό) ύψος
       grid.classList.toggle('view-feed', toFeed);
+      const targetHeight = grid.getBoundingClientRect().height;
+
+      // 3. Κλειδώνουμε στο ΤΕΛΙΚΟ ύψος ώστε το grid να μην κάνει collapse
+      //    κατά το absolute Flip — άρα το κουμπί κάθεται στην τελική του θέση
+      grid.style.minHeight = targetHeight + 'px';
 
       Flip.from(state, {
-        duration: 0.75,
-        ease: 'power3.inOut',
+        absolute: true,
         scale: true,
-        stagger: toFeed
-          ? { amount: 0.4, from: 'start' } // στήλη: μαζεύονται σαν πύργος
-          : { amount: 0.4, from: 'center' }, // πλέγμα: ανοίγουν προς τα έξω
+        duration: 0.6,
+        ease: 'power3.inOut',
+        stagger: 0.02,
         onComplete: () => {
+          grid.style.minHeight = '';
+          (window as any).lenis?.resize();
           isViewAnimating = false;
-          ScrollTrigger.refresh();
+          checkLoadMoreVisibility();
+          if ((window as any).ScrollTrigger)
+            (window as any).ScrollTrigger.refresh();
         }
       });
     };
